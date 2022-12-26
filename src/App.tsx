@@ -1,3 +1,8 @@
+import { initializeApp } from "firebase/app";
+import { config } from "./config/config";
+
+initializeApp(config.firebaseConfig);
+
 function App() {
   return (
     <div className="container w-100 mx-auto text-center p-8">
