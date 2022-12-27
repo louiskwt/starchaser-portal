@@ -1,13 +1,17 @@
 import { initializeApp } from "firebase/app";
+import { Route, Routes } from "react-router-dom";
 import { config } from "./config/config";
+import Dashboard from "./pages/Dashboard";
+import LoginPage from "./pages/LoginPage";
 
 initializeApp(config.firebaseConfig);
 
 function App() {
   return (
-    <div className="container w-100 mx-auto text-center p-8">
-      <h1 className="text-3xl font-bold ">Hello world!</h1>
-    </div>
+    <Routes>
+      <Route path="/" element={<Dashboard />} />
+      <Route path="login" element={<LoginPage />} />
+    </Routes>
   );
 }
 
