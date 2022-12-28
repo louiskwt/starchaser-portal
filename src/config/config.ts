@@ -1,3 +1,6 @@
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+
 export const config = {
   // firebase config
   firebaseConfig: {
@@ -10,3 +13,7 @@ export const config = {
     measurementId: import.meta.env.FIREBASE_MEASUREMENT_ID,
   },
 };
+
+const firebase = initializeApp(config.firebaseConfig);
+
+export const auth = getAuth(firebase);

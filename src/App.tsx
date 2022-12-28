@@ -1,17 +1,16 @@
-import { initializeApp } from "firebase/app";
 import { Route, Routes } from "react-router-dom";
-import { config } from "./config/config";
+import { AuthProvider } from "./context/AuthContext";
 import Dashboard from "./pages/Dashboard";
 import LoginPage from "./pages/LoginPage";
 
-initializeApp(config.firebaseConfig);
-
-function App() {
+function App(): JSX.Element {
   return (
-    <Routes>
-      <Route path="/" element={<Dashboard />} />
-      <Route path="login" element={<LoginPage />} />
-    </Routes>
+    <AuthProvider>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="login" element={<LoginPage />} />
+      </Routes>
+    </AuthProvider>
   );
 }
 
