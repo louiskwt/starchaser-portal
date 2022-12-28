@@ -1,8 +1,8 @@
-import { FaFacebook, FaGoogle } from "react-icons/fa";
+import { FaFacebookF, FaGoogle } from "react-icons/fa";
 
 const LoginPage = () => {
   return (
-    <section className="h-screen">
+    <section className="h-screen mb-4">
       <div className="container px-6 py-12 h-full">
         <div className="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">
           <div className="md:w-8/12 lg:w-6/12 mb-12 md:mb-0">
@@ -69,25 +69,23 @@ const LoginPage = () => {
               </div>
 
               <a
-                className="px-7 py-3 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-center items-center mb-3"
-                style={{ backgroundColor: "#3b5998" }}
+                className="px-7 py-3 text-white bg-blue-900 font-medium text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-center items-center mb-3"
                 href="#!"
                 role="button"
                 data-mdb-ripple="true"
                 data-mdb-ripple-color="light"
               >
-                <FaFacebook className="mr-3" />
+                <FaFacebookF className="mr-4" />
                 Continue with Facebook
               </a>
               <a
-                className="px-7 py-3 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-center items-center"
-                style={{ backgroundColor: "#E93241" }}
+                className="px-7 py-3 text-white bg-red-600 font-medium text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-center items-center mb-8"
                 href="#!"
                 role="button"
                 data-mdb-ripple="true"
                 data-mdb-ripple-color="light"
               >
-                <FaGoogle className="mr-4" />
+                <FaGoogle className="mr-5" />
                 Continue with Google
               </a>
             </form>
