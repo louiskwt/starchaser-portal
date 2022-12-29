@@ -1,13 +1,13 @@
 import { FaFacebookF, FaGoogle } from "react-icons/fa";
-import { ReactComponent as AuthImg } from "../assets/auth.svg";
+import auth from "../assets/auth.svg";
 
 const LoginPage = () => {
   return (
     <section className="h-screen mb-4">
       <div className="container px-6 py-12 h-full">
         <div className="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">
-          <div className="md:w-8/12 lg:w-6/12 mb-12 md:mb-0">
-            <AuthImg className="h-96" />
+          <div className="md:w-10/12 lg:w-6/12 mb-12 md:mb-0">
+            <img src={auth} className="h-96 w-2/3" />
           </div>
           <div className="md:w-8/12 lg:w-5/12 lg:ml-20">
             <h1 className="text-3xl text-gray-800 text-center font-semibold mb-8">
