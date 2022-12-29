@@ -3,11 +3,13 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
 const Dashboard = () => {
-  const { user } = useAuth();
+  const { user, setUser } = useAuth();
   const navigate = useNavigate();
   useEffect(() => {
     if (!user) {
       navigate("/login");
+    } else {
+      setUser(user);
     }
   }, []);
 

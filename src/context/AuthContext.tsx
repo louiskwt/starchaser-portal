@@ -35,6 +35,7 @@ export interface AuthContextState {
   signInWithEmail: (email: string, password: string) => Promise<UserCredential>;
   signUp: (email: string, password: string) => Promise<UserCredential>;
   logOut: () => Promise<void>;
+  setUser: (user: User | null) => void;
 }
 
 export const AuthContext = createContext<AuthContextState>(
@@ -67,7 +68,7 @@ export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
       setUser(user);
     });
     return unsubscribe;
-  }, []);
+  }, [user]);
 
   const values = {
     user,
@@ -75,6 +76,7 @@ export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
     signInWithEmail,
     logOut,
     auth,
+    setUser,
   };
 
   return <AuthContext.Provider value={values}>{children}</AuthContext.Provider>;
