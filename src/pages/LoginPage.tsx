@@ -73,7 +73,13 @@ const LoginPage = () => {
                 onClick={(e) => {
                   e.preventDefault();
                   try {
-                    signInWithEmail(email, password);
+                    signInWithEmail(email, password)
+                      .then(() => {
+                        navigate("/");
+                      })
+                      .catch((error) => {
+                        throw error;
+                      });
                   } catch (error) {
                     console.log(error);
                   }
