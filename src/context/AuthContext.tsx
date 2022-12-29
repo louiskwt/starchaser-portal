@@ -1,6 +1,7 @@
 import {
   Auth,
   createUserWithEmailAndPassword,
+  onAuthStateChanged,
   signInWithEmailAndPassword,
   signOut,
   User,
@@ -13,6 +14,7 @@ import {
   useEffect,
   useState,
 } from "react";
+import { useNavigate } from "react-router-dom";
 import { auth } from "../config/config";
 
 export interface AuthContextProps {
@@ -62,13 +64,18 @@ export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
   function logOut() {
     return signOut(auth);
   }
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged((user) => {
-      setUser(user);
+    const authCheck = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setUser(user);
+      } else {
+        navigate("/login");
+      }
     });
-    return unsubscribe;
-  }, [user]);
+    return () => authCheck();
+  }, [auth]);
 
   const values = {
     user,

@@ -74,7 +74,6 @@ const LoginPage = () => {
                   e.preventDefault();
                   try {
                     signInWithEmail(email, password);
-                    navigate("/");
                   } catch (error) {
                     console.log(error);
                   }
