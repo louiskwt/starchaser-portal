@@ -7,7 +7,7 @@ import { useAuth } from "../context/AuthContext";
 const SignUpPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { signInWithEmail } = useAuth();
+  const { signUp } = useAuth();
   const navigate = useNavigate();
 
   return (
@@ -49,17 +49,7 @@ const SignUpPage = () => {
                 data-mdb-ripple-color="light"
                 onClick={(e) => {
                   e.preventDefault();
-                  try {
-                    signInWithEmail(email, password)
-                      .then(() => {
-                        navigate("/");
-                      })
-                      .catch((error) => {
-                        throw error;
-                      });
-                  } catch (error) {
-                    console.log(error);
-                  }
+                  signUp(email, password);
                 }}
               >
                 Sign Up

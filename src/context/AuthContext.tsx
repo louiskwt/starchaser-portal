@@ -35,7 +35,7 @@ export interface AuthContextState {
   auth: Auth;
   user: User | null;
   signInWithEmail: (email: string, password: string) => Promise<UserCredential>;
-  signUp: (email: string, password: string) => Promise<UserCredential>;
+  signUp: (email: string, password: string) => void;
   logOut: () => Promise<void>;
   setUser: (user: User | null) => void;
 }
@@ -50,15 +50,26 @@ export function useAuth(): AuthContextState {
 
 export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
   const [user, setUser] = useState<User | null>(null);
-  function signUp(email: string, password: string): Promise<UserCredential> {
-    return createUserWithEmailAndPassword(auth, email, password);
+  function signUp(email: string, password: string): void {
+    createUserWithEmailAndPassword(auth, email, password)
+      .then(() => {
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error);
+        alert(error.message);
+      });
   }
 
   function signInWithEmail(
     email: string,
     password: string
   ): Promise<UserCredential> {
-    return signInWithEmailAndPassword(auth, email, password);
+    try {
+      return signInWithEmailAndPassword(auth, email, password);
+    } catch (error) {
+      throw error;
+    }
   }
 
   function logOut() {
