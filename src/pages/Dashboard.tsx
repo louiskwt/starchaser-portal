@@ -3,7 +3,6 @@ import { useAuth } from "../context/AuthContext";
 
 const Dashboard = () => {
   const { logOut, user } = useAuth();
-  console.log(user);
   return (
     <div className="container align-middle h-screen w-100 mx-auto text-center p-8">
       {!user ? (
