@@ -72,17 +72,7 @@ const LoginPage = () => {
                 data-mdb-ripple-color="light"
                 onClick={(e) => {
                   e.preventDefault();
-                  try {
-                    signInWithEmail(email, password)
-                      .then(() => {
-                        navigate("/");
-                      })
-                      .catch((error) => {
-                        throw error;
-                      });
-                  } catch (error) {
-                    console.log(error);
-                  }
+                  signInWithEmail(email, password);
                 }}
               >
                 Login

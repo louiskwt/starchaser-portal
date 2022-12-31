@@ -5,7 +5,6 @@ import {
   signInWithEmailAndPassword,
   signOut,
   User,
-  UserCredential,
 } from "firebase/auth";
 import {
   createContext,
@@ -34,7 +33,7 @@ export const UserStateContext = createContext<UserContextState>(
 export interface AuthContextState {
   auth: Auth;
   user: User | null;
-  signInWithEmail: (email: string, password: string) => Promise<UserCredential>;
+  signInWithEmail: (email: string, password: string) => void;
   signUp: (email: string, password: string) => void;
   logOut: () => Promise<void>;
   setUser: (user: User | null) => void;
@@ -61,15 +60,14 @@ export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
       });
   }
 
-  function signInWithEmail(
-    email: string,
-    password: string
-  ): Promise<UserCredential> {
-    try {
-      return signInWithEmailAndPassword(auth, email, password);
-    } catch (error) {
-      throw error;
-    }
+  function signInWithEmail(email: string, password: string): void {
+    signInWithEmailAndPassword(auth, email, password)
+      .then(() => {
+        navigate("/");
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
   }
 
   function logOut() {
