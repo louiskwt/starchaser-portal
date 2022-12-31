@@ -7,7 +7,7 @@ import { useAuth } from "../context/AuthContext";
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { signInWithEmail } = useAuth();
+  const { signInWithEmail, signInWithGoogle } = useAuth();
   const navigate = useNavigate();
 
   return (
@@ -94,6 +94,10 @@ const LoginPage = () => {
                 className="px-7 py-3 text-white bg-red-600 font-medium text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-center items-center mb-3"
                 data-mdb-ripple="true"
                 data-mdb-ripple-color="light"
+                onClick={(e) => {
+                  e.preventDefault();
+                  signInWithGoogle();
+                }}
               >
                 <FaGoogle className="mr-5" />
                 Continue with Google

@@ -1,8 +1,10 @@
 import {
   Auth,
   createUserWithEmailAndPassword,
+  GoogleAuthProvider,
   onAuthStateChanged,
   signInWithEmailAndPassword,
+  signInWithPopup,
   signOut,
   User,
 } from "firebase/auth";
@@ -34,6 +36,7 @@ export interface AuthContextState {
   auth: Auth;
   user: User | null;
   signInWithEmail: (email: string, password: string) => void;
+  signInWithGoogle: () => void;
   signUp: (email: string, password: string) => void;
   logOut: () => Promise<void>;
   setUser: (user: User | null) => void;
@@ -70,6 +73,18 @@ export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
       });
   }
 
+  function signInWithGoogle(): void {
+    const provider = new GoogleAuthProvider();
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        const user = result.user;
+        if (user) navigate("/");
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
+  }
+
   function logOut() {
     return signOut(auth);
   }
@@ -93,6 +108,7 @@ export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
     logOut,
     auth,
     setUser,
+    signInWithGoogle,
   };
 
   return <AuthContext.Provider value={values}>{children}</AuthContext.Provider>;
