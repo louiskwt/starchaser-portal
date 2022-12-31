@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import auth from "../assets/auth.svg";
 import { useAuth } from "../context/AuthContext";
 
-const LoginPage = () => {
+const SignUpPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { signInWithEmail } = useAuth();
@@ -19,7 +19,7 @@ const LoginPage = () => {
           </div>
           <div className="md:w-8/12 lg:w-5/12 lg:ml-20">
             <h1 className="text-3xl text-gray-800 text-center font-semibold mb-8">
-              Login
+              Sign Up
             </h1>
             <form>
               <div className="mb-6">
@@ -40,29 +40,6 @@ const LoginPage = () => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
-              </div>
-              <div className="flex justify-between items-center mb-6">
-                <div className="form-group form-check mr-4">
-                  <input
-                    id="rememberMe"
-                    type="checkbox"
-                    value=""
-                    className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                  ></input>
-
-                  <label
-                    className="form-check-label inline-block text-gray-800"
-                    htmlFor="rememberMe"
-                  >
-                    Remember me
-                  </label>
-                </div>
-                <a
-                  href="#!"
-                  className="text-blue-600 hover:text-blue-700 focus:text-blue-700 active:text-blue-800 duration-200 transition ease-in-out"
-                >
-                  Forgot password?
-                </a>
               </div>
 
               <button
@@ -85,9 +62,8 @@ const LoginPage = () => {
                   }
                 }}
               >
-                Login
+                Sign Up
               </button>
-
               <div className="flex items-center my-4 before:flex-1 before:border-t before:border-gray-300 before:mt-0.5 after:flex-1 after:border-t after:border-gray-300 after:mt-0.5">
                 <p className="text-center font-semibold mx-4 mb-0">OR</p>
               </div>
@@ -115,11 +91,11 @@ const LoginPage = () => {
                 data-mdb-ripple-color="light"
                 onClick={(e) => {
                   e.preventDefault();
-                  navigate("/signup");
+                  navigate("/login");
                 }}
               >
                 <FaSignInAlt className="mr-4" />
-                Continue to Sign Up
+                Go back to Log in
               </button>
             </form>
           </div>
@@ -129,4 +105,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default SignUpPage;
