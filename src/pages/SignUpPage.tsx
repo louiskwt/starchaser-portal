@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaFacebookF, FaGoogle, FaSignInAlt } from "react-icons/fa";
+import { FaArrowLeft, FaGoogle } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import auth from "../assets/auth.svg";
 import { useAuth } from "../context/AuthContext";
@@ -59,14 +59,6 @@ const SignUpPage = () => {
               </div>
 
               <button
-                className="px-7 py-3 text-white bg-blue-900 font-medium text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-center items-center mb-3"
-                data-mdb-ripple="true"
-                data-mdb-ripple-color="light"
-              >
-                <FaFacebookF className="mr-4" />
-                Continue with Facebook
-              </button>
-              <button
                 className="px-7 py-3 text-white bg-red-600 font-medium text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-center items-center mb-3"
                 data-mdb-ripple="true"
                 data-mdb-ripple-color="light"
@@ -84,7 +76,7 @@ const SignUpPage = () => {
                   navigate("/login");
                 }}
               >
-                <FaSignInAlt className="mr-4" />
+                <FaArrowLeft className="mr-8" />
                 Go back to Log in
               </button>
             </form>
