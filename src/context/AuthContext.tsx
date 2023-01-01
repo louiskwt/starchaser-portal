@@ -96,7 +96,8 @@ export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
     signInWithPopup(auth, provider)
       .then((result) => {
         const user = result.user;
-        if (user) navigate("/");
+        const username = user.displayName || "guest_student";
+        writeStudentData(user.uid, username, user?.email || "");
       })
       .catch((error) => {
         alert(error.message);
