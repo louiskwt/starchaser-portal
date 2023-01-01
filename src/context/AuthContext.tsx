@@ -86,6 +86,7 @@ export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
   }
 
   function logOut() {
+    setUser(null);
     return signOut(auth);
   }
   const navigate = useNavigate();
