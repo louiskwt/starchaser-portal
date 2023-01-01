@@ -7,6 +7,7 @@ import { useAuth } from "../context/AuthContext";
 const SignUpPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
   const { signUp } = useAuth();
   const navigate = useNavigate();
 
@@ -22,6 +23,16 @@ const SignUpPage = () => {
               Sign Up
             </h1>
             <form>
+              <div className="mb-6">
+                <input
+                  type="email"
+                  name="email"
+                  className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                  placeholder="User Name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                />
+              </div>
               <div className="mb-6">
                 <input
                   type="email"
@@ -49,7 +60,7 @@ const SignUpPage = () => {
                 data-mdb-ripple-color="light"
                 onClick={(e) => {
                   e.preventDefault();
-                  signUp(email, password);
+                  signUp(email, password, name);
                 }}
               >
                 Sign Up

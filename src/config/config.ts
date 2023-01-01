@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
-import { getDatabase } from "firebase/database";
+import { getFirestore } from "firebase/firestore";
 
 export const config = {
   // firebase config
@@ -12,10 +12,11 @@ export const config = {
     messagingSenderId: import.meta.env.VITE_FIREBASE_SENDER_ID,
     appId: import.meta.env.VITE_FIREBASE_APP_ID,
     measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
+    databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
   },
 };
 
 const firebase = initializeApp(config.firebaseConfig);
 
 export const auth = getAuth(firebase);
-export const db = getDatabase(firebase);
+export const db = getFirestore(firebase);

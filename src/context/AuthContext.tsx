@@ -8,6 +8,7 @@ import {
   signOut,
   User,
 } from "firebase/auth";
+import { addDoc, collection } from "firebase/firestore";
 import {
   createContext,
   ReactNode,
@@ -16,7 +17,7 @@ import {
   useState,
 } from "react";
 import { useNavigate } from "react-router-dom";
-import { auth } from "../config/config";
+import { auth, db } from "../config/config";
 
 export interface AuthContextProps {
   children?: ReactNode;
@@ -37,7 +38,7 @@ export interface AuthContextState {
   user: User | null;
   signInWithEmail: (email: string, password: string) => void;
   signInWithGoogle: () => void;
-  signUp: (email: string, password: string) => void;
+  signUp: (email: string, password: string, name: string) => void;
   logOut: () => Promise<void>;
   setUser: (user: User | null) => void;
 }
@@ -52,10 +53,27 @@ export function useAuth(): AuthContextState {
 
 export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
   const [user, setUser] = useState<User | null>(null);
-  function signUp(email: string, password: string): void {
-    createUserWithEmailAndPassword(auth, email, password)
-      .then(() => {
+
+  function writeStudentData(userId: string, name: string, email: string) {
+    addDoc(collection(db, "members"), {
+      userId: userId,
+      name: name,
+      email: email,
+    })
+      .then((res) => {
+        console.log(res);
         navigate("/");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+
+  function signUp(email: string, password: string, name: string): void {
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((res) => {
+        writeStudentData(res.user.uid, name, email);
+        // navigate("/");
       })
       .catch((error) => {
         console.log(error);
