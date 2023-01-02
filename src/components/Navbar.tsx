@@ -3,36 +3,51 @@ import { useState } from "react";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="bg-gray-50 border-gray-500 px-2 sm:px-4 py-2.5 w-100">
-      <div className="container flex flex-wrap items-center justify-between mx-auto">
-        <button
-          data-collapse-toggle="navbar-default"
-          type="button"
-          className="inline-flex items-center p-2 ml-3 text-sm text-gray-600 rounded-lg border-2  border-gray-300 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-600 dark:focus:ring-gray-600"
-          aria-controls="navbar-default"
-          aria-expanded="false"
+    <nav className="fixed top-0 z-40 flex w-full flex-row bg-gray-700 px-4 justify-between ">
+      <a href="/" className="flex items-center py-4 text-lg text-white">
+        <span className="self-center text-lg font-semibold whitespace-nowrap">
+          Louis's Class 2023
+        </span>
+      </a>
+
+      <button
+        data-collapse-toggle="navbar-default"
+        type="button"
+        className="py-4 text-2xl text-white hover:text-gray-200"
+        aria-controls="navbar-default"
+        aria-expanded="false"
+      >
+        <svg
+          id="navClosed"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          className="h-8 w-8"
         >
-          <span className="sr-only">Open main menu</span>
-          <svg
-            className="w-6 h-6"
-            aria-hidden="true"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-              clip-rule="evenodd"
-            ></path>
-          </svg>
-        </button>
-        <a href="/" className="flex items-center">
-          <span className="self-center text-xl font-semibold whitespace-nowrap">
-            Tutor Hero
-          </span>
-        </a>
-      </div>
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+        <svg
+          id="navOpen"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          className="hidden h-8 w-8"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
     </nav>
   );
 };

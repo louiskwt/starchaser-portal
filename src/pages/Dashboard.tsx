@@ -7,7 +7,7 @@ const Dashboard = () => {
   return (
     <>
       <Navbar />
-      <div className="container align-middle h-100 w-100 mx-auto text-center p-8">
+      <div className="container align-middle h-100 w-100 mx-auto text-center p-8 mt-12">
         {!user ? (
           <Loader />
         ) : (
