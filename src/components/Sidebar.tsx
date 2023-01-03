@@ -1,111 +1,62 @@
-import { useEffect, useRef } from "react";
-
 interface SidebarProps {
   isOpen: boolean;
   navHeight: number;
 }
 
-const Sidebar = ({ isOpen, navHeight }: SidebarProps) => {
-  const sideBar = useRef<HTMLMenuElement>(null);
-  useEffect(() => {
-    if (isOpen) {
-      sideBar?.current?.classList?.add("show");
-      sideBar.current.style.top = `${navHeight - 1}px`;
-    } else {
-      sideBar?.current?.classList?.remove("show");
-    }
-  }, [isOpen]);
+const Sidebar = () => {
   return (
-    <div id="containerSidebar" className="z-40">
-      <div className="navbar-menu relative z-40">
-        <nav
-          ref={sideBar}
-          id="sidebar"
-          className="fixed left-0 bottom-0 flex w-3/4 -translate-x-full flex-col overflow-y-auto bg-gray-700 pt-6 pb-8 sm:max-w-xs lg:w-80"
-        >
-          <div className="px-4 pb-6">
-            <h3 className="mb-2 text-xs font-medium uppercase text-gray-500">
-              Main
-            </h3>
-            <ul className="mb-8 text-sm font-medium">
-              <li>
-                <a
-                  className="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
-                  href="#homepage"
-                >
-                  <span className="select-none">Homepage</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  className="flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
-                  href="#link1"
-                >
-                  <span className="select-none">link1</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div className="px-4 pb-6">
-            <h3 className="mb-2 text-xs font-medium uppercase text-gray-500">
-              Legal
-            </h3>
-            <ul className="mb-8 text-sm font-medium">
-              <li>
-                <a
-                  className="flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
-                  href="#tc"
-                >
-                  <span className="select-none">Terms and Condition</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  className="flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
-                  href="#privacy"
-                >
-                  <span className="select-none">Privacy policy</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  className="flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
-                  href="#imprint"
-                >
-                  <span className="select-none">Imprint</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div className="px-4 pb-6">
-            <h3 className="mb-2 text-xs font-medium uppercase text-gray-500">
-              Others
-            </h3>
-            <ul className="mb-8 text-sm font-medium">
-              <li>
-                <a
-                  className="flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
-                  href="#ex1"
-                >
-                  <span className="select-none">...</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  className="flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
-                  href="#ex2"
-                >
-                  <span className="select-none">...</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+    <nav aria-label="alternative nav">
+      <div className="bg-gray-800 shadow-xl h-20 fixed bottom-0 mt-12 md:relative md:h-screen z-10 w-full md:w-48 content-center">
+        <div className="md:mt-12 md:w-48 md:fixed md:left-0 md:top-0 content-center md:content-start text-left justify-between">
+          <ul className="list-reset flex flex-row md:flex-col pt-3 md:py-3 px-1 md:px-2 text-center md:text-left">
+            <li className="mr-3 flex-1">
+              <a
+                href="#"
+                className="block py-1 md:py-3 pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-gray-800 hover:border-pink-500"
+              >
+                <i className="fas fa-tasks pr-0 md:pr-3"></i>
+                <span className="pb-1 md:pb-0 text-xs md:text-base text-gray-400 md:text-gray-200 block md:inline-block">
+                  Tasks
+                </span>
+              </a>
+            </li>
+            <li className="mr-3 flex-1">
+              <a
+                href="#"
+                className="block py-1 md:py-3 pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-gray-800 hover:border-purple-500"
+              >
+                <i className="fa fa-envelope pr-0 md:pr-3"></i>
+                <span className="pb-1 md:pb-0 text-xs md:text-base text-gray-400 md:text-gray-200 block md:inline-block">
+                  Messages
+                </span>
+              </a>
+            </li>
+            <li className="mr-3 flex-1">
+              <a
+                href="#"
+                className="block py-1 md:py-3 pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-blue-600"
+              >
+                <i className="fas fa-chart-area pr-0 md:pr-3 text-blue-600"></i>
+                <span className="pb-1 md:pb-0 text-xs md:text-base text-white md:text-white block md:inline-block">
+                  Analytics
+                </span>
+              </a>
+            </li>
+            <li className="mr-3 flex-1">
+              <a
+                href="#"
+                className="block py-1 md:py-3 pl-0 md:pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-gray-800 hover:border-red-500"
+              >
+                <i className="fa fa-wallet pr-0 md:pr-3"></i>
+                <span className="pb-1 md:pb-0 text-xs md:text-base text-gray-400 md:text-gray-200 block md:inline-block">
+                  Payments
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div className="mx-auto lg:ml-80"></div>
-    </div>
+    </nav>
   );
 };
 

@@ -1,5 +1,4 @@
 import { useRef, useState } from "react";
-import Sidebar from "./Sidebar";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,65 +9,73 @@ const Navbar = () => {
 
   return (
     <>
-      <nav
-        ref={navRef}
-        className="fixed top-0 z-40 flex w-full flex-row bg-gray-700 px-4 justify-between "
-      >
-        <a href="/" className="flex items-center py-4 text-lg text-white">
-          <span className="self-center text-lg font-semibold whitespace-nowrap">
-            Louis's Class 2023
-          </span>
-        </a>
-
-        <button
-          data-collapse-toggle="navbar-default"
-          type="button"
-          className="py-4 text-2xl text-white hover:text-gray-200"
-          aria-controls="navbar-default"
-          aria-expanded="false"
-          ref={sideBarToggler}
-          onClick={() => {
-            setIsOpen(!isOpen);
-            navClosed?.current?.classList.toggle("hidden");
-            navOpen?.current?.classList.toggle("hidden");
-            console.log(navRef?.current?.clientHeight);
-          }}
+      <header>
+        <nav
+          aria-label="menu nav"
+          className="bg-gray-800 pt-2 md:pt-1 pb-1 px-1 mt-0 h-auto fixed w-full z-20 top-0"
         >
-          <svg
-            id="navClosed"
-            ref={navClosed}
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            className="h-8 w-8"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-            />
-          </svg>
-          <svg
-            ref={navOpen}
-            id="navOpen"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            className="hidden h-8 w-8"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
-        </button>
-      </nav>
-      <Sidebar isOpen={isOpen} navHeight={navRef?.current?.clientHeight || 0} />
+          <div className="flex flex-wrap items-center justify-between">
+            <div className="flex flex-shrink md:w-1/3 justify-center md:justify-start text-white">
+              <a href="#" aria-label="Home">
+                <span className="text-xl pl-2">StarChaser</span>
+              </a>
+            </div>
+
+            <div className="flex w-full content-center justify-between md:w-1/3 md:justify-end">
+              <ul className="list-reset flex justify-end flex-1 md:flex-none items-center">
+                <li className="flex-1 md:flex-none md:mr-3">
+                  <div className="relative inline-block">
+                    <button className="drop-button text-white py-2 px-2">
+                      {" "}
+                      <span className="pr-2">
+                        <i className="em em-robot_face"></i>
+                      </span>{" "}
+                      Hi, User{" "}
+                      <svg
+                        className="h-3 fill-current inline"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                      </svg>
+                    </button>
+                    <div
+                      id="myDropdown"
+                      className="dropdownlist absolute bg-gray-800 text-white right-0 mt-3 p-3 overflow-auto z-30 invisible"
+                    >
+                      <input
+                        type="text"
+                        className="drop-search p-2 text-gray-600"
+                        placeholder="Search.."
+                        id="myInput"
+                      />
+                      <a
+                        href="#"
+                        className="p-2 hover:bg-gray-800 text-white text-sm no-underline hover:no-underline block"
+                      >
+                        <i className="fa fa-user fa-fw"></i> Profile
+                      </a>
+                      <a
+                        href="#"
+                        className="p-2 hover:bg-gray-800 text-white text-sm no-underline hover:no-underline block"
+                      >
+                        <i className="fa fa-cog fa-fw"></i> Settings
+                      </a>
+                      <div className="border border-gray-800"></div>
+                      <a
+                        href="#"
+                        className="p-2 hover:bg-gray-800 text-white text-sm no-underline hover:no-underline block"
+                      >
+                        <i className="fas fa-sign-out-alt fa-fw"></i> Log Out
+                      </a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
     </>
   );
 };
