@@ -18,7 +18,7 @@ const LoginPage = () => {
             <img src={auth} className="h-96 w-2/3" />
           </div>
           <div className="md:w-8/12 lg:w-5/12 lg:ml-20">
-            <h1 className="text-3xl text-gray-800 text-center font-semibold mb-8">
+            <h1 className="text-3xl text-white text-center font-semibold mb-8">
               Login
             </h1>
             <form>
@@ -35,7 +35,7 @@ const LoginPage = () => {
               <div className="mb-6">
                 <input
                   type="password"
-                  className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                  className="form-control block w-full px-4 py-2 text-xl font-normal text-white bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                   placeholder="Password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
@@ -47,11 +47,11 @@ const LoginPage = () => {
                     id="rememberMe"
                     type="checkbox"
                     value=""
-                    className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    className="w-4 h-4 text-white bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                   ></input>
 
                   <label
-                    className="form-check-label inline-block text-gray-800"
+                    className="form-check-label inline-block text-white"
                     htmlFor="rememberMe"
                   >
                     Remember me
@@ -59,7 +59,7 @@ const LoginPage = () => {
                 </div>
                 <a
                   href="#!"
-                  className="text-blue-600 hover:text-blue-700 focus:text-blue-700 active:text-blue-800 duration-200 transition ease-in-out"
+                  className="text-white hover:text-blue-300 focus:text-blue-700 active:text-blue-800 duration-200 transition ease-in-out"
                 >
                   Forgot password?
                 </a>
@@ -79,7 +79,9 @@ const LoginPage = () => {
               </button>
 
               <div className="flex items-center my-4 before:flex-1 before:border-t before:border-gray-300 before:mt-0.5 after:flex-1 after:border-t after:border-gray-300 after:mt-0.5">
-                <p className="text-center font-semibold mx-4 mb-0">OR</p>
+                <p className="text-center text-white font-semibold mx-4 mb-0">
+                  OR
+                </p>
               </div>
 
               <button
