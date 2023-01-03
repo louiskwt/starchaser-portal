@@ -8,29 +8,28 @@ const Dashboard = () => {
   return (
     <>
       <Navbar />
-      <div className="container align-middle h-100 w-100 mx-auto text-center p-8 mt-12">
-        {!user ? (
-          <Loader />
-        ) : (
-          <main>
-            <div className="flex flex-col md:flex-row">
-              <Sidebar />
-              <section className="">
-                <h1 className="text-3xl font-bold ">Hello world!</h1>
-                <button
-                  type="button"
-                  className="mt-4 text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                  onClick={() => {
-                    logOut();
-                  }}
-                >
-                  Logout
-                </button>
-              </section>
-            </div>
-          </main>
-        )}
-      </div>
+
+      {!user ? (
+        <Loader />
+      ) : (
+        <main>
+          <div className="flex flex-col md:flex-row">
+            <Sidebar />
+            <section className="">
+              <h1 className="text-3xl font-bold ">Hello world!</h1>
+              <button
+                type="button"
+                className="mt-4 text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                onClick={() => {
+                  logOut();
+                }}
+              >
+                Logout
+              </button>
+            </section>
+          </div>
+        </main>
+      )}
     </>
   );
 };
