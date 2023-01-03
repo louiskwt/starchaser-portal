@@ -8,7 +8,7 @@ const SignUpPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
-  const { signUp } = useAuth();
+  const { signUp, signInWithGoogle } = useAuth();
   const navigate = useNavigate();
 
   return (
@@ -19,7 +19,7 @@ const SignUpPage = () => {
             <img src={auth} className="h-96 w-2/3" />
           </div>
           <div className="md:w-8/12 lg:w-5/12 lg:ml-20">
-            <h1 className="text-3xl text-gray-800 text-center font-semibold mb-8">
+            <h1 className="text-3xl text-white text-center font-semibold mb-8">
               Sign Up
             </h1>
             <form>
@@ -66,13 +66,19 @@ const SignUpPage = () => {
                 Sign Up
               </button>
               <div className="flex items-center my-4 before:flex-1 before:border-t before:border-gray-300 before:mt-0.5 after:flex-1 after:border-t after:border-gray-300 after:mt-0.5">
-                <p className="text-center font-semibold mx-4 mb-0">OR</p>
+                <p className="text-center text-white font-semibold mx-4 mb-0">
+                  OR
+                </p>
               </div>
 
               <button
                 className="px-7 py-3 text-white bg-red-600 font-medium text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-center items-center mb-3"
                 data-mdb-ripple="true"
                 data-mdb-ripple-color="light"
+                onClick={(e) => {
+                  e.preventDefault();
+                  signInWithGoogle();
+                }}
               >
                 <FaGoogle className="mr-5" />
                 Continue with Google
