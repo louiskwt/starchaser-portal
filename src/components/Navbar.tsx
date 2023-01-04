@@ -1,12 +1,4 @@
-import { useRef, useState } from "react";
-
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const sideBarToggler = useRef<HTMLButtonElement>(null);
-  const navClosed = useRef<SVGSVGElement>(null);
-  const navOpen = useRef<SVGSVGElement>(null);
-  const navRef = useRef<HTMLMenuElement>(null);
-
   return (
     <>
       <header>

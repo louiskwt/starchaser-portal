@@ -1,8 +1,3 @@
-interface SidebarProps {
-  isOpen: boolean;
-  navHeight: number;
-}
-
 const Sidebar = () => {
   return (
     <nav aria-label="alternative nav">
