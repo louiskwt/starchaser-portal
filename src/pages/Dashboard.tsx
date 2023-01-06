@@ -3,6 +3,7 @@ import MetricCard from "../components/MetricCard";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import { useAuth } from "../context/AuthContext";
+import { cardStyles, iconStyles, textStyles } from "../styles/tailwindClasses";
 
 const Dashboard = () => {
   const { logOut, user } = useAuth();
@@ -28,9 +29,19 @@ const Dashboard = () => {
                 </div>
                 <div className="flex flex-wrap">
                   <MetricCard
+                    title="Weekly Target"
+                    data="1 / 2 Completed"
+                    cardStyle={cardStyles.green}
+                    textStyle={textStyles.dark}
+                    iconStyle={iconStyles.green}
+                    icon="calendar"
+                  />
+                  <MetricCard
                     title="Days to DSE"
                     data="106 days"
-                    color="red"
+                    cardStyle={cardStyles.blue}
+                    textStyle={textStyles.dark}
+                    iconStyle={iconStyles.blue}
                     icon="calendar"
                   />
                 </div>
