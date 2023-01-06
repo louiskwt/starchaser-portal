@@ -8,7 +8,7 @@ import {
   signOut,
   User,
 } from "firebase/auth";
-import { addDoc, collection } from "firebase/firestore";
+import { doc, getDoc, setDoc } from "firebase/firestore";
 import {
   createContext,
   ReactNode,
@@ -54,19 +54,25 @@ export function useAuth(): AuthContextState {
 export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
   const [user, setUser] = useState<User | null>(null);
 
-  function writeStudentData(userId: string, name: string, email: string) {
-    addDoc(collection(db, "members"), {
-      userId: userId,
-      name: name,
-      email: email,
-    })
-      .then((res) => {
-        console.log(res);
-        navigate("/");
+  async function writeStudentData(userId: string, name: string, email: string) {
+    const docRef = doc(db, "members", userId);
+    const docSnap = await getDoc(docRef);
+    if (!docSnap.exists()) {
+      setDoc(docRef, {
+        userId: userId,
+        name: name,
+        email: email,
       })
-      .catch((error) => {
-        console.log(error);
-      });
+        .then((res) => {
+          console.log(res);
+          navigate("/");
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    } else {
+      navigate("/");
+    }
   }
 
   function signUp(email: string, password: string, name: string): void {
