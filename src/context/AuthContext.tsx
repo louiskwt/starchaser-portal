@@ -58,20 +58,11 @@ export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
     const docRef = doc(db, "members", userId);
     const docSnap = await getDoc(docRef);
     if (!docSnap.exists()) {
-      setDoc(docRef, {
+      await setDoc(docRef, {
         userId: userId,
         name: name,
         email: email,
-      })
-        .then((res) => {
-          console.log(res);
-          navigate("/");
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    } else {
-      navigate("/");
+      });
     }
   }
 
@@ -104,6 +95,7 @@ export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
         const user = result.user;
         const username = user.displayName || "guest_student";
         writeStudentData(user.uid, username, user?.email || "");
+        navigate("/");
       })
       .catch((error) => {
         alert(error.message);
