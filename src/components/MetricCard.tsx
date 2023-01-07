@@ -38,8 +38,3 @@ const MetricCard = ({
 };
 
 export default MetricCard;
-
-// red: "bg-red-500 bg-gradient-to-b from-red-200 to-red-100",
-// blue: "bg-blue-500 bg-gradient-to-b from-blue-200 to-blue-100",
-// yellow: "bg-yellow-500 bg-gradient-to-b from-yellow-200 to-yellow-100",
-// pink: "bg-pink-500 bg-pink-to-b from-pink-200 to-pink-100",
