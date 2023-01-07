@@ -31,8 +31,8 @@ const Dashboard = () => {
                   </div>
                   <div className="flex flex-wrap">
                     <MetricCard
-                      title="Weekly Target"
-                      data="1 / 2 Completed"
+                      title="Next Lesson"
+                      data="01-08-23"
                       cardStyle={cardStyles.green}
                       textStyle={textStyles.dark}
                       iconStyle={iconStyles.green}
@@ -44,7 +44,23 @@ const Dashboard = () => {
                       cardStyle={cardStyles.blue}
                       textStyle={textStyles.dark}
                       iconStyle={iconStyles.blue}
-                      icon="calendar"
+                      icon="clock"
+                    />
+                    <MetricCard
+                      title="Weekly Progress"
+                      data="30%"
+                      cardStyle={cardStyles.red}
+                      textStyle={textStyles.dark}
+                      iconStyle={iconStyles.red}
+                      icon="tasks"
+                    />
+                    <MetricCard
+                      title="Points"
+                      data="100"
+                      cardStyle={cardStyles.purple}
+                      textStyle={textStyles.dark}
+                      iconStyle={iconStyles.purple}
+                      icon="star"
                     />
                   </div>
                   <button

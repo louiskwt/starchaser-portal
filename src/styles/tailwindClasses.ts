@@ -19,7 +19,7 @@ export const cardStyles: TailwindVariants = {
     "bg-gradient-to-b from-yellow-200 to-yellow-100 border-b-4 border-yellow-600",
   pink: "bg-pink-500 bg-pink-to-b from-pink-200 to-pink-100 border-b-4 border-pink-600",
   purple:
-    "bg-purple-to-b from-purple-200 to-purple-100 border-b-4 border-purple-600",
+    "bg-gradient-to-b from-purple-200 to-purple-100 border-b-4 border-purple-600",
   green:
     "bg-gradient-to-b from-green-200 to-green-100 border-b-4 border-green-600",
 };

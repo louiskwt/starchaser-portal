@@ -26,7 +26,7 @@ const MetricCard = ({
           </div>
           <div className="flex-1 text-right md:text-center">
             <h2 className={`font-bold uppercase ${textStyle}`}>{title}</h2>
-            <p className="font-bold text-3xl">
+            <p className="font-bold text-2xl">
               {data}
               <span className={textStyle}></span>
             </p>
