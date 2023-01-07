@@ -1,4 +1,9 @@
+import { useContext } from "react";
+import { AuthContext } from "../context/AuthContext";
+
 const Navbar = () => {
+  const { userInfo } = useContext(AuthContext);
+
   return (
     <>
       <header>
@@ -22,7 +27,7 @@ const Navbar = () => {
                       <span className="pr-2">
                         <i className="em em-robot_face"></i>
                       </span>{" "}
-                      Hi, User{" "}
+                      Hi, {userInfo?.name}
                       <svg
                         className="h-3 fill-current inline"
                         xmlns="http://www.w3.org/2000/svg"
