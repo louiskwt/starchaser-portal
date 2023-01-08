@@ -6,7 +6,7 @@ import { useAuth } from "../context/AuthContext";
 import { cardStyles, iconStyles, textStyles } from "../styles/tailwindClasses";
 
 const Dashboard = () => {
-  const { logOut, user } = useAuth();
+  const { user } = useAuth();
   return (
     <>
       <Navbar />
