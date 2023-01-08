@@ -32,7 +32,7 @@ const Navbar = () => {
                     >
                       {" "}
                       <span className="pr-2">
-                        <i className="em em-robot_face"></i>
+                        <i className="fa fa-star"></i>
                       </span>{" "}
                       Hi, {userInfo?.name}
                       <svg
