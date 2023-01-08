@@ -1,8 +1,12 @@
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import { AuthContext } from "../context/AuthContext";
 
 const Navbar = () => {
-  const { userInfo } = useContext(AuthContext);
+  const { userInfo, logOut } = useContext(AuthContext);
+  const dropDownRef = useRef<HTMLDivElement>(null);
+  const toggleDropDown = () => {
+    dropDownRef.current?.classList?.toggle("invisible");
+  };
 
   return (
     <>
@@ -22,7 +26,10 @@ const Navbar = () => {
               <ul className="list-reset flex justify-end flex-1 md:flex-none items-center">
                 <li className="flex-1 md:flex-none md:mr-3">
                   <div className="relative inline-block">
-                    <button className="drop-button text-white py-2 px-2">
+                    <button
+                      className="drop-button text-white py-2 px-2"
+                      onClick={toggleDropDown}
+                    >
                       {" "}
                       <span className="pr-2">
                         <i className="em em-robot_face"></i>
@@ -38,30 +45,14 @@ const Navbar = () => {
                     </button>
                     <div
                       id="myDropdown"
-                      className="dropdownlist absolute bg-gray-800 text-white right-0 mt-3 p-3 overflow-auto z-30 invisible"
+                      ref={dropDownRef}
+                      className="dropdownlist absolute bg-gray-800 text-white md:right-0 p-3 w-36 overflow-auto z-30 invisible"
                     >
-                      <input
-                        type="text"
-                        className="drop-search p-2 text-gray-600"
-                        placeholder="Search.."
-                        id="myInput"
-                      />
+                      <div className="border border-gray-100"></div>
                       <a
                         href="#"
                         className="p-2 hover:bg-gray-800 text-white text-sm no-underline hover:no-underline block"
-                      >
-                        <i className="fa fa-user fa-fw"></i> Profile
-                      </a>
-                      <a
-                        href="#"
-                        className="p-2 hover:bg-gray-800 text-white text-sm no-underline hover:no-underline block"
-                      >
-                        <i className="fa fa-cog fa-fw"></i> Settings
-                      </a>
-                      <div className="border border-gray-800"></div>
-                      <a
-                        href="#"
-                        className="p-2 hover:bg-gray-800 text-white text-sm no-underline hover:no-underline block"
+                        onClick={logOut}
                       >
                         <i className="fas fa-sign-out-alt fa-fw"></i> Log Out
                       </a>
