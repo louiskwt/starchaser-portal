@@ -1,4 +1,5 @@
 import { cardStyles, iconStyles, textStyles } from "../styles/tailwindClasses";
+import InfoCard from "./InfoCard";
 import MetricCard from "./MetricCard";
 
 const Home = () => {
@@ -6,7 +7,7 @@ const Home = () => {
     <section className="w-full">
       <div
         id="main"
-        className="main-content w-full h-screen flex-1 bg-gray-100 mt-12 md:mt-2 pb-24 md:pb-5"
+        className="main-content w-full h-full flex-1 bg-gray-100 mt-12 md:mt-2 pb-24 md:pb-5"
       >
         <div className="bg-gray-800 pt-3">
           <div className="rounded-tl-3xl bg-gradient-to-r from-blue-900 to-gray-800 p-4 shadow text-2xl text-white">
@@ -46,6 +47,9 @@ const Home = () => {
             iconStyle={iconStyles.purple}
             icon="star"
           />
+        </div>
+        <div className="flex flex-row flex-wrap flex-grow mt-2">
+          <InfoCard title={"Quote"} data={"To dare is to dream"} />
         </div>
       </div>
     </section>
