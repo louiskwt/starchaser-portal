@@ -17,6 +17,7 @@ import {
   useState,
 } from "react";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import { auth, db } from "../config/config";
 
 export interface AuthContextProps {
@@ -43,7 +44,12 @@ export interface AuthContextState {
   user: User | null;
   signInWithEmail: (email: string, password: string) => void;
   signInWithGoogle: () => void;
-  signUp: (email: string, password: string, name: string) => void;
+  signUp: (
+    email: string,
+    password: string,
+    name: string,
+    invitationCode: string
+  ) => void;
   logOut: () => Promise<void>;
   setUser: (user: User | null) => void;
   userInfo: UserInfo | null;
@@ -85,19 +91,38 @@ export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
     }
   }
 
-  function signUp(email: string, password: string, name: string): void {
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((res) => {
-        writeStudentData(res.user.uid, name, email);
-        setUserInfo({
-          name: name,
-          role: "student",
-        });
-        navigate("/");
+  function signUp(
+    email: string,
+    password: string,
+    name: string,
+    invitationCode: string
+  ): void {
+    const docRef = doc(db, "admin", "registration");
+    getDoc(docRef)
+      .then((docSnap) => {
+        if (
+          docSnap.exists() &&
+          docSnap.data()?.invitationCode === invitationCode
+        ) {
+          createUserWithEmailAndPassword(auth, email, password)
+            .then((res) => {
+              writeStudentData(res.user.uid, name, email);
+              setUserInfo({
+                name: name,
+                role: "student",
+              });
+              navigate("/");
+            })
+            .catch((error) => {
+              console.log(error);
+              toast.error(error.message);
+            });
+        } else {
+          toast.error("Invitation code is not correct 😢");
+        }
       })
       .catch((error) => {
         console.log(error);
-        alert(error.message);
       });
   }
 

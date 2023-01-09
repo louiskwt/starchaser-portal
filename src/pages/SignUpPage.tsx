@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaArrowLeft, FaGoogle } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import auth from "../assets/auth.svg";
 import { useAuth } from "../context/AuthContext";
@@ -8,7 +8,8 @@ const SignUpPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
-  const { signUp, signInWithGoogle } = useAuth();
+  const [invitationCode, setInvitationCode] = useState("");
+  const { signUp } = useAuth();
   const navigate = useNavigate();
 
   return (
@@ -52,6 +53,21 @@ const SignUpPage = () => {
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
+              <div className="mb-6">
+                <input
+                  type="text"
+                  className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                  placeholder="Invitation Code"
+                  value={invitationCode}
+                  onChange={(e) => setInvitationCode(e.target.value)}
+                />
+              </div>
+              <div className="mb-6">
+                <p className="text-white text-sm">
+                  👆🏼 This program is only open to invited studetns at the
+                  moemnt, to get invited, please try to contact Louis
+                </p>
+              </div>
 
               <button
                 type="submit"
@@ -60,32 +76,15 @@ const SignUpPage = () => {
                 data-mdb-ripple-color="light"
                 onClick={(e) => {
                   e.preventDefault();
-                  signUp(email, password, name);
+                  signUp(email, password, name, invitationCode);
                 }}
               >
                 Sign Up
               </button>
-              <div className="flex items-center my-4 before:flex-1 before:border-t before:border-gray-300 before:mt-0.5 after:flex-1 after:border-t after:border-gray-300 after:mt-0.5">
-                <p className="text-center text-white font-semibold mx-4 mb-0">
-                  OR
-                </p>
-              </div>
 
               <button
-                className="px-7 py-3 text-white bg-red-600 font-medium text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-center items-center mb-3"
-                data-mdb-ripple="true"
-                data-mdb-ripple-color="light"
-                onClick={(e) => {
-                  e.preventDefault();
-                  signInWithGoogle();
-                }}
-              >
-                <FaGoogle className="mr-5" />
-                Continue with Google
-              </button>
-              <button
                 type="submit"
-                className="px-7 py-3 text-white bg-gray-600 font-medium text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-center items-center mb-3"
+                className="px-7 py-3 text-white bg-gray-600 font-medium text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-center items-center mb-3 mt-3"
                 data-mdb-ripple="true"
                 data-mdb-ripple-color="light"
                 onClick={(e) => {
