@@ -48,10 +48,17 @@ export interface AuthContextState {
     email: string,
     password: string,
     name: string,
-    invitationCode: string
+    invitationCode: string,
+    dseYear: number
   ) => void;
   logOut: () => Promise<void>;
   setUser: (user: User | null) => void;
+  setStudentProfile: (
+    userId: string,
+    name: string,
+    email: string,
+    dseYear: number
+  ) => void;
   userInfo: UserInfo | null;
 }
 
@@ -67,7 +74,28 @@ export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
   const [user, setUser] = useState<User | null>(null);
   const [userInfo, setUserInfo] = useState<UserInfo | null>(null);
 
-  async function getUserInfo(userId: string) {
+  async function verifyOAuthUser(userId: string, email: string) {
+    const docRef = doc(db, "members", userId);
+    const docSnap = await getDoc(docRef);
+    if (docSnap.exists()) {
+      setUserInfo({
+        name: docSnap.data().name,
+        role: docSnap.data().role,
+      });
+      navigate("/");
+    } else {
+      navigate("/set-profile", {
+        replace: true,
+        state: {
+          from: "login",
+          userId: userId,
+          email: email,
+        },
+      });
+    }
+  }
+
+  async function checkUser(userId: string) {
     const docRef = doc(db, "members", userId);
     const docSnap = await getDoc(docRef);
     if (docSnap.exists()) {
@@ -78,16 +106,50 @@ export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
     }
   }
 
-  async function writeStudentData(userId: string, name: string, email: string) {
+  async function writeStudentData(
+    userId: string,
+    name: string,
+    email: string,
+    dseYear: number
+  ) {
     const docRef = doc(db, "members", userId);
     const docSnap = await getDoc(docRef);
     if (!docSnap.exists()) {
-      await setDoc(docRef, {
-        userId: userId,
+      const thisYear = new Date().getFullYear();
+      try {
+        await setDoc(docRef, {
+          userId: userId,
+          name: name,
+          email: email,
+          role: "student",
+          isDSER: thisYear === dseYear,
+          points: 0,
+          isActivated: true,
+          lessonDate: new Date(),
+          nextDse: dseYear,
+        });
+      } catch (error) {
+        throw new Error("Something went wrong");
+      }
+    }
+  }
+
+  async function setStudentProfile(
+    userId: string,
+    name: string,
+    email: string,
+    dseYear: number
+  ) {
+    try {
+      writeStudentData(userId, name, email, dseYear);
+      setUserInfo({
         name: name,
-        email: email,
         role: "student",
       });
+      navigate("/");
+    } catch (error) {
+      navigate("/login");
+      toast.error("Something went wrong; please try again later 😢");
     }
   }
 
@@ -95,7 +157,8 @@ export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
     email: string,
     password: string,
     name: string,
-    invitationCode: string
+    invitationCode: string,
+    dseYear: number
   ): void {
     const docRef = doc(db, "admin", "registration");
     getDoc(docRef)
@@ -106,7 +169,7 @@ export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
         ) {
           createUserWithEmailAndPassword(auth, email, password)
             .then((res) => {
-              writeStudentData(res.user.uid, name, email);
+              writeStudentData(res.user.uid, name, email, dseYear);
               setUserInfo({
                 name: name,
                 role: "student",
@@ -129,7 +192,7 @@ export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
   function signInWithEmail(email: string, password: string): void {
     signInWithEmailAndPassword(auth, email, password)
       .then((res) => {
-        getUserInfo(res.user.uid);
+        checkUser(res.user.uid);
         navigate("/");
       })
       .catch((error) => {
@@ -142,10 +205,7 @@ export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
     signInWithPopup(auth, provider)
       .then((result) => {
         const user = result.user;
-        const username = user.displayName || "guest_student";
-        writeStudentData(user.uid, username, user?.email || "");
-        getUserInfo(user.uid);
-        navigate("/");
+        verifyOAuthUser(user.uid, user?.email || "");
       })
       .catch((error) => {
         alert(error.message);
@@ -163,7 +223,7 @@ export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
     const authCheck = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
-        getUserInfo(user.uid);
+        checkUser(user.uid);
       } else {
         navigate("/login");
       }
@@ -180,6 +240,7 @@ export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
     setUser,
     signInWithGoogle,
     userInfo,
+    setStudentProfile,
   };
 
   return <AuthContext.Provider value={values}>{children}</AuthContext.Provider>;

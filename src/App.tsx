@@ -4,6 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { AuthProvider } from "./context/AuthContext";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
+import ProfileSetUpPage from "./pages/ProfileSetUpPage";
 import SignUpPage from "./pages/SignUpPage";
 
 function App(): JSX.Element {
@@ -13,6 +14,7 @@ function App(): JSX.Element {
         <Route path="/" element={<HomePage />} />
         <Route path="login" element={<LoginPage />} />
         <Route path="signup" element={<SignUpPage />} />
+        <Route path="set-profile" element={<ProfileSetUpPage />} />
       </Routes>
       <ToastContainer />
     </AuthProvider>
