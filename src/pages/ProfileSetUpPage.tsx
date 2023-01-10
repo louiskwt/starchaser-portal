@@ -7,9 +7,10 @@ const ProfileSetUpPage = () => {
   const [name, setName] = useState("");
   const [invitationCode, setInvitationCode] = useState("");
   const [dseYear, setDseYear] = useState("");
-  const { signUp } = useAuth();
+  const { setStudentProfile } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
+  const { userId, email } = location.state;
 
   console.log(location);
 
@@ -73,7 +74,13 @@ const ProfileSetUpPage = () => {
                 data-mdb-ripple-color="light"
                 onClick={(e) => {
                   e.preventDefault();
-                  // signUp(email, password, name, invitationCode);
+                  setStudentProfile(
+                    userId,
+                    name,
+                    email,
+                    parseInt(dseYear),
+                    invitationCode
+                  );
                 }}
               >
                 Submit

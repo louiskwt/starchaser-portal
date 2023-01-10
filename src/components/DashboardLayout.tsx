@@ -9,13 +9,13 @@ interface DashboardLayoutProps {
 }
 
 const DashboardLayout = ({ children }: DashboardLayoutProps) => {
-  const { user } = useAuth();
+  const { user, userInfo } = useAuth();
   return (
     <>
       <Navbar />
       <main>
         <div className="flex flex-col md:flex-row">
-          {!user ? (
+          {!user || !userInfo?.activated ? (
             <div className="flex flex-col mt-80 mx-auto">
               <Loader />
             </div>

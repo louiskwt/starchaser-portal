@@ -32,7 +32,8 @@ export interface UserContextState {
 
 export interface UserInfo {
   name: string;
-  role: "student" | "teacher";
+  role: "student" | "teacher" | "guest";
+  activated: boolean;
 }
 
 export const UserStateContext = createContext<UserContextState>(
@@ -57,7 +58,8 @@ export interface AuthContextState {
     userId: string,
     name: string,
     email: string,
-    dseYear: number
+    dseYear: number,
+    invitationCode: string
   ) => void;
   userInfo: UserInfo | null;
 }
@@ -81,9 +83,15 @@ export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
       setUserInfo({
         name: docSnap.data().name,
         role: docSnap.data().role,
+        activated: docSnap.data().isActivated,
       });
       navigate("/");
     } else {
+      setUserInfo({
+        name: "",
+        role: "guest",
+        activated: false,
+      });
       navigate("/set-profile", {
         replace: true,
         state: {
@@ -95,13 +103,23 @@ export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
     }
   }
 
-  async function checkUser(userId: string) {
+  async function checkUser(userId: string, email: string) {
     const docRef = doc(db, "members", userId);
     const docSnap = await getDoc(docRef);
     if (docSnap.exists()) {
       setUserInfo({
         name: docSnap.data().name,
         role: docSnap.data().role,
+        activated: docSnap.data().isActivated,
+      });
+      navigate("/");
+    } else {
+      navigate("/set-profile", {
+        state: {
+          from: "login",
+          userId: userId,
+          email: email,
+        },
       });
     }
   }
@@ -138,15 +156,24 @@ export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
     userId: string,
     name: string,
     email: string,
-    dseYear: number
+    dseYear: number,
+    invitationCode: string
   ) {
+    const docRef = doc(db, "admin", "registration");
+
     try {
-      writeStudentData(userId, name, email, dseYear);
-      setUserInfo({
-        name: name,
-        role: "student",
-      });
-      navigate("/");
+      const doc = await getDoc(docRef);
+      if (doc.exists() && doc.data()?.invitationCode === invitationCode) {
+        await writeStudentData(userId, name, email, dseYear);
+        setUserInfo({
+          name: name,
+          role: "student",
+          activated: true,
+        });
+        navigate("/");
+      } else {
+        toast.error("Invalid Invitation Code");
+      }
     } catch (error) {
       navigate("/login");
       toast.error("Something went wrong; please try again later 😢");
@@ -169,12 +196,19 @@ export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
         ) {
           createUserWithEmailAndPassword(auth, email, password)
             .then((res) => {
-              writeStudentData(res.user.uid, name, email, dseYear);
-              setUserInfo({
-                name: name,
-                role: "student",
-              });
-              navigate("/");
+              writeStudentData(res.user.uid, name, email, dseYear)
+                .then(() => {
+                  setUserInfo({
+                    name: name,
+                    role: "student",
+                    activated: true,
+                  });
+                  navigate("/");
+                })
+                .catch((error) => {
+                  console.log(error);
+                  toast.error(error.message);
+                });
             })
             .catch((error) => {
               console.log(error);
@@ -192,8 +226,7 @@ export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
   function signInWithEmail(email: string, password: string): void {
     signInWithEmailAndPassword(auth, email, password)
       .then((res) => {
-        checkUser(res.user.uid);
-        navigate("/");
+        checkUser(res.user.uid, res.user.email || "");
       })
       .catch((error) => {
         alert(error.message);
@@ -206,6 +239,7 @@ export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
       .then((result) => {
         const user = result.user;
         verifyOAuthUser(user.uid, user?.email || "");
+        setUser(user);
       })
       .catch((error) => {
         alert(error.message);
@@ -222,8 +256,8 @@ export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
   useEffect(() => {
     const authCheck = onAuthStateChanged(auth, (user) => {
       if (user) {
+        checkUser(user.uid, user.email || "");
         setUser(user);
-        checkUser(user.uid);
       } else {
         navigate("/login");
       }
