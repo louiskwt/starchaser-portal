@@ -229,7 +229,8 @@ export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
         checkUser(res.user.uid, res.user.email || "");
       })
       .catch((error) => {
-        alert(error.message);
+        toast.error("Invalid Password or Email");
+        console.log(error.message);
       });
   }
 
@@ -242,7 +243,8 @@ export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
         setUser(user);
       })
       .catch((error) => {
-        alert(error.message);
+        toast.error("Login failed 😢");
+        console.log(error.message);
       });
   }
 
