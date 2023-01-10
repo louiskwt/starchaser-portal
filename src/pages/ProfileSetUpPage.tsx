@@ -61,11 +61,8 @@ const ProfileSetUpPage = () => {
                   onChange={(e) => setInvitationCode(e.target.value)}
                 />
               </div>
-              <div className="mb-6">
-                <p className="text-white text-sm">
-                  👆🏼 This program is only open to invited studetns at the
-                  moemnt, to get invited, please try to contact Louis
-                </p>
+              <div className="flex justify-between items-center mb-6">
+                <div className="text-white">* 目前只有邀請碼才能註冊</div>
               </div>
               <button
                 type="submit"
