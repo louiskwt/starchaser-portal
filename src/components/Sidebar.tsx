@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const sideBarLinkData = [
   {
@@ -32,12 +32,13 @@ const generateSidebarButton = (
   icon: string,
   path: string,
   color: string,
-  currentPath: string
+  currentPath: string,
+  navigate: (path: string) => void
 ) => {
   return (
-    <li className="mr-3 flex-1">
+    <li className="mr-3 flex-1 cursor-pointer">
       <a
-        href={path}
+        onClick={() => navigate(path)}
         className={
           currentPath === path
             ? `sidebarLink sidebar-${color} sidebarActive-${color}`
@@ -53,6 +54,7 @@ const generateSidebarButton = (
 
 const Sidebar = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   return (
     <nav aria-label="alternative nav">
       <div className="bg-gray-800 shadow-xl h-20 fixed bottom-0 mt-12 md:relative md:h-screen z-10 w-full md:w-48 content-center">
@@ -64,7 +66,8 @@ const Sidebar = () => {
                 link.icon,
                 link.path,
                 link.color,
-                location.pathname
+                location.pathname,
+                navigate
               );
             })}
           </ul>

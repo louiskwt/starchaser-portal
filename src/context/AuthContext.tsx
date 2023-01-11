@@ -112,7 +112,6 @@ export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
         role: docSnap.data().role,
         activated: docSnap.data().isActivated,
       });
-      navigate("/");
     } else {
       navigate("/set-profile", {
         state: {
