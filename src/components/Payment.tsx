@@ -18,7 +18,7 @@ const Payment = () => {
           <h1 className="mb-2 text-xl font-semibold text-gray-900 ">
             學費繳付方式:
           </h1>
-          <ol className="max-w-md space-y-1 text-gray-800 list-decimal list-inside">
+          <ol className="max-w-md space-y-1 mb-6 text-gray-800 list-decimal list-inside">
             <li className="mt-12 w-100 mb-12">
               Pay Me
               <div className="flex justify-center align-middle mt-4 ml-32 rounded border border-red-300">
@@ -31,10 +31,14 @@ const Payment = () => {
                 <img src={alipay} alt="payMe QR code" />
               </div>
             </li>
-            <li className="mt-12 w-100">
-              FPS
-              <div className="flex mt-4 ml-32 rounded border border-green-300 p-12">
+            <br />
+            <li className="mt-24 w-100 mb-4">
+              FPS / Bank Transfer
+              <div className="flex flex-col mt-4 ml-32 rounded border bg-gray-100 border-green-300 p-3">
                 <p className="font-bold w-100">FPS: +852 6352 0220</p>
+                <p className="font-bold w-100 mt-2">
+                  Bank Transfer: 394-470108-882
+                </p>
               </div>
             </li>
           </ol>
