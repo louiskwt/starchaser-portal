@@ -14,9 +14,9 @@ const sideBarLinkData = [
     color: "pink",
   },
   {
-    name: "Vocab",
+    name: "Resources",
     icon: "fas fa-book",
-    path: "/vocab",
+    path: "/resources",
     color: "yellow",
   },
   {
