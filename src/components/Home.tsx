@@ -3,10 +3,10 @@ import MetricCard from "./MetricCard";
 
 interface HomeProps {
   daysToDSE: number;
+  points: number;
 }
 
-const Home = ({ daysToDSE }: HomeProps) => {
-  console.log("daysToDSE", daysToDSE);
+const Home = ({ daysToDSE, points }: HomeProps) => {
   return (
     <section className="w-full">
       <div
@@ -30,7 +30,7 @@ const Home = ({ daysToDSE }: HomeProps) => {
 
           <MetricCard
             title="Points"
-            data="100"
+            data={points.toString()}
             cardStyle={cardStyles.purple}
             textStyle={textStyles.dark}
             iconStyle={iconStyles.purple}

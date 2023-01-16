@@ -7,6 +7,7 @@ import {
   useState,
 } from "react";
 import { db } from "../config/config";
+import { useAuth } from "./AuthContext";
 
 export interface FirestoreContextProps {
   children?: ReactNode;
@@ -16,8 +17,13 @@ interface IMetric {
   daysToDSE: number;
 }
 
+interface IStudentData {
+  points: number;
+}
+
 export interface FirestoreContextState {
   metric: IMetric;
+  studentData: IStudentData;
 }
 
 export const FirestoreContext = createContext<FirestoreContextState>(
@@ -31,8 +37,13 @@ export function useFirestore(): FirestoreContextState {
 export const FirestoreProvider = ({
   children,
 }: FirestoreContextProps): JSX.Element => {
+  const { user } = useAuth();
+
   const [metric, setMetric] = useState<IMetric>({
     daysToDSE: 0,
+  });
+  const [studentData, setStudentData] = useState<IStudentData>({
+    points: 0,
   });
 
   async function fetchMetric() {
@@ -51,11 +62,23 @@ export const FirestoreProvider = ({
     }
   }
 
+  async function fetchStudentData() {
+    const docRef = doc(db, "members", user?.uid || "");
+    const docSnap = await getDoc(docRef);
+    if (docSnap.exists()) {
+      const { points } = docSnap.data();
+      setStudentData({
+        points,
+      });
+    }
+  }
+
   useEffect(() => {
     fetchMetric();
+    fetchStudentData();
   }, []);
 
-  const values = { metric };
+  const values = { metric, studentData };
   return (
     <FirestoreContext.Provider value={values}>
       {children}
