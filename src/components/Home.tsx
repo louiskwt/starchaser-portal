@@ -1,7 +1,12 @@
 import { cardStyles, iconStyles, textStyles } from "../styles/tailwindClasses";
 import MetricCard from "./MetricCard";
 
-const Home = () => {
+interface HomeProps {
+  daysToDSE: number;
+}
+
+const Home = ({ daysToDSE }: HomeProps) => {
+  console.log("daysToDSE", daysToDSE);
   return (
     <section className="w-full">
       <div
@@ -24,7 +29,7 @@ const Home = () => {
           />
           <MetricCard
             title="Days to DSE"
-            data="106 days"
+            data={`${daysToDSE} days`}
             cardStyle={cardStyles.blue}
             textStyle={textStyles.dark}
             iconStyle={iconStyles.blue}
