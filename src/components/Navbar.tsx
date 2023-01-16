@@ -18,7 +18,7 @@ const Navbar = () => {
           <div className="flex flex-wrap items-center justify-between">
             <div className="flex flex-shrink md:w-1/3 justify-center md:justify-start text-white">
               <a href="#" aria-label="Home">
-                <span className="text-xl pl-2">StarChaser</span>
+                <span className="text-xl pl-2">StarChaser (Beta)</span>
               </a>
             </div>
 

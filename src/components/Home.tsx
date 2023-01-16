@@ -20,14 +20,6 @@ const Home = ({ daysToDSE }: HomeProps) => {
         </div>
         <div className="flex flex-wrap">
           <MetricCard
-            title="Next Lesson"
-            data="01-08-23"
-            cardStyle={cardStyles.green}
-            textStyle={textStyles.dark}
-            iconStyle={iconStyles.green}
-            icon="calendar"
-          />
-          <MetricCard
             title="Days to DSE"
             data={`${daysToDSE} days`}
             cardStyle={cardStyles.blue}

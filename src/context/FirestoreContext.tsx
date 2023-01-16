@@ -44,7 +44,7 @@ export const FirestoreProvider = ({
       const dseDate = nextDse.toMillis();
       const diffTime = Math.abs(dseDate - today);
       const diffDays = diffTime / (1000 * 60 * 60 * 24);
-      console.log(diffDays);
+
       setMetric({
         daysToDSE: Math.ceil(diffDays),
       });
