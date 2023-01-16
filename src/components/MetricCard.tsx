@@ -16,7 +16,7 @@ const MetricCard = ({
   iconStyle,
 }: MetricCardProps) => {
   return (
-    <div className="w-full md:w-1/2 xl:w-1/3 p-6">
+    <div className="w-full md:w-1/2 p-6">
       <div className={`${cardStyle} rounded-lg shadow-xl p-5`}>
         <div className="flex flex-row items-center">
           <div className="flex-shrink pr-4">
