@@ -53,12 +53,12 @@ const Table = ({ title, subheading, head, data }: ITable) => {
                                 paddingBottom: "0.1rem",
                               }}
                               className={
-                                task[d]
+                                !task[d]
                                   ? "text-sm px-3 bg-red-200 text-red-800 rounded-full"
                                   : "text-sm px-3 bg-green-200 text-green-800 rounded-full"
                               }
                             >
-                              {task[d] ? "Completed" : "In Progress"}
+                              {!task[d] ? "In Progress" : "Completed"}
                             </div>
                           </div>
                         </td>
