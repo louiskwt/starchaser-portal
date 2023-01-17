@@ -32,40 +32,47 @@ const Table = ({ title, subheading, head, data }: ITable) => {
             </tr>
           </thead>
           <tbody>
-            {data.map((item, index) => (
+            {data.map((task, index) => (
               <tr key={index}>
-                {Object.keys(item).map((key, index) => {
-                  if (key === "status") {
-                    return (
-                      <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                        <div className="flex items-center">
-                          <div
-                            style={{
-                              paddingTop: "0.1em",
-                              paddingBottom: "0.1rem",
-                            }}
-                            className={
-                              item[key]
-                                ? "text-sm px-3 bg-red-200 text-red-800 rounded-full"
-                                : "text-sm px-3 bg-green-200 text-green-800 rounded-full"
-                            }
-                          >
-                            {item[key] ? "Completed" : "In Progress"}
+                <th
+                  key={index}
+                  className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left"
+                >
+                  {index + 1}
+                </th>
+                {head
+                  .filter((h) => h !== "#")
+                  .map((d, i) => {
+                    if (d === "status") {
+                      return (
+                        <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                          <div className="flex items-center">
+                            <div
+                              style={{
+                                paddingTop: "0.1em",
+                                paddingBottom: "0.1rem",
+                              }}
+                              className={
+                                task[d]
+                                  ? "text-sm px-3 bg-red-200 text-red-800 rounded-full"
+                                  : "text-sm px-3 bg-green-200 text-green-800 rounded-full"
+                              }
+                            >
+                              {task[d] ? "Completed" : "In Progress"}
+                            </div>
                           </div>
-                        </div>
-                      </td>
+                        </td>
+                      );
+                    }
+                    return (
+                      <th
+                        key={i}
+                        className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left"
+                      >
+                        {task[d as ITaskKeys]}
+                      </th>
                     );
-                  }
-
-                  return (
-                    <th
-                      key={index}
-                      className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left"
-                    >
-                      {item[key as ITaskKeys]}
-                    </th>
-                  );
-                })}
+                  })}
               </tr>
             ))}
           </tbody>

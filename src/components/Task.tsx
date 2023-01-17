@@ -3,10 +3,12 @@ import Table from "./Table";
 
 interface TaskProps {
   tasks: ITask[];
+  subheading?: string;
 }
 
-const Task = ({ tasks }: TaskProps) => {
+const Task = ({ tasks, subheading }: TaskProps) => {
   const head = ["#", "title", "status"];
+  console.log(tasks);
 
   return (
     <section className="w-full h-screen">
@@ -21,7 +23,12 @@ const Task = ({ tasks }: TaskProps) => {
         </div>
         <div></div>
         <div className="w-full px-4 mx-auto mt-24">
-          <Table title="Task" head={head} data={tasks} />
+          <Table
+            title="Task"
+            head={head}
+            data={tasks}
+            subheading={subheading}
+          />
         </div>
       </div>
     </section>

@@ -18,9 +18,14 @@ interface IMetric {
   daysToDSE: number;
 }
 
+interface taskData {
+  subheading: string;
+  tasks: ITask[];
+}
+
 interface IStudentData {
   points: number;
-  tasks: ITask[];
+  taskData: taskData;
 }
 
 export interface FirestoreContextState {
@@ -47,7 +52,10 @@ export const FirestoreProvider = ({
   });
   const [studentData, setStudentData] = useState<IStudentData>({
     points: 0,
-    tasks: [],
+    taskData: {
+      subheading: "",
+      tasks: [],
+    },
   });
 
   async function fetchMetric() {
@@ -78,16 +86,15 @@ export const FirestoreProvider = ({
     }
   }
 
-  async function fetchTasks(userId: string) {
-    const docRef = doc(db, "members", userId);
+  async function fetchTasks() {
+    const docRef = doc(db, "members", user?.uid || "");
     const docSnap = await getDoc(docRef);
     if (docSnap.exists()) {
-      console.log("hello", docSnap.data());
-
-      const { tasks } = docSnap.data();
+      const { taskData } = docSnap.data();
+      console.log("hello", taskData);
       setStudentData({
         ...studentData,
-        tasks: tasks.tasks,
+        taskData,
       });
     }
   }
@@ -95,7 +102,8 @@ export const FirestoreProvider = ({
   useEffect(() => {
     fetchMetric();
     fetchStudentData();
-  }, []);
+    fetchTasks();
+  }, [user]);
 
   const values = { metric, studentData, fetchTasks };
   return (
