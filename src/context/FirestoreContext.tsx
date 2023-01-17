@@ -7,6 +7,7 @@ import {
   useState,
 } from "react";
 import { db } from "../config/config";
+import { ITask } from "../types";
 import { useAuth } from "./AuthContext";
 
 export interface FirestoreContextProps {
@@ -19,11 +20,13 @@ interface IMetric {
 
 interface IStudentData {
   points: number;
+  tasks: ITask[];
 }
 
 export interface FirestoreContextState {
   metric: IMetric;
   studentData: IStudentData;
+  fetchTasks: (userId: string) => void;
 }
 
 export const FirestoreContext = createContext<FirestoreContextState>(
@@ -44,6 +47,7 @@ export const FirestoreProvider = ({
   });
   const [studentData, setStudentData] = useState<IStudentData>({
     points: 0,
+    tasks: [],
   });
 
   async function fetchMetric() {
@@ -68,7 +72,22 @@ export const FirestoreProvider = ({
     if (docSnap.exists()) {
       const { points } = docSnap.data();
       setStudentData({
+        ...studentData,
         points,
+      });
+    }
+  }
+
+  async function fetchTasks(userId: string) {
+    const docRef = doc(db, "members", userId);
+    const docSnap = await getDoc(docRef);
+    if (docSnap.exists()) {
+      console.log("hello", docSnap.data());
+
+      const { tasks } = docSnap.data();
+      setStudentData({
+        ...studentData,
+        tasks: tasks.tasks,
       });
     }
   }
@@ -78,7 +97,7 @@ export const FirestoreProvider = ({
     fetchStudentData();
   }, []);
 
-  const values = { metric, studentData };
+  const values = { metric, studentData, fetchTasks };
   return (
     <FirestoreContext.Provider value={values}>
       {children}
