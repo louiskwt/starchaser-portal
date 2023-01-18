@@ -45,7 +45,10 @@ const Table = ({ title, subheading, head, data }: ITable) => {
                   .map((d, i) => {
                     if (d === "status") {
                       return (
-                        <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                        <td
+                          key={i}
+                          className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
+                        >
                           <div className="flex items-center">
                             <div
                               style={{

@@ -91,7 +91,6 @@ export const FirestoreProvider = ({
     const docSnap = await getDoc(docRef);
     if (docSnap.exists()) {
       const { taskData } = docSnap.data();
-      console.log("hello", taskData);
       setStudentData({
         ...studentData,
         taskData,

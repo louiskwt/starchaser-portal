@@ -33,10 +33,11 @@ const generateSidebarButton = (
   path: string,
   color: string,
   currentPath: string,
-  navigate: (path: string) => void
+  navigate: (path: string) => void,
+  index: number
 ) => {
   return (
-    <li className="mr-3 flex-1 cursor-pointer">
+    <li key={index} className="mr-3 flex-1 cursor-pointer">
       <a
         onClick={() => navigate(path)}
         className={
@@ -60,14 +61,15 @@ const Sidebar = () => {
       <div className="bg-gray-800 shadow-xl h-20 fixed bottom-0 mt-12 md:relative md:h-screen z-10 w-full md:w-48 content-center">
         <div className="md:mt-12 md:w-48 md:fixed md:left-0 md:top-0 content-center md:content-start text-left justify-between">
           <ul className="list-reset flex flex-row md:flex-col pt-3 md:py-3 px-1 md:px-2 text-center md:text-left">
-            {sideBarLinkData.map((link) => {
+            {sideBarLinkData.map((link, index) => {
               return generateSidebarButton(
                 link.name,
                 link.icon,
                 link.path,
                 link.color,
                 location.pathname,
-                navigate
+                navigate,
+                index
               );
             })}
           </ul>
