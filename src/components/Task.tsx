@@ -1,14 +1,13 @@
-import { ITask } from "../types";
+import { useContext } from "react";
+import { FirestoreContext } from "../context/FirestoreContext";
 import Table from "./Table";
 
-interface TaskProps {
-  tasks: ITask[];
-  subheading?: string;
-}
+const Task = () => {
+  const { studentData } = useContext(FirestoreContext);
 
-const Task = ({ tasks, subheading }: TaskProps) => {
+  const { taskData } = studentData;
+  const { tasks, subheading } = taskData;
   const head = ["#", "title", "status"];
-  console.log(tasks);
 
   return (
     <section className="w-full h-screen">
