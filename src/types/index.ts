@@ -12,3 +12,8 @@ export interface ITable {
   head: string[];
   data: ITask[];
 }
+
+export interface ILink {
+  text: string;
+  path: string;
+}

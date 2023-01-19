@@ -1,4 +1,51 @@
+import LinkSection from "./LinkSection";
+
 const Resources = () => {
+  const mockData = [
+    {
+      heading: "Reading",
+      links: [
+        {
+          text: "Week 1",
+          path: "/resources/week1",
+        },
+        {
+          text: "Week 2",
+          path: "/resources/week2",
+        },
+        {
+          text: "Week 3",
+          path: "/resources/week3",
+        },
+        {
+          text: "Week 4",
+          path: "/resources/week4",
+        },
+      ],
+    },
+    {
+      heading: "Writing",
+      links: [
+        {
+          text: "Week 1",
+          path: "/resources/week1",
+        },
+        {
+          text: "Week 2",
+          path: "/resources/week2",
+        },
+        {
+          text: "Week 3",
+          path: "/resources/week3",
+        },
+        {
+          text: "Week 4",
+          path: "/resources/week4",
+        },
+      ],
+    },
+  ];
+
   return (
     <section className="w-full h-screen">
       <div
@@ -12,9 +59,19 @@ const Resources = () => {
         </div>
         <div></div>
         <div className="w-full px-16 mx-auto mt-12">
-          <h1 className="mb-2 text-xl font-semibold text-gray-900 ">
+          <h1 className="mb-4 text-xl font-semibold text-gray-900 ">
             精讀學習資源:
           </h1>
+
+          {mockData.map((section, index) => {
+            return (
+              <LinkSection
+                key={index}
+                heading={section.heading}
+                links={section.links}
+              />
+            );
+          })}
         </div>
       </div>
     </section>
