@@ -75,6 +75,7 @@ export const FirestoreProvider = ({
   }
 
   async function fetchStudentData() {
+    if (!user?.uid) return;
     const docRef = doc(db, "members", user?.uid || "");
     const docSnap = await getDoc(docRef);
     if (docSnap.exists()) {
@@ -87,6 +88,7 @@ export const FirestoreProvider = ({
   }
 
   async function fetchTasks() {
+    if (!user?.uid) return;
     const docRef = doc(db, "members", user?.uid || "");
     const docSnap = await getDoc(docRef);
     if (docSnap.exists()) {
