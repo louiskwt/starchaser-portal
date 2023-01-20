@@ -1,11 +1,11 @@
-# Tutor Hero
+# StarChaser Portol
 
-為補習老師而設的課堂管理系統 (Course Management System)
+StarChaser 的課堂管理系統 (Course Management System)
 
 ## 里程碑
 
-- [ ] 登入系純
+- [ X ] 登入系純
 - [ ] 資源管理
 - [ ] 學生進度
 - [ ] 獎勵制度
-- [ ] 學費付款
+- [ X ] 學費付款
