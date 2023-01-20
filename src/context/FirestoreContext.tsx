@@ -1,4 +1,11 @@
-import { doc, getDoc } from "firebase/firestore";
+import {
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  query,
+  where,
+} from "firebase/firestore";
 import {
   createContext,
   ReactNode,
@@ -100,10 +107,27 @@ export const FirestoreProvider = ({
     }
   }
 
+  async function fetchResources() {
+    if (!user?.uid) return;
+
+    const resourceRef = collection(db, "resources");
+    const readingQuery = query(resourceRef, where("type", "==", "reading"));
+    const listeningQuery = query(resourceRef, where("type", "==", "listening"));
+
+    const readingSnap = await getDocs(readingQuery);
+    const listeningSnap = await getDocs(listeningQuery);
+
+    const readingData = readingSnap.docs.map((doc) => doc.data());
+    const listeningData = listeningSnap.docs.map((doc) => doc.data());
+
+    console.log({ readingData, listeningData });
+  }
+
   useEffect(() => {
     fetchMetric();
     fetchStudentData();
     fetchTasks();
+    fetchResources();
   }, [user]);
 
   const values = { metric, studentData, fetchTasks };
