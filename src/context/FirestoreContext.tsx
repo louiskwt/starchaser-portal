@@ -36,13 +36,7 @@ interface IStudentData {
   taskData: taskData;
 }
 
-export interface FirestoreContextState {
-  metric: IMetric;
-  studentData: IStudentData;
-  fetchTasks: (userId: string) => void;
-}
-
-type ReourcesType = "reading" | "writing" | "listening" | "speaking";
+export type ReourcesType = "reading" | "writing" | "listening" | "speaking";
 
 export interface IResourceDoc {
   path: string;
@@ -55,6 +49,15 @@ export interface IResourceData {
   writing: IResourceDoc[];
   listening: IResourceDoc[];
   speaking: IResourceDoc[];
+}
+
+export type ResourceDataKeys = keyof IResourceData;
+
+export interface FirestoreContextState {
+  metric: IMetric;
+  studentData: IStudentData;
+  fetchTasks: (userId: string) => void;
+  resources: IResourceData;
 }
 
 export const FirestoreContext = createContext<FirestoreContextState>(
@@ -166,7 +169,7 @@ export const FirestoreProvider = ({
     fetchResources();
   }, [user]);
 
-  const values = { metric, studentData, fetchTasks };
+  const values = { metric, studentData, fetchTasks, resources };
   return (
     <FirestoreContext.Provider value={values}>
       {children}

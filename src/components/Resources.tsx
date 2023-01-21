@@ -1,50 +1,36 @@
+import { useContext, useEffect, useState } from "react";
+import {
+  FirestoreContext,
+  IResourceData,
+  IResourceDoc,
+} from "../context/FirestoreContext";
 import LinkSection from "./LinkSection";
 
+interface IResourceSection {
+  heading: string;
+  links: IResourceDoc[];
+}
+
 const Resources = () => {
-  const mockData = [
-    {
-      heading: "Reading",
-      links: [
-        {
-          text: "Week 1",
-          path: "/resources/week1",
-        },
-        {
-          text: "Week 2",
-          path: "/resources/week2",
-        },
-        {
-          text: "Week 3",
-          path: "/resources/week3",
-        },
-        {
-          text: "Week 4",
-          path: "/resources/week4",
-        },
-      ],
-    },
-    {
-      heading: "Writing",
-      links: [
-        {
-          text: "Week 1",
-          path: "/resources/week1",
-        },
-        {
-          text: "Week 2",
-          path: "/resources/week2",
-        },
-        {
-          text: "Week 3",
-          path: "/resources/week3",
-        },
-        {
-          text: "Week 4",
-          path: "/resources/week4",
-        },
-      ],
-    },
-  ];
+  const { resources } = useContext(FirestoreContext);
+  const [resourceData, setResourceData] = useState<IResourceSection[]>([]);
+
+  function formatResources(resources: IResourceData) {
+    const resourcesArr = [];
+    for (const [key, v] of Object.entries(resources)) {
+      if (v.length === 0) continue;
+      resourcesArr.push({
+        heading: key,
+        links: v,
+      });
+    }
+    return resourcesArr;
+  }
+
+  useEffect(() => {
+    const formattedResources = formatResources(resources);
+    setResourceData(formattedResources);
+  }, [resources]);
 
   return (
     <section className="w-full h-screen">
@@ -63,15 +49,16 @@ const Resources = () => {
             精讀學習資源:
           </h1>
 
-          {mockData.map((section, index) => {
-            return (
-              <LinkSection
-                key={index}
-                heading={section.heading}
-                links={section.links}
-              />
-            );
-          })}
+          {resourceData.length > 0 &&
+            resourceData.map((section, index) => {
+              return (
+                <LinkSection
+                  key={index}
+                  heading={section.heading}
+                  links={section.links}
+                />
+              );
+            })}
         </div>
       </div>
     </section>
