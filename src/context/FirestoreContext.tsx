@@ -1,6 +1,7 @@
 import {
   collection,
   doc,
+  DocumentData,
   getDoc,
   getDocs,
   query,
@@ -41,6 +42,21 @@ export interface FirestoreContextState {
   fetchTasks: (userId: string) => void;
 }
 
+type ReourcesType = "reading" | "writing" | "listening" | "speaking";
+
+export interface IResourceDoc {
+  path: string;
+  text: string;
+  type: ReourcesType;
+}
+
+export interface IResourceData {
+  reading: IResourceDoc[];
+  writing: IResourceDoc[];
+  listening: IResourceDoc[];
+  speaking: IResourceDoc[];
+}
+
 export const FirestoreContext = createContext<FirestoreContextState>(
   {} as FirestoreContextState
 );
@@ -63,6 +79,13 @@ export const FirestoreProvider = ({
       subheading: "",
       tasks: [],
     },
+  });
+
+  const [resources, setResources] = useState<IResourceData>({
+    reading: [],
+    writing: [],
+    listening: [],
+    speaking: [],
   });
 
   async function fetchMetric() {
@@ -107,6 +130,15 @@ export const FirestoreProvider = ({
     }
   }
 
+  function getResourceData(doc: DocumentData) {
+    const { path, text, type } = doc.data();
+    return {
+      path,
+      text,
+      type,
+    };
+  }
+
   async function fetchResources() {
     if (!user?.uid) return;
 
@@ -117,10 +149,14 @@ export const FirestoreProvider = ({
     const readingSnap = await getDocs(readingQuery);
     const listeningSnap = await getDocs(listeningQuery);
 
-    const readingData = readingSnap.docs.map((doc) => doc.data());
-    const listeningData = listeningSnap.docs.map((doc) => doc.data());
+    const readingData = readingSnap.docs.map((doc) => getResourceData(doc));
+    const listeningData = listeningSnap.docs.map((doc) => getResourceData(doc));
 
-    console.log({ readingData, listeningData });
+    setResources({
+      ...resources,
+      reading: readingData,
+      listening: listeningData,
+    });
   }
 
   useEffect(() => {
