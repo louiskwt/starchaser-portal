@@ -14,7 +14,7 @@ const LinkSection = ({ heading, links }: LinkSectionProps) => {
         <h1 className="mb-2 text-xl font-semibold text-gray-900">{heading}</h1>
         <hr className="h-px my-2 bg-gray-200 border-0 dark:bg-gray-700"></hr>
       </div>
-      <div className="grid grid-cols-4 gap-4 sm:grid-cols-3 sm:gap-3">
+      <div className="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-4">
         {links.map((link, index) => {
           return (
             <button
