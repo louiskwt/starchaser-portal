@@ -1,4 +1,8 @@
-const ResourceContent = () => {
+interface ResourceContentProps {
+  title: string;
+}
+
+const ResourceContent = ({ title = "" }: ResourceContentProps) => {
   return (
     <section className="w-full">
       <div
@@ -7,7 +11,7 @@ const ResourceContent = () => {
       >
         <div className="bg-gray-800 pt-3">
           <div className="rounded-tl-3xl bg-gradient-to-r from-blue-900 to-gray-800 p-4 shadow text-2xl text-white">
-            <h1 className="font-bold pl-2">Title</h1>
+            <h1 className="font-bold pl-2">{title}</h1>
           </div>
         </div>
         <div></div>
