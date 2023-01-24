@@ -42,6 +42,7 @@ export interface IResourceDoc {
   path: string;
   text: string;
   type: ReourcesType;
+  vidUrl: string;
 }
 
 export interface IResourceData {
@@ -135,11 +136,12 @@ export const FirestoreProvider = ({
   }
 
   function getResourceData(doc: DocumentData) {
-    const { path, text, type } = doc.data();
+    const { path, text, type, vidUrl } = doc.data();
     return {
       path,
       text,
       type,
+      vidUrl,
     };
   }
 
@@ -170,6 +172,7 @@ export const FirestoreProvider = ({
     const resourceQuery = query(resourceRef, where("path", "==", title));
     const resourceSnap = await getDocs(resourceQuery);
     const resourceData = resourceSnap.docs.map((doc) => getResourceData(doc));
+    console.log({ resourceData });
     return resourceData;
   }
 

@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { FirestoreContext } from "../context/FirestoreContext";
+import VideoPlayer from "./VideoPlayer";
 
 interface ResourceContentProps {
   title: string;
@@ -9,11 +10,12 @@ const ResourceContent = ({ title = "" }: ResourceContentProps) => {
   const { fetchSpecificResource } = useContext(FirestoreContext);
   const [resource, setResource] = useState<any>({});
   useEffect(() => {
-    fetchSpecificResource(title).then((res) => {
-      setResource(res);
+    const resourceData = fetchSpecificResource(title);
+    resourceData.then((data) => {
+      setResource(data[0]);
       console.log(resource);
     });
-  }, []);
+  }, [title]);
 
   return (
     <section className="w-full h-screen">
@@ -31,6 +33,8 @@ const ResourceContent = ({ title = "" }: ResourceContentProps) => {
           <h1 className="mb-4 text-xl font-semibold text-gray-900 ">
             精讀學習資源:
           </h1>
+
+          {resource.vidUrl && <VideoPlayer vidUrl={resource.vidUrl} />}
         </div>
       </div>
     </section>
