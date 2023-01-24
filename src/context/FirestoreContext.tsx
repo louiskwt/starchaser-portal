@@ -36,7 +36,12 @@ interface IStudentData {
   taskData: taskData;
 }
 
-export type ReourcesType = "reading" | "writing" | "listening" | "speaking";
+export type ReourcesType =
+  | "reading"
+  | "writing"
+  | "listening"
+  | "speaking"
+  | "";
 
 export interface IResourceDoc {
   path: string;
