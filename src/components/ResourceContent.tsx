@@ -1,8 +1,20 @@
+import { useContext, useEffect, useState } from "react";
+import { FirestoreContext } from "../context/FirestoreContext";
+
 interface ResourceContentProps {
   title: string;
 }
 
 const ResourceContent = ({ title = "" }: ResourceContentProps) => {
+  const { fetchSpecificResource } = useContext(FirestoreContext);
+  const [resource, setResource] = useState<any>({});
+  useEffect(() => {
+    fetchSpecificResource(title).then((res) => {
+      setResource(res);
+      console.log(resource);
+    });
+  }, []);
+
   return (
     <section className="w-full">
       <div

@@ -58,6 +58,7 @@ export interface FirestoreContextState {
   studentData: IStudentData;
   fetchTasks: (userId: string) => void;
   resources: IResourceData;
+  fetchSpecificResource: (title: string) => Promise<any>;
 }
 
 export const FirestoreContext = createContext<FirestoreContextState>(
@@ -162,6 +163,16 @@ export const FirestoreProvider = ({
     });
   }
 
+  async function fetchSpecificResource(title: string) {
+    if (!user?.uid) return;
+
+    const resourceRef = collection(db, "resources");
+    const resourceQuery = query(resourceRef, where("path", "==", title));
+    const resourceSnap = await getDocs(resourceQuery);
+    const resourceData = resourceSnap.docs.map((doc) => getResourceData(doc));
+    return resourceData;
+  }
+
   useEffect(() => {
     fetchMetric();
     fetchStudentData();
@@ -169,7 +180,13 @@ export const FirestoreProvider = ({
     fetchResources();
   }, [user]);
 
-  const values = { metric, studentData, fetchTasks, resources };
+  const values = {
+    metric,
+    studentData,
+    fetchTasks,
+    resources,
+    fetchSpecificResource,
+  };
   return (
     <FirestoreContext.Provider value={values}>
       {children}
