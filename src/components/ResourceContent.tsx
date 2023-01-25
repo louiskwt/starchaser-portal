@@ -19,12 +19,17 @@ const ResourceContent = ({ title = "" }: ResourceContentProps) => {
   useEffect(() => {
     const resourceData = fetchSpecificResource(title);
     resourceData.then((data) => {
-      console.log(data[0]["content"]);
       setResource(data[0]);
     });
   }, [title]);
 
-  const test = `# This is a header ello \n hey`;
+  const markdownContnet = createMarkup(resource.content);
+
+  function createMarkup(contentData: string) {
+    const contentArr = contentData.split("#n");
+    const content = contentArr.join(`\n`);
+    return content;
+  }
 
   return (
     <section className="w-full h-screen">
@@ -45,7 +50,7 @@ const ResourceContent = ({ title = "" }: ResourceContentProps) => {
 
           {resource.vidUrl && <VideoPlayer vidUrl={resource.vidUrl} />}
           <article className="prose mt-12">
-            <ReactMarkdown>{test}</ReactMarkdown>
+            <ReactMarkdown>{markdownContnet}</ReactMarkdown>
           </article>
         </div>
       </div>
