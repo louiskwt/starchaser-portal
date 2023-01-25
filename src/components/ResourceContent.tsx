@@ -1,4 +1,5 @@
 import { useContext, useEffect, useState } from "react";
+import ReactMarkdown from "react-markdown";
 import { FirestoreContext, IResourceDoc } from "../context/FirestoreContext";
 import VideoPlayer from "./VideoPlayer";
 
@@ -13,14 +14,17 @@ const ResourceContent = ({ title = "" }: ResourceContentProps) => {
     text: "",
     type: "",
     vidUrl: "",
+    content: "",
   });
   useEffect(() => {
     const resourceData = fetchSpecificResource(title);
     resourceData.then((data) => {
+      console.log(data[0]["content"]);
       setResource(data[0]);
-      console.log(resource);
     });
   }, [title]);
+
+  const test = `# This is a header ello \n hey`;
 
   return (
     <section className="w-full h-screen">
@@ -40,6 +44,9 @@ const ResourceContent = ({ title = "" }: ResourceContentProps) => {
           </h1>
 
           {resource.vidUrl && <VideoPlayer vidUrl={resource.vidUrl} />}
+          <article className="prose mt-12">
+            <ReactMarkdown>{test}</ReactMarkdown>
+          </article>
         </div>
       </div>
     </section>

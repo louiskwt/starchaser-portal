@@ -48,6 +48,7 @@ export interface IResourceDoc {
   text: string;
   type: ReourcesType;
   vidUrl: string;
+  content: string;
 }
 
 export interface IResourceData {
@@ -141,12 +142,13 @@ export const FirestoreProvider = ({
   }
 
   function getResourceData(doc: DocumentData) {
-    const { path, text, type, vidUrl } = doc.data();
+    const { path, text, type, vidUrl, content } = doc.data();
     return {
       path,
       text,
       type,
       vidUrl,
+      content,
     };
   }
 
