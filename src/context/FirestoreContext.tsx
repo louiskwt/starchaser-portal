@@ -179,7 +179,6 @@ export const FirestoreProvider = ({
     const resourceQuery = query(resourceRef, where("path", "==", title));
     const resourceSnap = await getDocs(resourceQuery);
     const resourceData = resourceSnap.docs.map((doc) => getResourceData(doc));
-    console.log({ resourceData });
     return resourceData;
   }
 
