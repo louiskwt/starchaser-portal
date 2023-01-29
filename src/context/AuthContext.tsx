@@ -50,7 +50,8 @@ export interface AuthContextState {
     password: string,
     name: string,
     invitationCode: string,
-    dseYear: number
+    dseYear: number,
+    phoneNum: number
   ) => void;
   logOut: () => Promise<void>;
   setUser: (user: User | null) => void;
@@ -59,6 +60,7 @@ export interface AuthContextState {
     name: string,
     email: string,
     dseYear: number,
+    phoneNum: number,
     invitationCode: string
   ) => void;
   userInfo: UserInfo | null;
@@ -127,7 +129,8 @@ export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
     userId: string,
     name: string,
     email: string,
-    dseYear: number
+    dseYear: number,
+    phoneNum: number
   ) {
     const docRef = doc(db, "members", userId);
     const docSnap = await getDoc(docRef);
@@ -144,6 +147,7 @@ export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
           isActivated: true,
           lessonDate: new Date(),
           nextDse: dseYear,
+          phoneNum: phoneNum,
         });
       } catch (error) {
         throw new Error("Something went wrong");
@@ -156,6 +160,7 @@ export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
     name: string,
     email: string,
     dseYear: number,
+    phoneNum: number,
     invitationCode: string
   ) {
     const docRef = doc(db, "admin", "registration");
@@ -163,7 +168,7 @@ export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
     try {
       const doc = await getDoc(docRef);
       if (doc.exists() && doc.data()?.invitationCode === invitationCode) {
-        await writeStudentData(userId, name, email, dseYear);
+        await writeStudentData(userId, name, email, dseYear, phoneNum);
         setUserInfo({
           name: name,
           role: "student",
@@ -184,7 +189,8 @@ export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
     password: string,
     name: string,
     invitationCode: string,
-    dseYear: number
+    dseYear: number,
+    phoneNum: number
   ): void {
     const docRef = doc(db, "admin", "registration");
     getDoc(docRef)
@@ -195,7 +201,7 @@ export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
         ) {
           createUserWithEmailAndPassword(auth, email, password)
             .then((res) => {
-              writeStudentData(res.user.uid, name, email, dseYear)
+              writeStudentData(res.user.uid, name, email, dseYear, phoneNum)
                 .then(() => {
                   setUserInfo({
                     name: name,
