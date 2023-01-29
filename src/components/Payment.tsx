@@ -1,4 +1,4 @@
-import alipay from "../assets/alipay.jpg";
+import alipay from "../assets/alipayhk.jpg";
 import payme from "../assets/payme.jpg";
 
 const Payment = () => {
