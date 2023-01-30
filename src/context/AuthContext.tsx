@@ -192,40 +192,35 @@ export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
     dseYear: number,
     phoneNum: number
   ): void {
-    const docRef = doc(db, "admin", "registration");
-    getDoc(docRef)
-      .then((docSnap) => {
-        if (
-          docSnap.exists() &&
-          docSnap.data()?.invitationCode === invitationCode
-        ) {
-          createUserWithEmailAndPassword(auth, email, password)
-            .then((res) => {
-              writeStudentData(res.user.uid, name, email, dseYear, phoneNum)
-                .then(() => {
-                  setUserInfo({
-                    name: name,
-                    role: "student",
-                    activated: true,
-                  });
-                  navigate("/");
-                })
-                .catch((error) => {
-                  console.log(error);
-                  toast.error(error.message);
+    createUserWithEmailAndPassword(auth, email, password).then((res) => {
+      const docRef = doc(db, "admin", "registration");
+      getDoc(docRef)
+        .then((docSnap) => {
+          if (
+            docSnap.exists() &&
+            docSnap.data()?.invitationCode === invitationCode
+          ) {
+            writeStudentData(res.user.uid, name, email, dseYear, phoneNum)
+              .then(() => {
+                setUserInfo({
+                  name: name,
+                  role: "student",
+                  activated: true,
                 });
-            })
-            .catch((error) => {
-              console.log(error);
-              toast.error(error.message);
-            });
-        } else {
-          toast.error("Invitation code is not correct 😢");
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+                navigate("/");
+              })
+              .catch((error) => {
+                console.log(error);
+                toast.error(error.message);
+              });
+          } else {
+            throw new Error("Invalid Invitation Code");
+          }
+        })
+        .catch((error) => {
+          toast.error(error.message);
+        });
+    });
   }
 
   function signInWithEmail(email: string, password: string): void {
