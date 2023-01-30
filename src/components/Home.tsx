@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { FirestoreContext } from "../context/FirestoreContext";
 import { cardStyles, iconStyles, textStyles } from "../styles/tailwindClasses";
 import MetricCard from "./MetricCard";
@@ -11,8 +12,12 @@ interface HomeProps {
 
 const Home = ({ daysToDSE, points }: HomeProps) => {
   const { studentData } = useContext(FirestoreContext);
+  const navigate = useNavigate();
 
   const { taskData } = studentData;
+
+  if (!taskData) return navigate("/login");
+
   const { tasks, subheading } = taskData;
   const head = ["#", "title", "status"];
 
