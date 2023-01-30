@@ -214,7 +214,7 @@ export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
                 toast.error(error.message);
               });
           } else {
-            throw new Error("Invalid Invitation Code");
+            throw new Error("請先取得邀請碼然後再繼續！");
           }
         })
         .catch((error) => {
