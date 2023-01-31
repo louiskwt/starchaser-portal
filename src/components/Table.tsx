@@ -1,6 +1,7 @@
 import { ITable, ITaskKeys } from "../types";
 
-const Table = ({ title, subheading, head, data }: ITable) => {
+const Table = ({ config }: ITable) => {
+  const { title, head, data, subheading } = config;
   return (
     <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded bg-white ">
       <div className="rounded-t mb-0 px-4 py-3 border-0">

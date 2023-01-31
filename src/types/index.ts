@@ -6,11 +6,15 @@ export interface ITask {
 
 export type ITaskKeys = keyof ITask;
 
-export interface ITable {
+export interface ITableConfig {
   title: string;
   subheading?: string;
   head: string[];
   data: ITask[];
+}
+
+export interface ITable {
+  config: ITableConfig;
 }
 
 export interface ILink {

@@ -5,11 +5,28 @@ import Table from "./Table";
 const Task = () => {
   const { studentData } = useContext(FirestoreContext);
 
-  const { taskData } = studentData;
+  const hasTasks = studentData.taskData ? true : false;
 
-  const { tasks, subheading } = taskData;
+  const defaultConfig = {
+    title: "Task",
+    head: ["#", "Title", "Status"],
+    data: [],
+    subheading: "",
+  };
 
-  const head = ["#", "title", "status"];
+  let tableConfig = defaultConfig;
+
+  if (hasTasks) {
+    const { taskData } = studentData;
+    const { tasks, subheading } = taskData;
+    const head = ["#", "Title", "Status"];
+    tableConfig = {
+      title: "Task",
+      head: head,
+      data: tasks,
+      subheading: subheading,
+    };
+  }
 
   return (
     <section className="w-full h-screen">
@@ -24,12 +41,7 @@ const Task = () => {
         </div>
         <div></div>
         <div className="w-full px-4 mx-auto mt-24">
-          <Table
-            title="Task"
-            head={head}
-            data={tasks}
-            subheading={subheading}
-          />
+          <Table config={tableConfig} />
         </div>
       </div>
     </section>
