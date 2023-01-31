@@ -1,11 +1,9 @@
 import { useContext } from "react";
-import { useNavigate } from "react-router-dom";
 import { FirestoreContext } from "../context/FirestoreContext";
 import Table from "./Table";
 
 const Task = () => {
   const { studentData } = useContext(FirestoreContext);
-  const navigate = useNavigate();
 
   const { taskData } = studentData;
 
