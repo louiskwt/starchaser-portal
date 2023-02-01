@@ -1,13 +1,21 @@
 import { useContext } from "react";
 import { FirestoreContext } from "../context/FirestoreContext";
+import { ITask } from "../types";
 import Table from "./Table";
+
+interface ITableConfig {
+  title: string;
+  head: string[];
+  data: ITask[] | [];
+  subheading: string;
+}
 
 const Task = () => {
   const { studentData } = useContext(FirestoreContext);
 
   const hasTasks = studentData.taskData ? true : false;
 
-  const defaultConfig = {
+  const defaultConfig: ITableConfig = {
     title: "Task",
     head: ["#", "Title", "Status"],
     data: [],
