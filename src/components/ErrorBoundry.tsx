@@ -1,4 +1,5 @@
 import { Component, ErrorInfo } from "react";
+import Error from "./Error";
 
 type ErrorBoundryProps = {
   children: JSX.Element;
@@ -27,7 +28,7 @@ export default class ErrorBoundry extends Component<
 
   render() {
     if (this.state.hasError) {
-      return <h1>Something went wrong</h1>;
+      return <Error />;
     }
     return this.props.children;
   }
