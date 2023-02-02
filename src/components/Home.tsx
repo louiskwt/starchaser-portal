@@ -1,8 +1,9 @@
 import { useContext } from "react";
 import { FirestoreContext } from "../context/FirestoreContext";
 import { cardStyles, iconStyles, textStyles } from "../styles/tailwindClasses";
+import { ITableConfig } from "../types";
 import MetricCard from "./MetricCard";
-import Task from "./Task";
+import Table from "./Table";
 
 interface HomeProps {
   daysToDSE: number;
@@ -13,6 +14,27 @@ const Home = ({ daysToDSE, points }: HomeProps) => {
   const { studentData } = useContext(FirestoreContext);
 
   const showTask = studentData.taskData ? true : false;
+
+  const defaultConfig: ITableConfig = {
+    title: "Task",
+    head: ["#", "Title", "Status"],
+    data: [],
+    subheading: "",
+  };
+
+  let tableConfig = defaultConfig;
+
+  if (showTask) {
+    const { taskData } = studentData;
+    const { tasks, subheading } = taskData;
+    const head = ["#", "Title", "Status"];
+    tableConfig = {
+      title: "Task",
+      head: head,
+      data: tasks,
+      subheading: subheading,
+    };
+  }
 
   return (
     <section className="w-full">
@@ -44,7 +66,9 @@ const Home = ({ daysToDSE, points }: HomeProps) => {
             icon="star"
           />
         </div>
-        <div className="w-full px-4 mx-auto mt-12">{showTask && <Task />}</div>
+        <div className="w-full px-4 mx-auto mt-12">
+          {showTask && <Table config={tableConfig} />}
+        </div>
       </div>
     </section>
   );
