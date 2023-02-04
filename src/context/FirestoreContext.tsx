@@ -41,6 +41,7 @@ export type ReourcesType =
   | "writing"
   | "listening"
   | "speaking"
+  | "grammar"
   | "";
 
 export interface IResourceDoc {
@@ -56,6 +57,7 @@ export interface IResourceData {
   writing: IResourceDoc[];
   listening: IResourceDoc[];
   speaking: IResourceDoc[];
+  grammar: IResourceDoc[];
 }
 
 export type ResourceDataKeys = keyof IResourceData;
@@ -97,6 +99,7 @@ export const FirestoreProvider = ({
     writing: [],
     listening: [],
     speaking: [],
+    grammar: [],
   });
 
   async function fetchMetric() {
