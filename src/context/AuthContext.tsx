@@ -19,6 +19,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { auth, db } from "../config/config";
+import { authError } from "../config/errorTypes";
 
 export interface AuthContextProps {
   children?: ReactNode;
@@ -243,8 +244,17 @@ export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
         setUser(user);
       })
       .catch((error) => {
-        toast.error("Login failed 😢");
-        console.log(error.message);
+        switch (error.message) {
+          case authError.USER_CANCELLED:
+            console.log("User cancelled the login flow");
+            break;
+          case authError.USER_CLOSED:
+            console.log("User closed the popup"); // possible for logging
+            break;
+          default:
+            console.log(error.message);
+            toast.error("Something went wrong; please try again later 😢");
+        }
       });
   }
 
