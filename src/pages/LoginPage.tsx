@@ -7,8 +7,13 @@ import { useAuth } from "../context/AuthContext";
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [submitting, setSubmitting] = useState(false);
   const { signInWithEmail, signInWithGoogle } = useAuth();
   const navigate = useNavigate();
+
+  function changeSubmittingState() {
+    setSubmitting(!submitting);
+  }
 
   return (
     <section className="h-screen mb-4">
@@ -67,12 +72,14 @@ const LoginPage = () => {
 
               <button
                 type="submit"
-                className="inline-block px-7 py-3 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out w-full"
+                className="inline-block px-7 py-3 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg disabled:bg-slate-400 transition duration-150 ease-in-out w-full"
                 data-mdb-ripple="true"
                 data-mdb-ripple-color="light"
+                disabled={email === "" || password === "" || submitting}
                 onClick={(e) => {
                   e.preventDefault();
                   signInWithEmail(email, password);
+                  setSubmitting(true);
                 }}
               >
                 Login
@@ -85,12 +92,17 @@ const LoginPage = () => {
               </div>
 
               <button
-                className="px-7 py-3 text-white bg-red-600 font-medium text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-center items-center mb-3"
+                className="px-7 py-3 text-white bg-red-600 font-medium text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-center items-center mb-3 disabled:bg-slate-400"
                 data-mdb-ripple="true"
                 data-mdb-ripple-color="light"
+                disabled={submitting}
                 onClick={(e) => {
                   e.preventDefault();
+                  setSubmitting(true);
                   signInWithGoogle();
+                  setTimeout(() => {
+                    setSubmitting(false);
+                  }, 5000);
                 }}
               >
                 <FaGoogle className="mr-5" />
