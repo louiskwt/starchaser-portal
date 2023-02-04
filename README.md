@@ -1,6 +1,6 @@
 # StarChaser Portol (Prototype)
 
-StarChaser 的課堂管理系統 (Course Management System)
+StarChaser 的 VIP 學生管理系統 (Course Management System)
 
 ## 里程碑 [v0.01]
 
@@ -10,6 +10,7 @@ StarChaser 的課堂管理系統 (Course Management System)
 - [ X ] 獎勵制度
 - [ X ] 學費付款
 - [ ] 訊息系統
+- [ ] 功課遞交功能
 
 ## Log
 
