@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import { toast } from "react-toastify";
+import { useAuth } from "../context/AuthContext";
 import { uploadFile } from "../firebase/utils";
 import Loader from "./Loader";
 interface CardButtonProps {
@@ -19,6 +20,7 @@ const CardButton = ({
 }: CardButtonProps) => {
   const fileRef = useRef<HTMLInputElement>(null);
   const [uploading, setUploading] = useState(false);
+  const { userInfo } = useAuth();
 
   function handleUploadState(state: boolean) {
     setUploading(state);
@@ -34,9 +36,10 @@ const CardButton = ({
 
   function handleSubmit(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0];
+
     if (file) {
-      console.log(file);
-      uploadFile(file, file.name, handleUploadState, toastHandler);
+      const fileName = `${userInfo?.name}-${file.name}`;
+      uploadFile(file, fileName, handleUploadState, toastHandler);
     }
   }
 
