@@ -1,5 +1,7 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import { toast } from "react-toastify";
 import { uploadFile } from "../firebase/utils";
+import Loader from "./Loader";
 interface CardButtonProps {
   title: string;
   cardStyle: string;
@@ -16,12 +18,25 @@ const CardButton = ({
   iconStyle,
 }: CardButtonProps) => {
   const fileRef = useRef<HTMLInputElement>(null);
+  const [uploading, setUploading] = useState(false);
+
+  function handleUploadState(state: boolean) {
+    setUploading(state);
+  }
+
+  function toastHandler(state: boolean) {
+    if (state) {
+      toast.success("Upload successful");
+    } else {
+      toast.error("Upload failed...Please try again later");
+    }
+  }
 
   function handleSubmit(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0];
     if (file) {
       console.log(file);
-      uploadFile(file, file.name);
+      uploadFile(file, file.name, handleUploadState, toastHandler);
     }
   }
 
@@ -49,7 +64,13 @@ const CardButton = ({
             </div>
           </div>
           <div className="flex-1 text-right md:text-center">
-            <h2 className={`font-bold uppercase ${textStyle}`}>{title}</h2>
+            {!uploading ? (
+              <h2 className={`font-bold text-black uppercase ${textStyle}`}>
+                {title}
+              </h2>
+            ) : (
+              <Loader />
+            )}
           </div>
         </div>
       </div>

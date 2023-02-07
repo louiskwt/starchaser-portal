@@ -1,7 +1,12 @@
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import { storage } from "../config/config";
 
-export function uploadFile(file: File, path: string) {
+export function uploadFile(
+  file: File,
+  path: string,
+  uploadStateHandler: Function,
+  toast: Function
+) {
   const storageRef = ref(storage, path);
   const uploadTask = uploadBytesResumable(storageRef, file);
 
@@ -9,13 +14,19 @@ export function uploadFile(file: File, path: string) {
     "state_changed",
     (snapshot) => {
       console.log(snapshot.state);
+      if (snapshot.state === "running") {
+        uploadStateHandler(true);
+      }
     },
     (err) => {
-      alert(err);
+      console.log(err);
+      toast(false);
     },
     () => {
       getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
         console.log(downloadURL);
+        uploadStateHandler(false);
+        toast(true);
       });
     }
   );
