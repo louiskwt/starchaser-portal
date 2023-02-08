@@ -23,11 +23,16 @@ export function uploadFile(
       toast(false);
     },
     () => {
-      getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-        console.log(downloadURL);
-        uploadStateHandler(false);
-        toast(true);
-      });
+      getDownloadURL(uploadTask.snapshot.ref)
+        .then((downloadURL) => {
+          console.log(downloadURL);
+          uploadStateHandler(false);
+          toast(true);
+        })
+        .catch((error) => {
+          console.log(error);
+          toast(false);
+        });
     }
   );
 }
