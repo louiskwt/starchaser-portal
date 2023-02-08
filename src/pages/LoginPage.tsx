@@ -11,10 +11,6 @@ const LoginPage = () => {
   const { signInWithEmail, signInWithGoogle } = useAuth();
   const navigate = useNavigate();
 
-  function changeSubmittingState() {
-    setSubmitting(!submitting);
-  }
-
   return (
     <section className="h-screen mb-4">
       <div className="container px-6 py-12 h-full">

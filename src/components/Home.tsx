@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { FirestoreContext } from "../context/FirestoreContext";
 import { cardStyles, iconStyles, textStyles } from "../styles/tailwindClasses";
 import { ITableConfig } from "../types";
+import CardButton from "./CardButton";
 import MetricCard from "./MetricCard";
 import Table from "./Table";
 
@@ -64,6 +65,13 @@ const Home = ({ daysToDSE, points }: HomeProps) => {
             textStyle={textStyles.dark}
             iconStyle={iconStyles.purple}
             icon="star"
+          />
+          <CardButton
+            title="Upload Task"
+            cardStyle={cardStyles.green}
+            textStyle={textStyles.dark}
+            iconStyle={iconStyles.green}
+            icon="upload"
           />
         </div>
         <div className="w-full px-4 mx-auto mt-12">
