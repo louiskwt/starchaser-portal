@@ -13,7 +13,6 @@ export function uploadFile(
   uploadTask.on(
     "state_changed",
     (snapshot) => {
-      console.log(snapshot.state);
       if (snapshot.state === "running") {
         uploadStateHandler(true);
       }
@@ -24,8 +23,7 @@ export function uploadFile(
     },
     () => {
       getDownloadURL(uploadTask.snapshot.ref)
-        .then((downloadURL) => {
-          console.log(downloadURL);
+        .then(() => {
           uploadStateHandler(false);
           toast(true);
         })

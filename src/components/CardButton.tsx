@@ -68,9 +68,7 @@ const CardButton = ({
           </div>
           <div className="flex-1 text-right md:text-center">
             {!uploading ? (
-              <h2 className={`font-bold text-black uppercase ${textStyle}`}>
-                {title}
-              </h2>
+              <h2 className={`font-bold uppercase ${textStyle}`}>{title}</h2>
             ) : (
               <Loader />
             )}

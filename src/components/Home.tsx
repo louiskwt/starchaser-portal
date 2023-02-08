@@ -67,7 +67,7 @@ const Home = ({ daysToDSE, points }: HomeProps) => {
             icon="star"
           />
           <CardButton
-            title="Submit Your Wrok"
+            title="Upload Task"
             cardStyle={cardStyles.green}
             textStyle={textStyles.dark}
             iconStyle={iconStyles.green}
