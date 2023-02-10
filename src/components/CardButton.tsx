@@ -54,7 +54,7 @@ const CardButton = ({
         <input
           type="file"
           ref={fileRef}
-          accept="doc,.docx,image/*"
+          accept="doc,.docx,image/*,.pdf"
           onChange={(e) => {
             handleSubmit(e);
           }}
