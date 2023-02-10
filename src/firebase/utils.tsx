@@ -1,5 +1,6 @@
+import { doc, setDoc } from "firebase/firestore";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
-import { storage } from "../config/config";
+import { db, storage } from "../config/config";
 
 export function uploadFile(
   file: File,
@@ -23,8 +24,16 @@ export function uploadFile(
     },
     () => {
       getDownloadURL(uploadTask.snapshot.ref)
-        .then(() => {
+        .then((downloadUrl) => {
+          // update db
+          setDoc(doc(db, "tasks", path), {
+            name: path,
+            url: downloadUrl,
+            status: "pending",
+          });
+
           uploadStateHandler(false);
+
           toast(true);
         })
         .catch((error) => {
