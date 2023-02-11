@@ -159,18 +159,39 @@ export const FirestoreProvider = ({
     if (!user?.uid) return;
 
     const resourceRef = collection(db, "resources");
-    const readingQuery = query(resourceRef, where("type", "==", "reading"));
-    const listeningQuery = query(resourceRef, where("type", "==", "listening"));
+    const resourceQuery = query(
+      resourceRef,
+      where("type", "in", [
+        "reading",
+        "writing",
+        "listening",
+        "speaking",
+        "grammar",
+      ])
+    );
+    const resourceSnap = await getDocs(resourceQuery);
 
-    const readingSnap = await getDocs(readingQuery);
-    const listeningSnap = await getDocs(listeningQuery);
-
-    const readingData = readingSnap.docs.map((doc) => getResourceData(doc));
-    const listeningData = listeningSnap.docs.map((doc) => getResourceData(doc));
+    const readingData = resourceSnap.docs
+      .map((doc) => getResourceData(doc))
+      .filter((doc) => doc.type === "reading");
+    const writingData = resourceSnap.docs
+      .map((doc) => getResourceData(doc))
+      .filter((doc) => doc.type === "writing");
+    const listeningData = resourceSnap.docs
+      .map((doc) => getResourceData(doc))
+      .filter((doc) => doc.type === "listening");
+    const speakingData = resourceSnap.docs
+      .map((doc) => getResourceData(doc))
+      .filter((doc) => doc.type === "speaking");
+    const grammarData = resourceSnap.docs
+      .map((doc) => getResourceData(doc))
+      .filter((doc) => doc.type === "grammar");
 
     setResources({
-      ...resources,
+      grammar: grammarData,
+      speaking: speakingData,
       reading: readingData,
+      writing: writingData,
       listening: listeningData,
     });
   }
