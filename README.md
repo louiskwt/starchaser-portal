@@ -10,7 +10,7 @@ StarChaser 的 VIP 學生管理系統 (Course Management System)
 - [ X ] 獎勵制度
 - [ X ] 學費付款
 - [ ] 訊息系統
-- [ ] 功課遞交功能
+- [ x ] 功課遞交功能
 
 ## Log
 
