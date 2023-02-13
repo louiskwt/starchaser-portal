@@ -29,7 +29,7 @@ function App(): JSX.Element {
             <Route path="set-profile" element={<ProfileSetUpPage />} />
           </Routes>
         </FirestoreProvider>
-        <ToastContainer />
+        <ToastContainer style={{ width: "100vw" }} />
       </AuthProvider>
     </ErrorBoundry>
   );
