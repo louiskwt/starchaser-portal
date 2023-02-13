@@ -28,9 +28,9 @@ const CardButton = ({
 
   function toastHandler(state: boolean) {
     if (state) {
-      toast.success("Upload successful");
+      toast.success("上傳成功～ Louis 會儘快改好畀你");
     } else {
-      toast.error("Upload failed...Please try again later");
+      toast.error("上傳失敗！ 請聯絡 Louis");
     }
   }
 
