@@ -28,9 +28,15 @@ const CardButton = ({
 
   function toastHandler(state: boolean) {
     if (state) {
-      toast.success("上傳成功～ Louis 會儘快改好畀你");
+      toast.success("上傳成功～ Louis 會儘快改好畀你", {
+        position: "top-center",
+        autoClose: false,
+      });
     } else {
-      toast.error("上傳失敗！ 請聯絡 Louis");
+      toast.error("上傳失敗！ 請聯絡 Louis", {
+        position: "top-center",
+        autoClose: false,
+      });
     }
   }
 
