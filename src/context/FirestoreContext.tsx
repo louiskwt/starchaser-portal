@@ -207,10 +207,12 @@ export const FirestoreProvider = ({
   }
 
   useEffect(() => {
-    fetchMetric();
-    fetchStudentData();
-    fetchTasks();
-    fetchResources();
+    if (user) {
+      fetchMetric();
+      fetchStudentData();
+      fetchTasks();
+      fetchResources();
+    }
   }, [user]);
 
   const values = {
