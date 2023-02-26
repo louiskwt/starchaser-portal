@@ -74,8 +74,18 @@ const LoginPage = () => {
                 disabled={email === "" || password === "" || submitting}
                 onClick={(e) => {
                   e.preventDefault();
-                  signInWithEmail(email, password);
+                  const res = signInWithEmail(email, password);
                   setSubmitting(true);
+                  res
+                    .then((success) => {
+                      if (!success) {
+                        setSubmitting(false);
+                      }
+                    })
+                    .catch((err) => {
+                      setSubmitting(false);
+                      console.log(err);
+                    });
                 }}
               >
                 Login

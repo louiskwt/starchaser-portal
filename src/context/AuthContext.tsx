@@ -44,7 +44,7 @@ export const UserStateContext = createContext<UserContextState>(
 export interface AuthContextState {
   auth: Auth;
   user: User | null;
-  signInWithEmail: (email: string, password: string) => void;
+  signInWithEmail: (email: string, password: string) => Promise<boolean>;
   signInWithGoogle: () => void;
   signUp: (
     email: string,
@@ -224,15 +224,22 @@ export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
     });
   }
 
-  function signInWithEmail(email: string, password: string): void {
-    signInWithEmailAndPassword(auth, email, password)
+  function signInWithEmail(email: string, password: string): Promise<boolean> {
+    const success: Promise<boolean> = signInWithEmailAndPassword(
+      auth,
+      email,
+      password
+    )
       .then((res) => {
         checkUser(res.user.uid, res.user.email || "");
+        return true;
       })
       .catch((error) => {
         toast.error("Invalid Password or Email");
         console.log(error.message);
+        return false;
       });
+    return success;
   }
 
   function signInWithGoogle(): void {
