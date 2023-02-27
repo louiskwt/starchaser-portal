@@ -11,7 +11,7 @@ const LinkSection = ({ heading, links }: LinkSectionProps) => {
   return (
     <div className="w-full mb-6 shadow-lg rounded bg-white p-6">
       <div className="mb-8">
-        <h1 className="mb-2 text-xl font-semibold text-gray-900">{heading}</h1>
+        <h1 className="mb-2 text-xl font-semibold text-zinc-600">{heading}</h1>
         <hr className="h-px my-2 bg-gray-200 border-0 dark:bg-gray-700"></hr>
       </div>
       <div className="grid grid-cols-1 gap-1 md:grid-cols-4 md:gap-4">
