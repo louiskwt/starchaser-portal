@@ -8,7 +8,7 @@ const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [submitting, setSubmitting] = useState(false);
-  const { signInWithEmail, signInWithGoogle } = useAuth();
+  const { signInWithEmail, signInWithGoogle, resetPassword } = useAuth();
   const navigate = useNavigate();
 
   return (
@@ -60,6 +60,9 @@ const LoginPage = () => {
                 </div>
                 <a
                   href="#!"
+                  onClick={() => {
+                    resetPassword(email);
+                  }}
                   className="text-white hover:text-blue-300 focus:text-blue-700 active:text-blue-800 duration-200 transition ease-in-out"
                 >
                   Forgot password?

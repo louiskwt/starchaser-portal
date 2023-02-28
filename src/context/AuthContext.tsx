@@ -3,6 +3,7 @@ import {
   createUserWithEmailAndPassword,
   GoogleAuthProvider,
   onAuthStateChanged,
+  sendPasswordResetEmail,
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
@@ -65,6 +66,7 @@ export interface AuthContextState {
     invitationCode: string
   ) => void;
   userInfo: UserInfo | null;
+  resetPassword: (email: string) => void;
 }
 
 export const AuthContext = createContext<AuthContextState>(
@@ -270,6 +272,19 @@ export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
     setUserInfo(null);
     return signOut(auth);
   }
+
+  function resetPassword(email: string): void {
+    sendPasswordResetEmail(auth, email)
+      .then(() => {
+        toast.success(
+          "Reset password email sent! Please check your email and reset your password"
+        );
+      })
+      .catch((error) => {
+        toast.error(error.message);
+      });
+  }
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -294,6 +309,7 @@ export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
     signInWithGoogle,
     userInfo,
     setStudentProfile,
+    resetPassword,
   };
 
   return <AuthContext.Provider value={values}>{children}</AuthContext.Provider>;
