@@ -276,12 +276,11 @@ export const AuthProvider = ({ children }: AuthContextProps): JSX.Element => {
   function resetPassword(email: string): void {
     sendPasswordResetEmail(auth, email)
       .then(() => {
-        toast.success(
-          "Reset password email sent! Please check your email and reset your password"
-        );
+        toast.success("已經發送重設密碼的電郵，請檢查你的電郵信箱。");
       })
       .catch((error) => {
-        toast.error(error.message);
+        console.log(error.message);
+        toast.error("你提供的電郵不正確...");
       });
   }
 
