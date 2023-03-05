@@ -10,6 +10,7 @@ interface TailwindVariants {
 interface TailwindText {
   dark: string;
   light: string;
+  zinc: string;
 }
 
 export const cardStyles: TailwindVariants = {
@@ -34,6 +35,7 @@ export const iconStyles: TailwindVariants = {
 };
 
 export const textStyles: TailwindText = {
+  zinc: "text-zinc-800 font-bold text-xl",
   dark: "text-gray-600",
   light: "text-gray-200",
 };
