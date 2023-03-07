@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { FaGoogle, FaSignInAlt } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import auth from "../assets/auth.svg";
@@ -10,6 +11,7 @@ const LoginPage = () => {
   const [submitting, setSubmitting] = useState(false);
   const { signInWithEmail, signInWithGoogle, resetPassword } = useAuth();
   const navigate = useNavigate();
+  const { t, i18n } = useTranslation();
 
   return (
     <section className="h-screen mb-4">
@@ -20,7 +22,7 @@ const LoginPage = () => {
           </div>
           <div className="md:w-8/12 lg:w-5/12 lg:ml-20">
             <h1 className="text-3xl text-white text-center font-semibold mb-8">
-              Login
+              {t("login")}
             </h1>
             <form>
               <div className="mb-6">
