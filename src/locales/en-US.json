@@ -1,3 +1,5 @@
 {
-  "LOG_IN": "Log In"
+  "login": {
+    "title": "Log In"
+  }
 }
