@@ -46,22 +46,7 @@ const LoginPage = () => {
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
-              <div className="flex justify-between items-center mb-6">
-                <div className="form-group form-check mr-4">
-                  <input
-                    id="rememberMe"
-                    type="checkbox"
-                    value=""
-                    className="w-4 h-4 text-white bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                  ></input>
-
-                  <label
-                    className="form-check-label inline-block text-white"
-                    htmlFor="rememberMe"
-                  >
-                    Remember me
-                  </label>
-                </div>
+              <div className="flex justify-start items-center mb-6">
                 <a
                   href="#!"
                   onClick={() => {
