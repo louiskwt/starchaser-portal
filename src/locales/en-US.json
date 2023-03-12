@@ -1,5 +1,11 @@
 {
   "login": {
-    "title": "Log In"
+    "title": "Log In",
+    "email": "Email",
+    "password": "Password",
+    "forgot": "Forgot your password?",
+    "signup": "Continue to Sign Up",
+    "google": "Log in with Google",
+    "or": "or"
   }
 }

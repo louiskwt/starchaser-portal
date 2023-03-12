@@ -12,6 +12,8 @@ const LoginPage = () => {
   const { signInWithEmail, signInWithGoogle, resetPassword } = useAuth();
   const navigate = useNavigate();
   const { t, i18n } = useTranslation("login");
+  const emailPlaceholder = t("email");
+  const passwordPlaceholder = t("password");
 
   return (
     <section className="h-screen mb-4">
@@ -30,7 +32,7 @@ const LoginPage = () => {
                   type="email"
                   name="email"
                   className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                  placeholder="Email Address"
+                  placeholder={emailPlaceholder}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
@@ -39,7 +41,7 @@ const LoginPage = () => {
                 <input
                   type="password"
                   className="form-control block w-full px-4 py-2 text-xl font-normal text-white bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                  placeholder="Password"
+                  placeholder={passwordPlaceholder}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
@@ -67,7 +69,7 @@ const LoginPage = () => {
                   }}
                   className="text-white hover:text-blue-300 focus:text-blue-700 active:text-blue-800 duration-200 transition ease-in-out"
                 >
-                  Forgot password?
+                  {t("forgot")}
                 </a>
               </div>
 
@@ -93,12 +95,12 @@ const LoginPage = () => {
                     });
                 }}
               >
-                Login
+                {t("title")}
               </button>
 
               <div className="flex items-center my-4 before:flex-1 before:border-t before:border-gray-300 before:mt-0.5 after:flex-1 after:border-t after:border-gray-300 after:mt-0.5">
                 <p className="text-center text-white font-semibold mx-4 mb-0">
-                  OR
+                  {t("or")}
                 </p>
               </div>
 
@@ -117,7 +119,7 @@ const LoginPage = () => {
                 }}
               >
                 <FaGoogle className="mr-5" />
-                Continue with Google
+                {t("google")}
               </button>
               <button
                 type="submit"
@@ -130,7 +132,7 @@ const LoginPage = () => {
                 }}
               >
                 <FaSignInAlt className="mr-4" />
-                Continue to Sign Up
+                {t("signup")}
               </button>
             </form>
           </div>

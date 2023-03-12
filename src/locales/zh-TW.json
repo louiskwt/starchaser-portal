@@ -1,5 +1,11 @@
 {
   "login": {
-    "title": "登入"
+    "title": "登入",
+    "email": "電子郵件",
+    "password": "密碼",
+    "forgot": "忘記密碼？",
+    "signup": " 馬上註冊",
+    "google": "使用 Google 登入",
+    "or": "或"
   }
 }
