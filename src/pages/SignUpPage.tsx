@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { FaArrowLeft } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import auth from "../assets/auth.svg";
@@ -14,6 +15,15 @@ const SignUpPage = () => {
   const { signUp } = useAuth();
   const navigate = useNavigate();
 
+  const { t, i18n } = useTranslation("signup");
+
+  const emailPlaceholder = t("email");
+  const passwordPlaceholder = t("password");
+  const dseYearPlaceholder = t("dseYear");
+  const mobilePhonePlaceholder = t("mobilePhone");
+  const invitationCodePlaceholder = t("invitationCode");
+  const namePlaceholder = t("username");
+
   return (
     <section className="h-screen mb-4">
       <div className="container px-6 py-12 h-full">
@@ -23,15 +33,15 @@ const SignUpPage = () => {
           </div>
           <div className="md:w-8/12 lg:w-5/12 lg:ml-20">
             <h1 className="text-3xl text-white text-center font-semibold mb-8">
-              Sign Up
+              {t("title")}
             </h1>
             <form>
               <div className="mb-6">
                 <input
-                  type="email"
-                  name="email"
+                  type="text"
+                  name="userName"
                   className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                  placeholder="User Name"
+                  placeholder={namePlaceholder}
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                 />
@@ -41,7 +51,7 @@ const SignUpPage = () => {
                   type="email"
                   name="email"
                   className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                  placeholder="Email Address"
+                  placeholder={emailPlaceholder}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
@@ -50,7 +60,7 @@ const SignUpPage = () => {
                 <input
                   type="password"
                   className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                  placeholder="Password"
+                  placeholder={passwordPlaceholder}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
@@ -59,7 +69,7 @@ const SignUpPage = () => {
                 <input
                   type="number"
                   className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                  placeholder="Your (next) DSE Year"
+                  placeholder={dseYearPlaceholder}
                   value={dseYear}
                   onChange={(e) => setDseYear(e.target.value)}
                 />
@@ -68,7 +78,7 @@ const SignUpPage = () => {
                 <input
                   type="number"
                   className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                  placeholder="Your Phone Number"
+                  placeholder={mobilePhonePlaceholder}
                   value={phoneNum}
                   onChange={(e) => setPhoneNum(e.target.value)}
                 />
@@ -77,7 +87,7 @@ const SignUpPage = () => {
                 <input
                   type="text"
                   className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                  placeholder="Invitation Code"
+                  placeholder={invitationCodePlaceholder}
                   value={invitationCode}
                   onChange={(e) => setInvitationCode(e.target.value)}
                 />
@@ -103,7 +113,7 @@ const SignUpPage = () => {
                   );
                 }}
               >
-                Sign Up
+                {t("signup")}
               </button>
 
               <button
@@ -117,7 +127,7 @@ const SignUpPage = () => {
                 }}
               >
                 <FaArrowLeft className="mr-8" />
-                Go back to Log in
+                {t("back")}
               </button>
             </form>
           </div>

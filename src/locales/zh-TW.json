@@ -7,5 +7,16 @@
     "signup": " 馬上註冊",
     "google": "使用 Google 登入",
     "or": "或"
+  },
+  "signup": {
+    "title": "註冊",
+    "email": "電子郵件",
+    "password": "密碼",
+    "dseYear": "下一次 DSE 考試年份",
+    "mobilePhone": "手提電話號碼",
+    "invitationCode": "邀請碼",
+    "signup": "註冊",
+    "username": "用戶名稱",
+    "back": "返回登入頁面"
   }
 }

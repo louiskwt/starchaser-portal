@@ -7,5 +7,16 @@
     "signup": "Continue to Sign Up",
     "google": "Log in with Google",
     "or": "or"
+  },
+  "signup": {
+    "title": "Sign Up",
+    "email": "Email",
+    "password": "Password",
+    "dseYear": "Your Next DSE Year",
+    "mobilePhone": "Your Mobile Phone Number",
+    "invitationCode": "Invitation Code",
+    "signup": "Sign Up",
+    "username": "Username",
+    "back": "Back to Log In"
   }
 }
