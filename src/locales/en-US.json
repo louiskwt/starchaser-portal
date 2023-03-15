@@ -18,5 +18,13 @@
     "signup": "Sign Up",
     "username": "Username",
     "back": "Back to Log In"
+  },
+  "profileSetup": {
+    "title": "Student Profile",
+    "username": "Username",
+    "dseYear": "Your Next DSE Year",
+    "mobilePhone": "Your Mobile Phone Number",
+    "invitationCode": "Invitation Code",
+    "submit": "Submit"
   }
 }

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useLocation, useNavigate } from "react-router-dom";
 import auth from "../assets/auth.svg";
 import { useAuth } from "../context/AuthContext";
@@ -15,6 +16,13 @@ const ProfileSetUpPage = () => {
 
   console.log(location);
 
+  const { t, i18n } = useTranslation("profileSetup");
+
+  const dseYearPlaceholder = t("dseYear");
+  const mobilePhonePlaceholder = t("mobilePhone");
+  const invitationCodePlaceholder = t("invitationCode");
+  const namePlaceholder = t("username");
+
   useEffect(() => {
     if (!location.state || location.state.from !== "login") {
       navigate("/login", { replace: true });
@@ -30,7 +38,7 @@ const ProfileSetUpPage = () => {
           </div>
           <div className="md:w-8/12 lg:w-5/12 lg:ml-20">
             <h1 className="text-3xl text-white text-center font-semibold mb-8">
-              Profile Setup
+              {t("title")}
             </h1>
             <form>
               <div className="mb-6">
@@ -38,7 +46,7 @@ const ProfileSetUpPage = () => {
                   type="email"
                   name="email"
                   className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                  placeholder="User Name"
+                  placeholder={namePlaceholder}
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                 />
@@ -48,7 +56,7 @@ const ProfileSetUpPage = () => {
                   type="number"
                   name="dseYear"
                   className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                  placeholder="Your (Next) DSE Year"
+                  placeholder={dseYearPlaceholder}
                   value={dseYear}
                   onChange={(e) => setDseYear(e.target.value)}
                 />
@@ -58,7 +66,7 @@ const ProfileSetUpPage = () => {
                   type="number"
                   name="phoneNum"
                   className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                  placeholder="Your Phone Number"
+                  placeholder={mobilePhonePlaceholder}
                   value={phoneNum}
                   onChange={(e) => setPhoneNum(e.target.value)}
                 />
@@ -67,7 +75,7 @@ const ProfileSetUpPage = () => {
                 <input
                   type="text"
                   className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                  placeholder="Invitation Code"
+                  placeholder={invitationCodePlaceholder}
                   value={invitationCode}
                   onChange={(e) => setInvitationCode(e.target.value)}
                 />
@@ -92,7 +100,7 @@ const ProfileSetUpPage = () => {
                   );
                 }}
               >
-                Submit
+                {t("submit")}
               </button>
             </form>
           </div>
