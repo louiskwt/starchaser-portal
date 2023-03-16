@@ -26,5 +26,11 @@
     "mobilePhone": "手提電話號碼",
     "invitationCode": "邀請碼",
     "submit": "提交"
+  },
+  "sidebar": {
+    "home": "主頁",
+    "tasks": "學習任務",
+    "resources": "學習資源",
+    "payment": "繳付學費"
   }
 }

@@ -1,31 +1,5 @@
+import { useTranslation } from "react-i18next";
 import { useLocation, useNavigate } from "react-router-dom";
-
-const sideBarLinkData = [
-  {
-    name: "Home",
-    icon: "fas fa-home",
-    path: "/",
-    color: "green",
-  },
-  {
-    name: "Task",
-    icon: "fas fa-tasks",
-    path: "/task",
-    color: "pink",
-  },
-  {
-    name: "Resources",
-    icon: "fas fa-book",
-    path: "/resources",
-    color: "yellow",
-  },
-  {
-    name: "Payment",
-    icon: "fas fa-wallet",
-    path: "/payment",
-    color: "purple",
-  },
-];
 
 const generateSidebarButton = (
   name: string,
@@ -56,6 +30,35 @@ const generateSidebarButton = (
 const Sidebar = () => {
   const location = useLocation();
   const navigate = useNavigate();
+  const { t } = useTranslation("sidebar");
+
+  const sideBarLinkData = [
+    {
+      name: t("home"),
+      icon: "fas fa-home",
+      path: "/",
+      color: "green",
+    },
+    {
+      name: t("tasks"),
+      icon: "fas fa-tasks",
+      path: "/task",
+      color: "pink",
+    },
+    {
+      name: t("resources"),
+      icon: "fas fa-book",
+      path: "/resources",
+      color: "yellow",
+    },
+    {
+      name: t("payment"),
+      icon: "fas fa-wallet",
+      path: "/payment",
+      color: "purple",
+    },
+  ];
+
   return (
     <nav aria-label="alternative nav">
       <div className="bg-gray-800 shadow-xl h-20 fixed bottom-0 mt-12 md:relative md:h-screen z-10 w-full md:w-48 content-center">

@@ -26,5 +26,11 @@
     "mobilePhone": "Your Mobile Phone Number",
     "invitationCode": "Invitation Code",
     "submit": "Submit"
+  },
+  "sidebar": {
+    "home": "Home",
+    "task": "Tasks",
+    "resources": "Resources",
+    "payment": "Payment"
   }
 }
