@@ -29,7 +29,7 @@
   },
   "sidebar": {
     "home": "Home",
-    "task": "Tasks",
+    "tasks": "Tasks",
     "resources": "Resources",
     "payment": "Payment"
   }
