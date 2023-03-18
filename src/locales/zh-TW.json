@@ -32,5 +32,8 @@
     "tasks": "學習任務",
     "resources": "學習資源",
     "payment": "繳付學費"
+  },
+  "navbar": {
+    "logout": "登出"
   }
 }

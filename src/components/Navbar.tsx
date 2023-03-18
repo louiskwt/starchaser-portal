@@ -1,4 +1,5 @@
 import { useContext, useRef } from "react";
+import { useTranslation } from "react-i18next";
 import { AuthContext } from "../context/AuthContext";
 
 const Navbar = () => {
@@ -7,6 +8,7 @@ const Navbar = () => {
   const toggleDropDown = () => {
     dropDownRef.current?.classList?.toggle("invisible");
   };
+  const { t } = useTranslation("navbar");
 
   return (
     <>
@@ -54,7 +56,8 @@ const Navbar = () => {
                         className="p-2 hover:bg-gray-800 text-white text-sm no-underline hover:no-underline block"
                         onClick={logOut}
                       >
-                        <i className="fas fa-sign-out-alt fa-fw"></i> Log Out
+                        <i className="fas fa-sign-out-alt fa-fw mr-2"></i>
+                        {t("logout")}
                       </a>
                     </div>
                   </div>
