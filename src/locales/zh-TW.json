@@ -35,5 +35,11 @@
   },
   "navbar": {
     "logout": "登出"
+  },
+  "home": {
+    "title": "主頁",
+    "countdown": "DSE 考試倒數",
+    "days": "天",
+    "points": "Star Points"
   }
 }

@@ -35,5 +35,11 @@
   },
   "navbar": {
     "logout": "Log Out"
+  },
+  "home": {
+    "title": "Home",
+    "countdown": "Count Down to DSE",
+    "days": "days",
+    "points": "Star Points"
   }
 }

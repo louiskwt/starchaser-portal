@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { useTranslation } from "react-i18next";
 import { FirestoreContext } from "../context/FirestoreContext";
 import { cardStyles, iconStyles, textStyles } from "../styles/tailwindClasses";
 import { ITableConfig } from "../types";
@@ -37,6 +38,8 @@ const Home = ({ daysToDSE, points }: HomeProps) => {
     };
   }
 
+  const { t } = useTranslation("home");
+
   return (
     <section className="w-full">
       <div
@@ -45,12 +48,12 @@ const Home = ({ daysToDSE, points }: HomeProps) => {
       >
         <div className="bg-gray-800 pt-3">
           <div className="rounded-tl-3xl bg-gradient-to-r from-blue-900 to-gray-800 p-4 shadow text-2xl text-white">
-            <h1 className="font-bold pl-2">Home</h1>
+            <h1 className="font-bold pl-2">{t("title")}</h1>
           </div>
         </div>
         <div className="flex flex-wrap">
           <MetricCard
-            title="Days to DSE"
+            title={t("countdown")}
             data={`${daysToDSE} days`}
             cardStyle={cardStyles.blue}
             textStyle={textStyles.dark}
@@ -59,7 +62,7 @@ const Home = ({ daysToDSE, points }: HomeProps) => {
           />
 
           <MetricCard
-            title="Points"
+            title={t("points")}
             data={points.toString()}
             cardStyle={cardStyles.purple}
             textStyle={textStyles.dark}
