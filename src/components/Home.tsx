@@ -70,7 +70,7 @@ const Home = ({ daysToDSE, points }: HomeProps) => {
             icon="star"
           />
           <CardButton
-            title="上傳作業"
+            title={t("upload")}
             cardStyle={cardStyles.green}
             textStyle={textStyles.zinc}
             iconStyle={iconStyles.green}
