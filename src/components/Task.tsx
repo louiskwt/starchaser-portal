@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { useTranslation } from "react-i18next";
 import { FirestoreContext } from "../context/FirestoreContext";
 import { ITask } from "../types";
 import Table from "./Table";
@@ -36,6 +37,8 @@ const Task = () => {
     };
   }
 
+  const { t } = useTranslation("task");
+
   return (
     <section className="w-full h-screen">
       <div
@@ -44,7 +47,7 @@ const Task = () => {
       >
         <div className="bg-gray-800 pt-3">
           <div className="rounded-tl-3xl bg-gradient-to-r from-blue-900 to-gray-800 p-4 shadow text-2xl text-white">
-            <h1 className="font-bold pl-2">Task</h1>
+            <h1 className="font-bold pl-2">{t("title")}</h1>
           </div>
         </div>
         <div></div>

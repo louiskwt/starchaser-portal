@@ -42,5 +42,8 @@
     "days": "days",
     "points": "Star Points",
     "upload": "Upload your Assignments"
+  },
+  "task": {
+    "title": "Tasks"
   }
 }

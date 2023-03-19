@@ -42,5 +42,8 @@
     "days": "天",
     "points": "Star Points",
     "upload": "上傳作業"
+  },
+  "task": {
+    "title": "學習任務"
   }
 }
