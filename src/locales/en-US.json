@@ -45,5 +45,8 @@
   },
   "task": {
     "title": "Tasks"
+  },
+  "resources": {
+    "title": "Resources"
   }
 }

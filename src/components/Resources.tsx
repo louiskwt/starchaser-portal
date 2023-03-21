@@ -1,4 +1,5 @@
 import { useContext, useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import {
   FirestoreContext,
   IResourceData,
@@ -32,6 +33,8 @@ const Resources = () => {
     setResourceData(formattedResources);
   }, [resources]);
 
+  const { t } = useTranslation("resources");
+
   return (
     <section className="w-full">
       <div
@@ -40,7 +43,7 @@ const Resources = () => {
       >
         <div className="bg-gray-800 pt-3">
           <div className="rounded-tl-3xl bg-gradient-to-r from-blue-900 to-gray-800 p-4 shadow text-2xl text-white">
-            <h1 className="font-bold pl-2">Resources</h1>
+            <h1 className="font-bold pl-2">{t("title")}</h1>
           </div>
         </div>
         <div></div>
