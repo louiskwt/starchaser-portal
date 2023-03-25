@@ -12,7 +12,7 @@ StarChaser 的 VIP 學生管理系統 (Course Management System)
 - [ X ] 訊息系統
 - [ x ] 功課遞交功能
 - [ X ] 忘記密碼
-- [ ] 中文版面
+- [ X ] 中文版面
 - [ ] 學習表現分析
 
 ## Log
