@@ -41,12 +41,10 @@ const CardButton = ({
   }
 
   function handleSubmit(e: React.ChangeEvent<HTMLInputElement>) {
-    const file = e.target.files?.[0];
-
-    if (file) {
+    Object.values(e.target.files).forEach((file) => {
       const fileName = `${userInfo?.name}-${file.name}`;
       uploadFile(file, fileName, handleUploadState, toastHandler);
-    }
+    });
   }
 
   return (
