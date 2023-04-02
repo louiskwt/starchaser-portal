@@ -62,6 +62,7 @@ const CardButton = ({
           onChange={(e) => {
             handleSubmit(e);
           }}
+          multiple
           hidden
         />
         <div className="flex flex-row items-center">
