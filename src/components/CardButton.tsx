@@ -45,6 +45,7 @@ const CardButton = ({
       const fileName = `${userInfo?.name}-${file.name}`;
       uploadFile(file, fileName, handleUploadState, toastHandler);
     });
+    e.target.value = "";
   }
 
   return (

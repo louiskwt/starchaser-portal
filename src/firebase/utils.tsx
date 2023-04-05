@@ -33,7 +33,6 @@ export function uploadFile(
           });
 
           uploadStateHandler(false);
-
           toast(true);
         })
         .catch((error) => {
