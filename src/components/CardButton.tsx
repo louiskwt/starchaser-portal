@@ -41,12 +41,15 @@ const CardButton = ({
   }
 
   function handleSubmit(e: React.ChangeEvent<HTMLInputElement>) {
-    const file = e.target.files?.[0];
+    if (e.target.files === null) return;
 
-    if (file) {
+    const files: File[] = Object.values(e.target.files);
+
+    files.forEach((file) => {
       const fileName = `${userInfo?.name}-${file.name}`;
       uploadFile(file, fileName, handleUploadState, toastHandler);
-    }
+    });
+    e.target.value = "";
   }
 
   return (
@@ -64,6 +67,7 @@ const CardButton = ({
           onChange={(e) => {
             handleSubmit(e);
           }}
+          multiple
           hidden
         />
         <div className="flex flex-row items-center">
