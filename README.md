@@ -17,5 +17,9 @@ StarChaser 的 VIP 學生管理系統 (Course Management System)
 ## Log
 
 01/29 It's live now 🎉
+
 03/01 重要更新 + Bug fix
+
 03/25 中文介面
+
+04/05 FIXED Upload Bug
