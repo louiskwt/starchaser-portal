@@ -61,6 +61,16 @@ const Home = ({ daysToDSE, points }: HomeProps) => {
             icon="clock"
           />
 
+          {daysToDSE <= 0 && (
+            <CardButton
+              title={t("survey")}
+              cardStyle={cardStyles.blue}
+              textStyle={textStyles.dark}
+              iconStyle={iconStyles.blue}
+              icon="star"
+            />
+          )}
+
           <MetricCard
             title={t("points")}
             data={points.toString()}
