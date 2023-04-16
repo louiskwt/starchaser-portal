@@ -61,7 +61,7 @@ const Home = ({ daysToDSE, points }: HomeProps) => {
             icon="clock"
           />
 
-          {daysToDSE <= 0 && (
+          {daysToDSE <= 7 && (
             <MetricCard
               title={t("survey")}
               data={t("surveyLink")}
