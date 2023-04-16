@@ -62,12 +62,18 @@ const Home = ({ daysToDSE, points }: HomeProps) => {
           />
 
           {daysToDSE <= 0 && (
-            <CardButton
+            <MetricCard
               title={t("survey")}
-              cardStyle={cardStyles.blue}
+              data={t("surveyLink")}
+              cardStyle={cardStyles.red}
               textStyle={textStyles.dark}
-              iconStyle={iconStyles.blue}
-              icon="star"
+              iconStyle={iconStyles.red}
+              icon="clipboard-list"
+              isClickable={true}
+              onClickAction={() => {
+                // TODO: Add link to survey
+                alert("Link to survey");
+              }}
             />
           )}
 
