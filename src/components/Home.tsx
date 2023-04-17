@@ -71,8 +71,7 @@ const Home = ({ daysToDSE, points }: HomeProps) => {
               icon="clipboard-list"
               isClickable={true}
               onClickAction={() => {
-                // TODO: Add link to survey
-                alert("Link to survey");
+                window.open("https://forms.gle/M2DKzFH6p1U7yn4m9", "_blank");
               }}
             />
           )}
