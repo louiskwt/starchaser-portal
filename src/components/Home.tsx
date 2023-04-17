@@ -21,6 +21,7 @@ const Home = ({ daysToDSE, points }: HomeProps) => {
       toast("提提你，記得幫我完成問卷 （Menu 入面第二個選項)", {
         type: "info",
         closeOnClick: true,
+        autoClose: false,
       });
   });
 
