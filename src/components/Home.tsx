@@ -1,5 +1,6 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { toast } from "react-toastify";
 import { FirestoreContext } from "../context/FirestoreContext";
 import { cardStyles, iconStyles, textStyles } from "../styles/tailwindClasses";
 import { ITableConfig } from "../types";
@@ -14,6 +15,15 @@ interface HomeProps {
 
 const Home = ({ daysToDSE, points }: HomeProps) => {
   const { studentData } = useContext(FirestoreContext);
+
+  useEffect(() => {
+    if (daysToDSE <= 7)
+      toast("提提你，記得幫我完成問卷 （Menu 入面第二個選項)", {
+        type: "info",
+        closeOnClick: true,
+        autoClose: false,
+      });
+  });
 
   const showTask = studentData.taskData ? true : false;
 
@@ -60,6 +70,21 @@ const Home = ({ daysToDSE, points }: HomeProps) => {
             iconStyle={iconStyles.blue}
             icon="clock"
           />
+
+          {daysToDSE <= 7 && (
+            <MetricCard
+              title={t("survey")}
+              data={t("surveyLink")}
+              cardStyle={cardStyles.red}
+              textStyle={textStyles.dark}
+              iconStyle={iconStyles.red}
+              icon="clipboard-list"
+              isClickable={true}
+              onClickAction={() => {
+                window.open("https://forms.gle/M2DKzFH6p1U7yn4m9", "_blank");
+              }}
+            />
+          )}
 
           <MetricCard
             title={t("points")}

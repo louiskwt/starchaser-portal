@@ -41,7 +41,9 @@
     "countdown": "DSE 考試倒數",
     "days": "天",
     "points": "Star Points",
-    "upload": "上傳作業"
+    "upload": "上傳作業",
+    "survey": "填寫問卷",
+    "surveyLink": "按這裡填寫問卷"
   },
   "task": {
     "title": "學習任務"

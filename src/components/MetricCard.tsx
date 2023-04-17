@@ -5,6 +5,8 @@ interface MetricCardProps {
   iconStyle: string;
   icon: string;
   data: string;
+  onClickAction?: () => void;
+  isClickable?: boolean;
 }
 
 const MetricCard = ({
@@ -14,9 +16,18 @@ const MetricCard = ({
   data,
   textStyle,
   iconStyle,
+  isClickable,
+  onClickAction,
 }: MetricCardProps) => {
   return (
-    <div className="w-full md:w-1/2 p-6">
+    <div
+      className="w-full md:w-1/2 p-6"
+      onClick={() => {
+        if (isClickable && onClickAction) {
+          onClickAction();
+        }
+      }}
+    >
       <div className={`${cardStyle} rounded-lg shadow-xl p-5`}>
         <div className="flex flex-row items-center">
           <div className="flex-shrink pr-4">

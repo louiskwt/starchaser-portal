@@ -41,7 +41,9 @@
     "countdown": "Count Down to DSE",
     "days": "days",
     "points": "Star Points",
-    "upload": "Upload your Assignments"
+    "upload": "Upload your Assignments",
+    "survey": "Take the Survey",
+    "surveyLink": "Click heres"
   },
   "task": {
     "title": "Tasks"
