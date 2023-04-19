@@ -86,6 +86,14 @@ const Home = ({ daysToDSE, points }: HomeProps) => {
             />
           )}
 
+          <CardButton
+            title={t("upload")}
+            cardStyle={cardStyles.green}
+            textStyle={textStyles.zinc}
+            iconStyle={iconStyles.green}
+            icon="upload"
+          />
+
           <MetricCard
             title={t("points")}
             data={points.toString()}
@@ -93,13 +101,6 @@ const Home = ({ daysToDSE, points }: HomeProps) => {
             textStyle={textStyles.dark}
             iconStyle={iconStyles.purple}
             icon="star"
-          />
-          <CardButton
-            title={t("upload")}
-            cardStyle={cardStyles.green}
-            textStyle={textStyles.zinc}
-            iconStyle={iconStyles.green}
-            icon="upload"
           />
         </div>
         <div className="w-full px-4 mx-auto mt-12">
