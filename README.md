@@ -1,19 +1,10 @@
-# StarChaser Portol (Prototype)
+# StarChaser
 
-StarChaser 的 VIP 學生管理系統 (Course Management System)
+StarChaser 線上學習平台
 
 ## 里程碑 [v0.1]
 
-- [ X ] 登入系純
-- [ X ] 資源管理
-- [ X ] 每週任務
-- [ X ] 獎勵制度
-- [ X ] 學費付款
-- [ X ] 訊息系統
-- [ x ] 功課遞交功能
-- [ X ] 忘記密碼
-- [ X ] 中文版面
-- [ X ] 教學問卷
+- [  ] Rebuild
 
 ## Log
 
@@ -24,4 +15,5 @@ StarChaser 的 VIP 學生管理系統 (Course Management System)
 03/25 中文介面
 
 04/05 FIXED Upload Bug
-`
+
+09/07 Start rebuild
