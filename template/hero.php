@@ -1,6 +1,6 @@
 <?php
-  $v_link = "#";
-  $r_link = "#";
+  $v_link = "https://www.youtube.com/watch?v=FrQK56ojb6c&list=PLms_Uy6lFiB3y-oxHKe2zoUTUw3jfaBZ1";
+  $r_link = "https://drive.google.com/drive/folders/19t63LXgL-I1-SOj1aDvabBqUqv0E7Ng1?usp=sharing";
 ?>
 
 <div class="bg-dark text-secondary px-4 py-5 text-center">
