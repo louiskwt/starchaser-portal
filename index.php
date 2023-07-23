@@ -1,4 +1,5 @@
 <?php
-  $site_name = "StarChaser";
-  echo "Hello " . $site_name
+$req = $_SERVER['REQUEST_URI']; 
+echo var_dump($req);
+
 ?>
