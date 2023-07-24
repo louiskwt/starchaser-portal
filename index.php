@@ -1,11 +1,10 @@
 <?php
   $nav = __DIR__ . "/template/navbar.php";
   $hero = __DIR__ . "/template/hero.php";
-
 ?>
 
 <!doctype html>
-<html lang="zh-HKt:" data-bs-theme="dark">
+<html lang="zh-HK" data-bs-theme="dark">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
