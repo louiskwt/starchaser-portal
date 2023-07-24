@@ -9,10 +9,10 @@
       <div class="col-lg-6 mx-auto">
         <p class="fs-5 mb-4"> 只要你有心，一切都有可能！ </p>
         <div class="d-grid gap-2 row-gap-4 d-sm-flex justify-content-sm-center ">
-        <a href=<?= $r_link ?> class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">
+        <a href=<?= $r_link ?> target="_blank" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">
             Notes and Slides
         </a>
-        <a href=<?= $v_link ?>  class="btn btn-outline-light btn-lg px-4">Videos</a>
+        <a href=<?= $v_link ?> target="_blank"  class="btn btn-outline-light btn-lg px-4">Videos</a>
         </div>
       </div>
     </div>
