@@ -8,6 +8,23 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- generics -->
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/louiskwt/starchaser-static/icons/icon-96.png
+" sizes="96x96">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/louiskwt/starchaser-static/icons/icon-128.png
+" sizes="128x128">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/louiskwt/starchaser-static/icons/icon-192.png
+" sizes="192x192">
+
+<!-- Android -->
+<link rel="shortcut icon" sizes="196x196" href=“https://cdn.jsdelivr.net/gh/louiskwt/starchaser-static/icons/icon-196.png
+">
+
+<!-- iOS -->
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/louiskwt/starchaser-static/icons/icon-120.png
+" sizes="120x120">
+
+
     <title>StarChaser | 線上英文學習平台</title>
     <meta content="線上 DSE 英文 及 IELTS 考試學習平台，提供練習及公開課程去幫你備考" name="description">
     <meta content="線上 DSE 英文 及 IELTS 考試學習平台，提供練習及公開課程去幫你備考" property="og:description">
