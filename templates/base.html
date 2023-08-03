@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <title>StarChaser | {% block title %}{% endblock title %}</title>
+  </head>
+  <body> 
+    <header>
+      <h1><a href="{% url 'home' %}">DSE StarChaser</a></h1>
+    </header>
+    <div>
+      {% block content %}
+      {% endblock content %}
+    </div>
+  </body> 
+</html>
