@@ -1,3 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
+class PostListView(ListView):
+    model = Post
+    template_name = "dse-home.html"
