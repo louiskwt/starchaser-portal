@@ -1,6 +1,5 @@
 from django.db import models
 from django.urls import reverse
-from django.utils import timezone
 
 
 class PublishedManager(models.Manager):
@@ -32,7 +31,7 @@ class Post(models.Model):
 
 
     def __str__(self):
-        return self.title
+        return self.title[:30]
 
     def get_absolute_url(self):
         return reverse("notes_detail", kwargs={"pk": self.pk})
