@@ -21,5 +21,5 @@ from starchaser_project.views import LandingPageView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('dse/', include('dse.urls')),
-    path("", LandingPageView.as_view()),
+    path("", LandingPageView.as_view(), name="home"),
 ]
