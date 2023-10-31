@@ -6,7 +6,8 @@ from .models import Post
 
 class PostListView(ListView):
     queryset = Post.published.all()
-    content_object_name = 'post_list'
+    context_object_name = 'post_list'
+    paginate_by = 5
     template_name = "dse-home.html"
 
 
