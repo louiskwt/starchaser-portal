@@ -1,8 +1,23 @@
 {% extends "base.html" %}
 
-{% block title %} {{ post.title }} {% endblock title %}
+{% block title %} 
+
+{{ post.title }} 
+
+{% endblock title %}
 
 {% block content %}
-
-
+<div class="row g-5">
+    <div class="col-md-8">
+        <article class="mb-4">
+            <h2 class="display-5 mb-1">{{ post.title }}</h2>
+            <p class="blog-post-meta">{{ post.published_at }}</p>
+            <hr>
+            <p>
+                {{ post.body }}
+            </p>
+        </article>
+    </div>
+    <div class="col-md-4"></div>
+</div>
 {% endblock content %}
