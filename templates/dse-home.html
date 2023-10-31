@@ -11,7 +11,7 @@
       <h3 class="mb-0">{{ post.title }}</h3>
       <div class="mb-1 text-body-secondary">{{ post.published_at | date}}</div>
       <p class="card-text mb-auto">{{ post.description }}</p>
-      <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+      <a href="{{ post.get_absolute_url }}" class="icon-link gap-1 icon-link-hover stretched-link">
         Continue reading ->
       </a>
     </div>
