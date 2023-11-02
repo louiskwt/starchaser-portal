@@ -19,8 +19,8 @@ def post_list(request):
         posts = paginator.page(page_number)
     except EmptyPage:
         posts = paginator.page(paginator.num_pages)
-    return render(request, 'dse-home.html', {'posts': posts})
+    return render(request, 'dse/dse-home.html', {'posts': posts})
 
 def notes_detail(request, year, month, day, post, id):
     post = get_object_or_404(Post, status=Post.Status.PUBLISHED, slug=post, published_at__year=year, published_at__month=month, published_at__day=day, id=id)
-    return render(request, 'note_detail.html', {'post': post})
+    return render(request, 'dse/dse-note-detail.html', {'post': post})
