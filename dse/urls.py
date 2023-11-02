@@ -1,6 +1,6 @@
 from django.urls import path
 
-from .views import PostListView, notes_detail, post_list
+from .views import notes_detail, post_list
 
 urlpatterns = [
     path("", post_list, name="dse_main"),
