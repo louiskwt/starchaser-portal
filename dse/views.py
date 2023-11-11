@@ -23,4 +23,6 @@ def post_list(request, tag_slug=None):
 
 def notes_detail(request, year, month, day, post, id):
     post = get_object_or_404(Post, status=Post.Status.PUBLISHED, slug=post, published_at__year=year, published_at__month=month, published_at__day=day, id=id)
-    return render(request, 'dse/dse-note-detail.html', {'post': post})
+    post_tag_ids = post.tags.values_list('id', flat=True)
+    related_posts = Post.published.filter(tags__in=post_tag_ids).exclude(id=post.id).order_by('-published_at')[:3]
+    return render(request, 'dse/dse-note-detail.html', {'post': post, 'related_posts': related_posts})
