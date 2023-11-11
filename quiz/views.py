@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from django.core.paginator import EmptyPage, Paginator
+from django.shortcuts import get_object_or_404, render
+from taggit.models import Tag
 
-# Create your views here.
+
+def quiz_index(request):
+    return render(request, 'quiz/quiz-home.html')
+
