@@ -6,4 +6,23 @@
 
 <h1>Quiz Table</h1>
 
+<table class="table table-hover table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">Title</th>
+      <th scope="col">Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for quiz in quizzes %}
+        <tr>
+            <th scope="row">{{ quiz.created_at|date:"d/m/Y" }}</th>
+            <td>{{ quiz.title|truncatechars:52 }}</td>
+            <td><button type="button" class="btn btn-outline-info">Link</button></td>
+        </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
 {% endblock content %}
