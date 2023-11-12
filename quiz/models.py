@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 
 class Quiz(models.Model):
@@ -6,7 +7,7 @@ class Quiz(models.Model):
     content = models.TextField()
     slug = models.SlugField()
     source = models.TextField()
-    created_at = models.DateField(auto_now_add=True)
+    created_at = models.DateField(default=timezone.now)
 
     class Meta:
         ordering = ['-created_at']
