@@ -12,7 +12,7 @@ def quiz_index(request):
 
 
 def quiz_page(request, quiz):
-    quiz = Quiz.objects.filter(slug=quiz)
+    quiz = Quiz.objects.get(slug=quiz)
     context = {
         'quiz': quiz
     }
