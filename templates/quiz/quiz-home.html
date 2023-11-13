@@ -19,7 +19,7 @@
         <tr>
             <th scope="row">{{ quiz.created_at|date:"d/m/Y" }}</th>
             <td>{{ quiz.title|truncatechars:52 }}</td>
-            <td><button type="button" class="btn btn-outline-info">Link</button></td>
+            <td><a href="{{ quiz.get_absolute_url }}" class="btn btn-outline-info">Link</a></td>
         </tr>
     {% endfor %}
   </tbody>

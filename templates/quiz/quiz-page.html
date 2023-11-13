@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %} 
+
+{{ quiz.title }} 
+
+{% endblock title %}
+
+{% block content %}
+<h1>{{ quiz.title }}</h1>
+<div>
+    <span>Date: {{ quiz.created_at|date:"d/m/Y" }}</span>
+</div>
+
+{{ quiz.content}}
+
+{% endblock content %}

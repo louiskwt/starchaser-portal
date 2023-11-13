@@ -5,9 +5,16 @@ from .models import Quiz
 
 
 def quiz_index(request):
-    quizzes = Quiz.objects.all().values
+    quizzes = Quiz.objects.all()
     context = {
         'quizzes': quizzes
     }
     return render(request, 'quiz/quiz-home.html', context)
 
+
+def quiz_page(request, quiz):
+    quiz = Quiz.objects.filter(slug=quiz)
+    context = {
+        'quiz': quiz
+    }
+    return render(request, 'quiz/quiz-page.html', context)
