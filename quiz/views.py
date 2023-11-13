@@ -1,4 +1,3 @@
-from django.core.paginator import EmptyPage, Paginator
 from django.shortcuts import get_object_or_404, render
 
 from .models import Quiz
