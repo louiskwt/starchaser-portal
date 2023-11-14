@@ -6,6 +6,7 @@ from django.utils import timezone
 class Quiz(models.Model):
     title = models.CharField(max_length=255)
     content = models.TextField()
+    vocab_list = models.TextField(null=True, blank=True)
     slug = models.SlugField()
     source = models.TextField()
     created_at = models.DateField(default=timezone.now)
