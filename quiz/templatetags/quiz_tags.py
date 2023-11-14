@@ -6,4 +6,4 @@ register = template.Library()
 
 @register.filter(name='md')
 def markdown_format(text):
-    return mark_safe(markdown.markdown(text))
+    return mark_safe(markdown.markdown(text, extensions=['extra']))
