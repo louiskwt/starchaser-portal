@@ -10,6 +10,7 @@ class Quiz(models.Model):
     slug = models.SlugField()
     source = models.TextField()
     created_at = models.DateField(default=timezone.now)
+    answer_key = models.TextField(null=True, blank=True)
 
     class Meta:
         ordering = ['-created_at']
