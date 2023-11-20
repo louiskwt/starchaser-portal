@@ -9,4 +9,4 @@ class QuizAdmin(admin.ModelAdmin):
     list_filter = ['created_at']
     search_fields = ['title', 'content']
     date_hierarchy = 'created_at'
-    ordering = ['created_at']
+    ordering = ['-created_at']
