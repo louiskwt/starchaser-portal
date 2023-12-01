@@ -2,6 +2,17 @@
 
 {% load quiz_tags %}
 
+{% block meta %}
+  <meta content="線上 DSE 每日英文小測，助你提升英放水平" name="description" />
+  <meta content="線上 DSE 每日英文小測，助你提升英放水平" property="og:description" />
+  <meta content="StarChaser | {{ quiz.title }} " property="og:title" />
+  <meta property="og:site_name" content="DSE StarChaser">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.{{request.get_host}}{{request.path }}">
+{% endblock meta %}
+
+
+
 {% block title %} 
 
 {{ quiz.title }} 
