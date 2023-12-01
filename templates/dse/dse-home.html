@@ -1,6 +1,16 @@
 {% extends "base.html" %}
 
-{% block title %} DSE {% endblock title %}
+{% block meta %}
+  <meta content="線上 DSE 英文筆記，助你提升英放水平" name="description" />
+  <meta content="線上 DSE 英文筆記，助你提升英放水平" property="og:description" />
+  <meta content="StarChaser | DSE 英文筆記 " property="og:title" />
+  <meta property="og:site_name" content="DSE StarChaser">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.{{request.get_host}}{{request.path }}">
+{% endblock meta %}
+
+
+{% block title %} DSE 英文筆記 {% endblock title %}
 
 {% block content %}
 <div class="col-mb-6 mt-5">
