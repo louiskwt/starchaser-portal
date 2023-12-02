@@ -14,6 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.contrib.sitemaps.views import sitemap
 from django.urls import include, path
 
 from starchaser_project.views import LandingPageView
@@ -23,4 +24,5 @@ urlpatterns = [
     path('dse/', include('dse.urls')),
     path('quiz/', include('quiz.urls')),
     path("", LandingPageView.as_view(), name="home"),
+    # path("sitemap.xml", sitemap, {"sitemaps", {}}, name="django.contrib.sitemaps.views.sitemap")
 ]
