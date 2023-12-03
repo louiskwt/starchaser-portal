@@ -3,8 +3,8 @@ from django.contrib.sitemaps import Sitemap
 from .models import Post
 
 
-class QuizSitemap(Sitemap):
-    changefreq = 'daily'
+class DSESitemap(Sitemap):
+    changefreq = 'weekly'
     priority = 0.8
 
     def items(self):
