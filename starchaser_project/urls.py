@@ -21,9 +21,12 @@ from dse.sitemaps import DSESitemap
 from quiz.sitemaps import QuizSitemap
 from starchaser_project.views import LandingPageView
 
+from .sitemaps import StaticViewSitemap
+
 sitemaps = {
     'dse': DSESitemap,
-    'quiz': QuizSitemap
+    'quiz': QuizSitemap,
+    'static': StaticViewSitemap
 }
 
 urlpatterns = [
