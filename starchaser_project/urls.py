@@ -31,5 +31,5 @@ urlpatterns = [
     path('dse/', include('dse.urls')),
     path('quiz/', include('quiz.urls')),
     path("", LandingPageView.as_view(), name="home"),
-    # path("sitemap.xml", sitemap, {"sitemaps", sitemaps}, name="django.contrib.sitemaps.views.sitemap")
+    path("sitemap.xml", sitemap, {"sitemaps": sitemaps}, name="django.contrib.sitemaps.views.sitemap")
 ]
