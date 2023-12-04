@@ -35,6 +35,8 @@ ALLOWED_HOSTS = ['www.dsestarchaser.me', '127.0.0.1']
 
 CSRF_TRUSTED_ORIGINS = ['https://www.dsestarchaser.me', 'http://127.0.0.1:8000']
 
+SITE_ID = 1
+
 # Application definition
 
 INSTALLED_APPS = [
