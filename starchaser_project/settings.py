@@ -50,7 +50,8 @@ INSTALLED_APPS = [
     'quiz.apps.QuizConfig',
     'taggit',
     'django.contrib.sites',
-    'django.contrib.sitemaps'
+    'django.contrib.sitemaps',
+    'ielts.apps.IeltsConfig'
 ]
 
 MIDDLEWARE = [
