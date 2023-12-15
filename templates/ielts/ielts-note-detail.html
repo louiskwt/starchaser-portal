@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load dse_tags %}
+
+{% block meta %}
+  <meta content="線上 DSE 英文筆記，助你提升英放水平" name="description" />
+  <meta content="線上 DSE 英文筆記，助你提升英放水平" property="og:description" />
+  <meta content="DSE StarChaser | {{ post.title }} " property="og:title" />
+  <meta property="og:site_name" content="DSE StarChaser">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.{{request.get_host}}{{request.path }}">
+{% endblock meta %}
+
+
+{% block title %} 
+
+{{ post.title }} 
+
+{% endblock title %}
+
+{% block content %}
+<div class="row g-5 p-3">
+    <div class="col-md-8">
+        <article class="mb-4">
+            <div class="text-center text-md-start">
+                <h2 class="display-5 mb-1">{{ post.title }}</h2>
+                <p class="blog-post-meta">{{ post.published_at }}</p>
+            </div>
+            <hr>
+            <p>
+                {{ post.body|markdown }}
+            </p>
+        </article>
+    </div>
+    <div class="col-md-4">
+        <div class="position-sticky" style="top: 2rem;">
+        <div class="p-4 mb-3 bg-body-tertiary rounded">
+          <h4 class="fst-italic">Motivational Quote</h4>
+          <p class="mb-0">
+            “Shoot for the moon. Even if you miss, you'll land among the stars.”
+            <br/>
+            <br/>
+            ― Norman Vincent Peale
+          </p>
+        </div>
+
+        <div>
+          <h4 class="fst-italic">Related Notes</h4>
+          <ul class="list-unstyled">
+            {% for post in related_posts %}
+              <li>
+                <a href="{{ post.get_absolute_url }}" class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                  <div class="col-lg-8">
+                    <h6 class="mb-0">{{ post.title }}</h6>
+                    <small class="text-body-secondary">{{ post.published_at }}</small>
+                  </div>
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+</div>
+{% endblock content %}
