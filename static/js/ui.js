@@ -3,6 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const navbar = document.getElementById("navbarNav");
 
   navbarBtn.addEventListener("click", () => {
-    navbar.classList.remove("collapse");
+    navbar.classList.toggle("collapse");
   });
 });
