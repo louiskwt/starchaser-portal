@@ -1,0 +1,11 @@
+{
+  "name": "starchaser-api",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "KT",
+  "license": "MIT",
+  "dependencies": {
+    "fastify": "^4.28.1"
+  },
+  "type": "module"
+}
