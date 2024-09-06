@@ -2,11 +2,15 @@
 
 
 {% block content %}
-      <table>
+    <table>
         <tr valign="top">
             <td><img src="{{ student.avatar(80) }}"></td>
             <td><h1>User: {{ student.username }}</h1></td>
         </tr>
     </table>
     <hr>
+    <h1>Latest Updates</h1>
+    {% for update in updates %}
+        {% include '_update.html' %}
+    {% endfor %}
 {% endblock %}

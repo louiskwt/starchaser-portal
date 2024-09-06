@@ -16,7 +16,11 @@ def index():
 @login_required
 def student(studentname):
     student = db.first_or_404(sa.select(User).where(User.username == studentname))
-    return render_template('student.html', student=student)
+    updates = [
+        {'author': student, 'body': 'Testing 1'},
+        {'author': student, 'body': 'Testing 2'}
+    ]
+    return render_template('student.html', student=student, updates=updates)
 
 @web_app.route('/login', methods=['GET', 'POST'])
 def login():
