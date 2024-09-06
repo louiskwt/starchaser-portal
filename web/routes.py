@@ -10,7 +10,7 @@ import sqlalchemy as sa
 @login_required
 def index():
     user = {'username': 'Eren'}
-    return render_template('index.html', title='Home', user=user)
+    return render_template('index.html', title='Home')
 
 @web_app.route('/login', methods=['GET', 'POST'])
 def login():
