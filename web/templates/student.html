@@ -5,7 +5,10 @@
     <table>
         <tr valign="top">
             <td><img src="{{ student.avatar(80) }}"></td>
-            <td><h1>User: {{ student.username }}</h1></td>
+            <td><h1>Student: {{ student.username }}</h1></td>
+            {% if student.about_me %}<p>{{ student.about_me }}</p>{% endif %}
+            {% if student.last_seen %}<p>Last seen on: {{ student.last_seen }}</p>{% endif %}
+
         </tr>
     </table>
     <hr>

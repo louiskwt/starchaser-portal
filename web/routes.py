@@ -5,6 +5,13 @@ from web.forms import LoginForm, RegistrationForm
 from flask_login import current_user, login_user, login_required, logout_user
 from web.models import User
 import sqlalchemy as sa
+from datetime import datetime, timezone
+
+@web_app.before_request
+def before_request():
+    if current_user.is_authenticated:
+        current_user.last_seen = datetime.now(timezone.utc)
+        db.session.commit()
 
 @web_app.route('/')
 @login_required
