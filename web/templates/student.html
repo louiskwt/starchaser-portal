@@ -2,6 +2,11 @@
 
 
 {% block content %}
-    <h1>Student: {{ student.username }}</h1>
+      <table>
+        <tr valign="top">
+            <td><img src="{{ student.avatar(80) }}"></td>
+            <td><h1>User: {{ student.username }}</h1></td>
+        </tr>
+    </table>
     <hr>
 {% endblock %}
