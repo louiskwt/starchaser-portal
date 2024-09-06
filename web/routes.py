@@ -12,6 +12,12 @@ def index():
     user = {'username': 'Eren'}
     return render_template('index.html', title='Home')
 
+@web_app.route('/student/<studentname>')
+@login_required
+def student(studentname):
+    student = db.first_or_404(sa.select(User).where(User.username == studentname))
+    return render_template('student.html', student=student)
+
 @web_app.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
