@@ -1,1 +1,2 @@
 FLASK_APP=starchaser.py
+FLASK_DEBUG=1
