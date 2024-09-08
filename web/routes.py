@@ -16,7 +16,6 @@ def before_request():
 @web_app.route('/')
 @login_required
 def index():
-    user = {'username': 'Eren'}
     return render_template('index.html', title='Home')
 
 @web_app.route('/student/<studentname>')
@@ -41,8 +40,10 @@ def login():
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
         next_page = request.args.get('next')
+        print(f'1: {next_page}')
         if not next_page or urlsplit(next_page).netloc != '':
             next_page = url_for('index')
+        print(f'2: {next_page}')
         flash('Login successfully! Welcome {}~'.format(form.username.data))
         return redirect(url_for(next_page))
     return render_template('login.html', title='Sign In', form=form)
