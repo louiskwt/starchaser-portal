@@ -1,5 +1,3 @@
-# StarChaser
+# StarChaser Portal
 
-線上 DSE 備考平台
-
-Online DSE Bootcamp
+My Personal Teaching Platform
