@@ -3,7 +3,9 @@ import "./App.css";
 function App() {
   return (
     <>
-      <div></div>
+      <div>
+        <button className="btn btn-primary">Button</button>
+      </div>
       <h1>Starchaser</h1>
     </>
   );
