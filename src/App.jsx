@@ -1,12 +1,10 @@
 import "./App.css";
+import {Navbar} from "./components";
 
 function App() {
   return (
     <>
-      <div>
-        <button className="btn btn-ghost">Ghost</button>
-      </div>
-      <h1 className="text-3xl font-bold underline">Hello StarChaser</h1>
+      <Navbar />
     </>
   );
 }
