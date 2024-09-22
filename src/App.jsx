@@ -6,7 +6,7 @@ function App() {
       <div>
         <button className="btn btn-primary">Button</button>
       </div>
-      <h1>Starchaser</h1>
+      <h1 className="text-3xl font-bold underline">Hello StarChaser</h1>
     </>
   );
 }
