@@ -2,14 +2,14 @@ export const Navbar = () => {
   return (
     <div className="navbar bg-base-100">
       <div className="flex-1">
-        <a className="btn btn-ghost text-xl">DSE Starchaser ⭐️</a>
+        <a className="btn btn-ghost text-2xl">DSE Starchaser ⭐️</a>
       </div>
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
-          <li>
-            <a>Link</a>
+          <li className="text-2xl">
+            <a>Login</a>
           </li>
-          <li>
+          {/* <li>
             <details>
               <summary>Parent</summary>
               <ul className="bg-base-100 rounded-t-none p-2">
@@ -21,7 +21,7 @@ export const Navbar = () => {
                 </li>
               </ul>
             </details>
-          </li>
+          </li> */}
         </ul>
       </div>
     </div>
