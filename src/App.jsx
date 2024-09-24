@@ -1,12 +1,12 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {AuthProvider} from "./hooks";
-import {LandingPage, LoginPage, ProtectedPageLayout} from "./pages";
+import {ErrorPage, LandingPage, LoginPage, ProtectedPageLayout} from "./pages";
 
 export const App = () => {
   const AppRoute = () => (
     <Routes>
-      <Route path="/" element={<LandingPage />} />
-      <Route path="/login" element={<LoginPage />} />
+      <Route path="/" element={<LandingPage />} errorElement={<ErrorPage />} />
+      <Route path="/login" element={<LoginPage />} errorElement={<ErrorPage />} />
       <Route
         path="/course"
         element={
@@ -15,6 +15,7 @@ export const App = () => {
             <h1>Protected</h1>{" "}
           </ProtectedPageLayout>
         }
+        errorElement={<ErrorPage />}
       />
     </Routes>
   );
