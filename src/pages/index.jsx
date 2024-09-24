@@ -1,3 +1,4 @@
 import {ErrorPage} from "./error";
+import {LoginPage} from "./login";
 
-export {ErrorPage};
+export {ErrorPage, LoginPage};

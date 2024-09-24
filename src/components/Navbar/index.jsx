@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom";
+
 export const Navbar = () => {
   return (
     <div className="navbar bg-base-100">
@@ -7,7 +9,9 @@ export const Navbar = () => {
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
           <li className="text-2xl">
-            <a>Login</a>
+            <Link to="/login">
+              <a>Login</a>
+            </Link>
           </li>
           {/* <li>
             <details>
