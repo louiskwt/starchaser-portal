@@ -1,4 +1,10 @@
+import {useAuth} from "../hooks";
+
 export const LoginPage = () => {
+  const {loginWithGoogle} = useAuth();
+  const handleGoogleLogin = async () => {
+    await loginWithGoogle();
+  };
   return (
     <>
       <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
@@ -7,7 +13,7 @@ export const LoginPage = () => {
         </div>
 
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-          <form className="space-y-6" action="#" method="POST">
+          <div className="space-y-6">
             <label className="block form-control w-full ">
               <div className="label">
                 <span className="label-text">Email</span>
@@ -22,17 +28,20 @@ export const LoginPage = () => {
             </label>
 
             <div>
-              <button type="submit" className="btn flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-lg font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                Sign in
-              </button>
+              <button className="btn flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-lg font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign in</button>
             </div>
             <div>
-              <button type="submit" className="btn flex w-full justify-center rounded-md bg-orange-600 px-3 py-1.5 text-lg font-semibold leading-6 text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+              <button
+                className="btn flex w-full justify-center rounded-md bg-orange-600 px-3 py-1.5 text-lg font-semibold leading-6 text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                onClick={() => {
+                  console.log("here");
+                  handleGoogleLogin();
+                }}>
                 <i className="fa fa-google" aria-hidden="true"></i>
                 Sign in With Google
               </button>
             </div>
-          </form>
+          </div>
 
           <p className="mt-10 text-center text-xl text-white">Not a member?</p>
         </div>
