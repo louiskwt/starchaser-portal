@@ -1,37 +1,21 @@
-import {createContext, useContext, useMemo, useState} from "react";
-import {useNavigate} from "react-router-dom";
+import {createContext, useContext, useState} from "react";
 
 const AuthContext = createContext();
 
-const AuthProvider = (children) => {
-  const [user, setUser] = useState("user", null);
-  const navigate = useNavigate();
+export const AuthProvider = ({children}) => {
+  const [user, setUser] = useState(null);
 
-  // call this function when you want to authenticate the user
-  const login = async (data) => {
-    setUser(data);
-    navigate("/profile");
+  const login = (userData) => {
+    setUser(userData); // Set user data upon login
   };
 
-  // call this function to sign out logged in user
   const logout = () => {
-    setUser(null);
-    navigate("/", {replace: true});
+    setUser(null); // Clear user data upon logout
   };
 
-  const value = useMemo(
-    () => ({
-      user,
-      login,
-      logout,
-    }),
-    [user]
-  );
-  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
+  return <AuthContext.Provider value={{user, login, logout}}>{children}</AuthContext.Provider>;
 };
 
-const useAuth = () => {
+export const useAuth = () => {
   return useContext(AuthContext);
 };
-
-export {AuthProvider, useAuth};
