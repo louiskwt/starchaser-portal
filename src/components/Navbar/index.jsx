@@ -19,7 +19,7 @@ export const Navbar = () => {
             <>
               {" "}
               <label htmlFor="my-drawer" className="btn btn-primary drawer-button">
-                Notes
+                <i className="fa-solid fa-book fa-2x"></i>
               </label>
               <li className="text-xl btn btn-ghost" onClick={() => handleLogout()}>
                 Logout
