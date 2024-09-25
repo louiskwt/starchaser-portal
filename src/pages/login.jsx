@@ -40,7 +40,7 @@ export const LoginPage = () => {
                 onClick={() => {
                   handleGoogleLogin();
                 }}>
-                <i className="fa fa-google" aria-hidden="true"></i>
+                <i className="fa-brands fa-google"></i>
                 Sign in With Google
               </button>
             </div>
