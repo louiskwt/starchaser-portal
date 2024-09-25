@@ -16,13 +16,21 @@ export const Navbar = () => {
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
           {user ? (
-            <li className="text-xl btn btn-ghost" onClick={() => handleLogout()}>
-              Logout
-            </li>
+            <>
+              {" "}
+              <label htmlFor="my-drawer" className="btn btn-primary drawer-button">
+                Notes
+              </label>
+              <li className="text-xl btn btn-ghost" onClick={() => handleLogout()}>
+                Logout
+              </li>
+            </>
           ) : (
-            <li className="text-xl btn btn-primary">
-              <Link to="/login">Login</Link>
-            </li>
+            <>
+              <li className="text-xl btn btn-primary">
+                <Link to="/login">Login</Link>
+              </li>
+            </>
           )}
         </ul>
       </div>
