@@ -1,9 +1,13 @@
+import {useNavigate} from "react-router-dom";
 import {useAuth} from "../hooks";
 
 export const LoginPage = () => {
-  const {loginWithGoogle} = useAuth();
+  const {loginWithGoogle, setUser} = useAuth();
+  const navigate = useNavigate();
   const handleGoogleLogin = async () => {
-    await loginWithGoogle();
+    const user = await loginWithGoogle();
+    setUser(user);
+    navigate("/course");
   };
   return (
     <>
@@ -34,7 +38,6 @@ export const LoginPage = () => {
               <button
                 className="btn flex w-full justify-center rounded-md bg-orange-600 px-3 py-1.5 text-lg font-semibold leading-6 text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 onClick={() => {
-                  console.log("here");
                   handleGoogleLogin();
                 }}>
                 <i className="fa fa-google" aria-hidden="true"></i>
