@@ -1,6 +1,13 @@
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
+import {useAuth} from "../../hooks";
 
 export const Navbar = () => {
+  const {user, logout} = useAuth();
+  const navigate = useNavigate();
+  const handleLogout = async () => {
+    await logout();
+    navigate("/");
+  };
   return (
     <div className="navbar bg-base-100">
       <div className="flex-1">
@@ -8,24 +15,15 @@ export const Navbar = () => {
       </div>
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
-          <li className="text-2xl">
-            <Link to="/login">
-              <a>Login</a>
-            </Link>
-          </li>
-          {/* <li>
-            <details>
-              <summary>Parent</summary>
-              <ul className="bg-base-100 rounded-t-none p-2">
-                <li>
-                  <a>Link 1</a>
-                </li>
-                <li>
-                  <a>Link 2</a>
-                </li>
-              </ul>
-            </details>
-          </li> */}
+          {user ? (
+            <li className="text-2xl btn btn-ghost" onClick={() => handleLogout()}>
+              Logout
+            </li>
+          ) : (
+            <li className="text-2xl btn btn-primary">
+              <Link to="/login">Login</Link>
+            </li>
+          )}
         </ul>
       </div>
     </div>
