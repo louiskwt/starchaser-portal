@@ -5,8 +5,6 @@ import {useAuth} from "../hooks";
 export const ProtectedPageLayout = ({children}) => {
   const {user} = useAuth();
 
-  console.log("check user", user);
-
   if (!user) {
     // user is not authenticated
     return <Navigate to="/login" />;
