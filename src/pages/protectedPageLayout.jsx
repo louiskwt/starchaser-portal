@@ -1,10 +1,11 @@
-import {Navigate, useOutlet} from "react-router-dom";
+import {Navigate} from "react-router-dom";
 import {Navbar} from "../components";
 import {useAuth} from "../hooks";
 
-export const ProtectedPageLayout = () => {
+export const ProtectedPageLayout = ({children}) => {
   const {user} = useAuth();
-  const outlet = useOutlet();
+
+  console.log("check user", user);
 
   if (!user) {
     // user is not authenticated
@@ -12,9 +13,9 @@ export const ProtectedPageLayout = () => {
   }
 
   return (
-    <div>
+    <>
       <Navbar />
-      {outlet}
-    </div>
+      {children}
+    </>
   );
 };
