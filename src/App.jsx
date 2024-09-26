@@ -1,6 +1,6 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {Toast} from "./components";
-import {AuthProvider, ToastProvider} from "./hooks";
+import {AuthProvider, NotesProvider, ToastProvider} from "./hooks";
 import {ErrorPage, ForgotPasswordPage, LandingPage, LoginPage, ProfilePage, RegisterPage} from "./pages";
 
 export const App = () => {
@@ -17,10 +17,12 @@ export const App = () => {
   return (
     <BrowserRouter>
       <AuthProvider>
-        <ToastProvider>
-          <AppRoute />
-          <Toast />
-        </ToastProvider>
+        <NotesProvider>
+          <ToastProvider>
+            <AppRoute />
+            <Toast />
+          </ToastProvider>
+        </NotesProvider>
       </AuthProvider>
     </BrowserRouter>
   );
