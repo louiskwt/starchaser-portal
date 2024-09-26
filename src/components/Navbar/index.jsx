@@ -17,6 +17,13 @@ export const Navbar = () => {
               <label htmlFor="my-drawer" className="btn btn-primary drawer-button">
                 <i className="fa-solid fa-book fa-2x"></i>
               </label>
+              <div className="btn avatar">
+                <div className="w-12 ml-1 rounded-2xl">
+                  <Link to="/profile">
+                    <img src={user.photoURL} />
+                  </Link>
+                </div>
+              </div>
             </>
           ) : (
             <>
