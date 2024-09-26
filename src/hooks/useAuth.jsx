@@ -1,4 +1,4 @@
-import {createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut} from "firebase/auth";
+import {createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut} from "firebase/auth";
 import {createContext, useContext, useEffect, useState} from "react";
 import {firebase} from "../Firebase";
 
@@ -55,8 +55,17 @@ export const AuthProvider = ({children}) => {
       throw error;
     }
   };
+  const resetPassword = async (email) => {
+    try {
+      await sendPasswordResetEmail(auth, email);
+      console.log("Password reset email sent!");
+    } catch (error) {
+      console.error("Error sending password reset email:", error);
+      throw error;
+    }
+  };
 
-  return <AuthContext.Provider value={{user, setUser, loginWithEmail, loginWithGoogle, logout, registerWithEmail}}>{children}</AuthContext.Provider>;
+  return <AuthContext.Provider value={{user, setUser, loginWithEmail, loginWithGoogle, logout, registerWithEmail, resetPassword}}>{children}</AuthContext.Provider>;
 };
 
 export const useAuth = () => {
