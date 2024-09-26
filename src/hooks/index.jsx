@@ -1,3 +1,4 @@
 import {AuthProvider, useAuth} from "./useAuth";
+import {ToastProvider, useToast} from "./useToast";
 
-export {AuthProvider, useAuth};
+export {AuthProvider, ToastProvider, useAuth, useToast};
