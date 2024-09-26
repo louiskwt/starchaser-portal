@@ -58,7 +58,6 @@ export const AuthProvider = ({children}) => {
   const resetPassword = async (email) => {
     try {
       await sendPasswordResetEmail(auth, email);
-      console.log("Password reset email sent!");
     } catch (error) {
       console.error("Error sending password reset email:", error);
       throw error;
