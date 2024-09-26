@@ -1,4 +1,4 @@
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {useAuth} from "../hooks";
 
 export const LoginPage = () => {
@@ -46,7 +46,9 @@ export const LoginPage = () => {
             </div>
           </div>
 
-          <p className="mt-10 text-center text-xl text-white">Not a member?</p>
+          <p className="mt-10 text-center text-xl text-white">
+            Not a member? <Link to="/register">Register here</Link>
+          </p>
         </div>
       </div>
     </>
