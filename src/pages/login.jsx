@@ -54,6 +54,9 @@ export const LoginPage = () => {
             <label className="block form-control w-full ">
               <div className="label">
                 <span className="label-text">Password</span>
+                <Link className="label-text-alt text-red-400" to="/forgotpassword">
+                  <span>Forgot Password?</span>
+                </Link>
               </div>
               <input name="password" type="password" placeholder="Type here" onChange={(e) => handleInutChange(e.target.name, e.target.value)} className="input input-bordered w-full" />
             </label>
