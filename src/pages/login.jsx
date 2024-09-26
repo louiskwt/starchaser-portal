@@ -47,7 +47,11 @@ export const LoginPage = () => {
           </div>
 
           <p className="mt-10 text-center text-xl text-white">
-            Not a member? <Link to="/register">Register here</Link>
+            Not a member? Register{" "}
+            <Link to="/register" className="text-primary">
+              {" "}
+              here
+            </Link>
           </p>
         </div>
       </div>
