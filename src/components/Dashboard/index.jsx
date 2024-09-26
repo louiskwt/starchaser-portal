@@ -1,8 +1,14 @@
+import {useNavigate} from "react-router-dom";
 import {useAuth} from "../../hooks";
 
 export const Dashboard = () => {
-  const {user} = useAuth();
-  console.log(user);
+  const {user, logout} = useAuth();
+
+  const navigate = useNavigate();
+  const handleLogout = async () => {
+    await logout();
+    navigate("/");
+  };
   return (
     <div className="flex flex-col justify-center items-center p-3 w-full">
       {/* main */}
@@ -94,6 +100,9 @@ export const Dashboard = () => {
           </div>
         </div>
       </div>
+      <li className="text-xl btn btn-ghost" onClick={() => handleLogout()}>
+        Logout
+      </li>
     </div>
   );
 };
