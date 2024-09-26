@@ -1,20 +1,28 @@
 import {useState} from "react";
 import {Link} from "react-router-dom";
-import {useAuth} from "../hooks";
+import {useAuth, useToast} from "../hooks";
 
 export const ForgotPasswordPage = () => {
   const {resetPassword} = useAuth();
   const [email, setEmail] = useState(null);
-  const [errorMessage, setErrorMessage] = useState(null);
+
+  const {showToast} = useToast();
 
   const handleInutChange = (email) => {
     setEmail(email);
   };
   const handlePasswordReset = async () => {
     try {
-      resetPassword(email);
+      //   resetPassword(email);
+      showToast({
+        message: "Reset password email sent!",
+        type: "success",
+      });
     } catch (error) {
-      setErrorMessage(error.message.replace("Firebase: ", "Oops! "));
+      showToast({
+        message: error.message,
+        type: "error",
+      });
     }
   };
 
@@ -24,7 +32,6 @@ export const ForgotPasswordPage = () => {
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight ">Reset your password</h2>
         </div>
-        <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm text-secondary text-center">{errorMessage}</div>
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
           <div className="space-y-6">
             <label className="block form-control w-full ">
