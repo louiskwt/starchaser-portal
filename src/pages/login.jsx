@@ -20,7 +20,7 @@ export const LoginPage = () => {
     try {
       const user = await loginWithGoogle();
       setUser(user);
-      navigate("/course");
+      navigate("/profile");
     } catch (error) {
       setErrorMessage(error.message.replace("Firebase: ", "Oops! "));
     }
@@ -31,7 +31,7 @@ export const LoginPage = () => {
       const {email, password} = loginForm;
       const user = await loginWithEmail(email, password);
       setUser(user);
-      navigate("/course");
+      navigate("/profile");
     } catch (error) {
       setErrorMessage(error.message.replace("Firebase: ", "Oops! "));
     }

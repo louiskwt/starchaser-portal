@@ -26,7 +26,7 @@ export const RegisterPage = () => {
         const {email, password} = registerForm;
         const user = await registerWithEmail(email, password);
         setUser(user);
-        navigate("/course");
+        navigate("/profile");
       } else {
         throw Error("Please ensure that both passwords match exactly.");
       }

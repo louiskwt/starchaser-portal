@@ -1,7 +1,7 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {Toast} from "./components";
 import {AuthProvider, ToastProvider} from "./hooks";
-import {CoursePage, ErrorPage, ForgotPasswordPage, LandingPage, LoginPage, RegisterPage} from "./pages";
+import {ErrorPage, ForgotPasswordPage, LandingPage, LoginPage, ProfilePage, RegisterPage} from "./pages";
 
 export const App = () => {
   const AppRoute = () => (
@@ -10,7 +10,7 @@ export const App = () => {
       <Route path="/login" element={<LoginPage />} errorElement={<ErrorPage />} />
       <Route path="/register" element={<RegisterPage />} errorElement={<ErrorPage />} />
       <Route path="/forgotpassword" element={<ForgotPasswordPage />} errorElement={<ErrorPage />} />
-      <Route path="/course" element={<CoursePage />} errorElement={<ErrorPage />} />
+      <Route path="/profile" element={<ProfilePage />} errorElement={<ErrorPage />} />
     </Routes>
   );
 
