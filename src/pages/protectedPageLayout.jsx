@@ -1,15 +1,6 @@
-import {Navigate} from "react-router-dom";
 import {Navbar} from "../components";
-import {useAuth} from "../hooks";
 
 export const ProtectedPageLayout = ({children}) => {
-  const {user} = useAuth();
-
-  if (!user) {
-    // user is not authenticated
-    return <Navigate to="/login" />;
-  }
-
   return (
     <>
       <Navbar />
