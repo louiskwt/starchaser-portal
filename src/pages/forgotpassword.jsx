@@ -13,7 +13,7 @@ export const ForgotPasswordPage = () => {
   };
   const handlePasswordReset = async () => {
     try {
-      //   resetPassword(email);
+      resetPassword(email);
       showToast({
         message: "Reset password email sent!",
         type: "success",
