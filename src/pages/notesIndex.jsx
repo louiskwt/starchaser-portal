@@ -1,6 +1,6 @@
 import {Navigate} from "react-router-dom";
+import {Navbar} from "../components";
 import {useAuth} from "../hooks";
-import {ProtectedPageLayout} from "./protectedPageLayout";
 
 export const NotesIndexPage = () => {
   const {user} = useAuth();
@@ -10,7 +10,8 @@ export const NotesIndexPage = () => {
     return <Navigate to="/login" />;
   }
   return (
-    <ProtectedPageLayout>
+    <>
+      <Navbar />
       <h1 className="text-xl">All Notes</h1>
       <div className="card bg-base-100 w-96 shadow-xl">
         <figure>
@@ -28,6 +29,6 @@ export const NotesIndexPage = () => {
           </div>
         </div>
       </div>
-    </ProtectedPageLayout>
+    </>
   );
 };
