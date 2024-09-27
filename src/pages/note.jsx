@@ -7,7 +7,7 @@ export const NotePage = () => {
   const {notes} = useNotes();
   const note = notes.find((n) => (n.id = noteId)) || {};
 
-  const {vocabulary} = note;
+  const {vocabulary, grammar} = note;
 
   const VOCAB_TABLE_KEYS = ["Item", "Meaning", "Example"];
 
@@ -55,6 +55,13 @@ export const NotePage = () => {
         </div>
         <div className="mt-8" id="grammar">
           <h2 className="text-2xl font-bold text-left">Grammar Section</h2>
+          <h3 className="text-xl font-bold text-left my-4">{grammar.heading}</h3>
+
+          {grammar.content.map((text, index) => (
+            <p key={index} className="my-2">
+              {text}
+            </p>
+          ))}
         </div>
         <div className="mt-8" id="video">
           <h2 className="text-2xl font-bold text-left">Video</h2>
