@@ -3,8 +3,6 @@ export const Table = ({data, keys}) => {
     return <th key={index}>{key}</th>;
   });
 
-  console.log(data);
-
   const tableRows = data.map((d, index) => {
     return (
       <tr key={index}>
