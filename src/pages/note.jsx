@@ -1,10 +1,26 @@
 import {useParams} from "react-router-dom";
+import {Table} from "../components";
 import {useNotes} from "../hooks";
 
 export const NotePage = () => {
   const {noteId} = useParams();
   const {notes} = useNotes();
-  const note = notes.find((n) => (n.id = noteId));
+  const note = notes.find((n) => (n.id = noteId)) || {};
+
+  const {vocabulary} = note;
+
+  const VOCAB_TABLE_KEYS = ["Item", "Meaning", "Example"];
+
+  const vocabData = Object.keys(vocabulary).map((key) => {
+    const meaning = vocabulary[key].split("/")[0] || "";
+    const example = vocabulary[key].split("/")[1] || "";
+    return {
+      item: key,
+      meaning,
+      example,
+    };
+  });
+
   console.log(note);
 
   return (
@@ -35,6 +51,7 @@ export const NotePage = () => {
         </div>
         <div className="mt-8" id="vocabulary">
           <h2 className="text-2xl font-bold text-left">Vocab Table</h2>
+          <Table data={vocabData} keys={VOCAB_TABLE_KEYS} />
         </div>
         <div className="mt-8" id="grammar">
           <h2 className="text-2xl font-bold text-left">Grammar Section</h2>
