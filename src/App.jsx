@@ -1,7 +1,7 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {Toast} from "./components";
 import {AuthProvider, NotesProvider, ToastProvider} from "./hooks";
-import {ErrorPage, ForgotPasswordPage, LandingPage, LoginPage, NotesIndexPage, ProfilePage, RegisterPage} from "./pages";
+import {ErrorPage, ForgotPasswordPage, LandingPage, LoginPage, NotePage, NotesIndexPage, ProfilePage, RegisterPage} from "./pages";
 
 export const App = () => {
   const AppRoute = () => (
@@ -11,7 +11,9 @@ export const App = () => {
       <Route path="/register" element={<RegisterPage />} errorElement={<ErrorPage />} />
       <Route path="/forgotpassword" element={<ForgotPasswordPage />} errorElement={<ErrorPage />} />
       <Route path="/profile" element={<ProfilePage />} errorElement={<ErrorPage />} />
-      <Route path="/notes" element={<NotesIndexPage />} errorElement={<ErrorPage />} />
+      <Route path="/notes" element={<NotesIndexPage />} errorElement={<ErrorPage />}>
+        <Route path=":noteId" element={<NotePage />} />
+      </Route>
     </Routes>
   );
 
