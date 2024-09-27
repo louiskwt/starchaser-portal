@@ -6,6 +6,7 @@ const AuthContext = createContext();
 
 export const AuthProvider = ({children}) => {
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   const auth = getAuth(firebase);
   const provider = new GoogleAuthProvider();
@@ -13,9 +14,10 @@ export const AuthProvider = ({children}) => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
+      setLoading(false);
     });
     return () => unsubscribe();
-  }, []);
+  }, [auth]);
 
   const loginWithEmail = async (email, password) => {
     try {
@@ -64,7 +66,7 @@ export const AuthProvider = ({children}) => {
     }
   };
 
-  return <AuthContext.Provider value={{user, setUser, loginWithEmail, loginWithGoogle, logout, registerWithEmail, resetPassword}}>{children}</AuthContext.Provider>;
+  return <AuthContext.Provider value={{user, setUser, loginWithEmail, loginWithGoogle, logout, registerWithEmail, resetPassword, loading}}>{children}</AuthContext.Provider>;
 };
 
 export const useAuth = () => {

@@ -1,18 +1,13 @@
-import {Navigate, Outlet, useLocation, useNavigate} from "react-router-dom";
+import {Outlet, useLocation, useNavigate} from "react-router-dom";
 import {Navbar} from "../components";
-import {useAuth, useNotes} from "../hooks";
+import {useNotes} from "../hooks";
 
 export const NotesIndexPage = () => {
-  const {user} = useAuth();
   const {notes} = useNotes();
   const location = useLocation();
   const navigate = useNavigate();
   const isNestedRoute = location.pathname.includes("/notes/");
 
-  if (!user) {
-    // user is not authenticated
-    return <Navigate to="/login" />;
-  }
   return (
     <>
       <Navbar />
