@@ -54,9 +54,9 @@ export const NotesProvider = ({children}) => {
             ) : (
               notes.map((note) => {
                 return (
-                  <li key={note.id} className="text-lg mb-4">
-                    <a>{note.title}</a>
-                  </li>
+                  <Link key={note.id} className="text-lg mb-4" to={`/notes/${note.id}`}>
+                    {note.title}
+                  </Link>
                 );
               })
             )}
