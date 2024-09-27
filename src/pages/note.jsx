@@ -7,7 +7,8 @@ export const NotePage = () => {
   const {notes} = useNotes();
   const note = notes.find((n) => (n.id = noteId)) || {};
 
-  const {vocabulary, grammar} = note;
+  const {vocabulary, grammar, topic, title} = note;
+  const {heading, ideas, resources} = topic;
 
   const VOCAB_TABLE_KEYS = ["Item", "Meaning", "Example"];
 
@@ -27,12 +28,12 @@ export const NotePage = () => {
     <>
       <div className="flex flex-col justify-center w-full p-12">
         <div className="w-full divide-y-8 mb-4">
-          <h1 className="text-3xl font-bold text-left">{note.title}</h1>
+          <h1 className="text-3xl font-bold text-left">{title}</h1>
         </div>
         <div className="w-full" id="main-topic">
-          <h2 className="text-2xl font-bold text-left">{note.topic.heading}</h2>
+          <h2 className="text-2xl font-bold text-left">{heading}</h2>
           <ol className="list-decimal list-inside mt-2 mb-4">
-            {note.topic.ideas.map((idea, index) => (
+            {ideas.map((idea, index) => (
               <li className="mb-2" key={index}>
                 {idea}
               </li>
@@ -40,10 +41,10 @@ export const NotePage = () => {
           </ol>
           <h2 className="text-xl font-semibold mb-4">Resources</h2>
           <ul>
-            {Object.keys(note.topic.resources).map((key, id) => {
+            {Object.keys(resources).map((key, id) => {
               return (
                 <li key={id} className="link">
-                  <a href={note.topic.resources[key]}>{key}</a>
+                  <a href={resources[key]}>{key}</a>
                 </li>
               );
             })}
