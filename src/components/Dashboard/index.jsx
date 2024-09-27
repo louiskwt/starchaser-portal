@@ -1,13 +1,8 @@
-import {Navigate, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import {useAuth} from "../../hooks";
 
 export const Dashboard = () => {
   const {user, logout} = useAuth();
-
-  if (!user) {
-    // user is not authenticated
-    return <Navigate to="/login" />;
-  }
 
   const navigate = useNavigate();
   const handleLogout = async () => {
