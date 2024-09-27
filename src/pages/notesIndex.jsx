@@ -34,9 +34,9 @@ export const NotesIndexPage = () => {
                   </h2>
                   <p>{note.desc}</p>
                   <div className="card-actions justify-end">
-                    {note.categories.map((c, index) => (
+                    {note.categories.map((category, index) => (
                       <div key={index} className="badge badge-outline">
-                        {c}
+                        {category}
                       </div>
                     ))}
                   </div>
