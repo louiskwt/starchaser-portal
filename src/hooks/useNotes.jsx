@@ -10,6 +10,7 @@ export const NotesProvider = ({children}) => {
   const [notes, setNotes] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
 
   const {user} = useAuth();
 
@@ -37,16 +38,25 @@ export const NotesProvider = ({children}) => {
     }
   }, [user]);
 
+  const handleLinkClick = () => {
+    setIsOpen(false); // Close the drawer when a link is clicked
+  };
+
+  const toggleDrawer = () => {
+    setIsOpen((prev) => !prev); // Toggle the drawer open/close
+  };
+
   return (
-    <NotesContext.Provider value={{notes, setNotes, loading, error}}>
+    <NotesContext.Provider value={{notes, setNotes, loading, error, toggleDrawer}}>
       {children}
       <div className="drawer">
-        <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+        <input id="my-drawer" type="checkbox" className="drawer-toggle" checked={isOpen} readOnly />
         <div className="drawer-side">
-          <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
+          <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay" onClick={() => handleLinkClick()}></label>
 
           <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-8">
-            <Link className="text-xl mb-4" to="/notes">
+            <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+            <Link className="text-xl mb-4" to="/notes" onClick={handleLinkClick}>
               Notes
             </Link>
             {loading ? (
@@ -54,7 +64,7 @@ export const NotesProvider = ({children}) => {
             ) : (
               notes.map((note) => {
                 return (
-                  <Link key={note.id} className="text-lg mb-4" to={`/notes/${note.id}`}>
+                  <Link key={note.id} className="text-lg mb-4" to={`/notes/${note.id}`} onClick={() => handleLinkClick()}>
                     {note.title}
                   </Link>
                 );

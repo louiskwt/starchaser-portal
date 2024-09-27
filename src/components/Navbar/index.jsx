@@ -1,8 +1,9 @@
 import {Link} from "react-router-dom";
-import {useAuth} from "../../hooks";
+import {useAuth, useNotes} from "../../hooks";
 
 export const Navbar = () => {
   const {user, loading} = useAuth();
+  const {toggleDrawer} = useNotes();
 
   const menu = () => {
     if (loading)
@@ -17,7 +18,7 @@ export const Navbar = () => {
     return user ? (
       <>
         {" "}
-        <label htmlFor="my-drawer" className="btn btn-primary drawer-button">
+        <label htmlFor="my-drawer" className="btn btn-primary drawer-button" onClick={() => toggleDrawer()}>
           <i className="fa-solid fa-book fa-2x"></i>
         </label>
         <div className="btn avatar">
