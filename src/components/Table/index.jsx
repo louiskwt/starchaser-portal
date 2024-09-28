@@ -1,14 +1,22 @@
 export const Table = ({data, keys}) => {
   const tableHead = keys.map((key, index) => {
-    return <th key={index}>{key}</th>;
+    return (
+      <th key={index} className="text-lg font-bold">
+        {key}
+      </th>
+    );
   });
 
   const tableRows = data.map((d, index) => {
     return (
       <tr key={index}>
-        <th>{index}</th>
+        <th className="text-lg font-semibold">{index}</th>
         {Object.keys(d).map((k, index) => {
-          return <td key={index}>{d[k]}</td>;
+          return (
+            <td key={index} className="text-lg font-semibold">
+              {d[k]}
+            </td>
+          );
         })}
       </tr>
     );
