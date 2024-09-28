@@ -7,7 +7,7 @@ export const NotePage = () => {
   const {notes} = useNotes();
   const note = notes.find((n) => (n.id = noteId)) || {};
 
-  const {vocabulary, grammar, topic, title, links} = note;
+  const {vocabulary, grammar, topic, title, links, videos} = note;
   const {heading, ideas, resources} = topic;
 
   const VOCAB_TABLE_KEYS = ["Item", "Meaning", "Example"];
@@ -65,7 +65,14 @@ export const NotePage = () => {
           ))}
         </div>
         <div className="mt-8" id="video">
-          <h2 className="text-2xl font-bold text-left">Video</h2>
+          <h2 className="text-2xl font-bold text-left">Videos</h2>
+          {videos.map((link, index) => {
+            return (
+              <div className="my-4" key={index}>
+                <iframe width="560" height="315" src={link} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+            );
+          })}
         </div>
         <div className="mt-8" id="link">
           <h2 className="text-2xl font-bold text-left">Links to Notes</h2>
