@@ -34,7 +34,7 @@ export const NotePage = () => {
           <h2 className="text-2xl font-bold text-left">{heading}</h2>
           <ol className="list-decimal list-inside mt-2 mb-4">
             {ideas.map((idea, index) => (
-              <li className="mb-2" key={index}>
+              <li className="mb-2 text-lg" key={index}>
                 {idea}
               </li>
             ))}
@@ -43,7 +43,7 @@ export const NotePage = () => {
           <ul>
             {Object.keys(resources).map((key, id) => {
               return (
-                <li key={id} className="link">
+                <li key={id} className="link text-lg">
                   <a href={resources[key]}>{key}</a>
                 </li>
               );
@@ -58,11 +58,13 @@ export const NotePage = () => {
           <h2 className="text-2xl font-bold text-left">Grammar Section</h2>
           <h3 className="text-xl font-bold text-left my-4">{grammar.heading}</h3>
 
-          {grammar.content.map((text, index) => (
-            <p key={index} className="my-2">
-              {text}
-            </p>
-          ))}
+          <div className="px-4">
+            {grammar.content.map((text, index) => (
+              <p key={index} className="my-2 text-lg">
+                {text}
+              </p>
+            ))}
+          </div>
         </div>
         <div className="mt-8" id="video">
           <h2 className="text-2xl font-bold text-left">Videos</h2>
