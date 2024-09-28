@@ -40,10 +40,10 @@ export const NotePage = () => {
             ))}
           </ol>
           <h2 className="text-xl font-semibold mb-4">Resources</h2>
-          <ul>
+          <ul className="px-4">
             {Object.keys(resources).map((key, id) => {
               return (
-                <li key={id} className="link text-lg">
+                <li key={id} className="link text-lg link-primary">
                   <a href={resources[key]}>{key}</a>
                 </li>
               );
