@@ -84,13 +84,13 @@ export const NotePage = () => {
               But if you don't feel comofrable, feel free to work on the one labeld as "Less".
             </h1>
             <ul className="list-disc px-4">
-              <li className="px-4 mt-4">
+              <li className="px-4 mt-4 text text-lg">
                 <a className="link link-secondary" href={links.more} target="_blank">
                   Notes (More)
                 </a>
               </li>
 
-              <li className="px-4 mt-4">
+              <li className="px-4 mt-4 text-lg">
                 <a className="link link-accent" href={links.less}>
                   Notes (Less)
                 </a>
