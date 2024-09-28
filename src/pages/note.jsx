@@ -7,7 +7,7 @@ export const NotePage = () => {
   const {notes} = useNotes();
   const note = notes.find((n) => (n.id = noteId)) || {};
 
-  const {vocabulary, grammar, topic, title} = note;
+  const {vocabulary, grammar, topic, title, links} = note;
   const {heading, ideas, resources} = topic;
 
   const VOCAB_TABLE_KEYS = ["Item", "Meaning", "Example"];
@@ -68,7 +68,26 @@ export const NotePage = () => {
           <h2 className="text-2xl font-bold text-left">Video</h2>
         </div>
         <div className="mt-8" id="link">
-          <h2 className="text-2xl font-bold text-left">Link to Notes</h2>
+          <h2 className="text-2xl font-bold text-left">Links to Notes</h2>
+          <div className="mt-4 p-4">
+            <h1 className="text-lg font-semibold">
+              If you want to challege yourself, take a look at the notes labeld as "More". <br />
+              But if you don't feel comofrable, feel free to work on the one labeld as "Less".
+            </h1>
+            <ul className="list-disc px-4">
+              <li className="px-4 mt-4">
+                <a className="link link-secondary" href={links.more} target="_blank">
+                  Notes (More)
+                </a>
+              </li>
+
+              <li className="px-4 mt-4">
+                <a className="link link-accent" href={links.less}>
+                  Notes (Less)
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </>
