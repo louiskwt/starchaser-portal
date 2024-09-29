@@ -22,8 +22,6 @@ export const NotePage = () => {
     };
   });
 
-  console.log(note);
-
   return (
     <>
       <div className="flex flex-col justify-center w-full p-12">
