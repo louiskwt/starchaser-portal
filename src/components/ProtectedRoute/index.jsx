@@ -1,10 +1,11 @@
 import {Navigate} from "react-router-dom";
-import {useAuth} from "../../hooks";
+import {useAuth, useNotes} from "../../hooks";
 
 export const ProtectedRoute = ({element}) => {
-  const {user, loading} = useAuth();
+  const {user, loading: loadingAuth} = useAuth();
+  const {loading: loadingNote} = useNotes();
 
-  if (loading) {
+  if (loadingAuth || loadingNote) {
     return (
       <div className="flex items-center justify-center min-h-screen">
         <div className="loader">
