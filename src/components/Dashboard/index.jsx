@@ -33,7 +33,7 @@ export const Dashboard = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
             </svg>
           </div>
-          <div className="stat-title">Lessons Taken</div>
+          <div className="stat-title">Lessons Attended</div>
           <div className="stat-value text-primary">8</div>
           <div className="stat-desc">Since Sep 2024</div>
         </div>
@@ -63,38 +63,35 @@ export const Dashboard = () => {
       <div className="flex justify-around">
         <div className="stats stats-vertical shadow">
           <div className="stat">
-            <div className="stat-title">Downloads</div>
+            <div className="stat-title">Reading Average</div>
             <div className="stat-value">31K</div>
             <div className="stat-desc">Jan 1st - Feb 1st</div>
           </div>
-
           <div className="stat">
-            <div className="stat-title">New Users</div>
-            <div className="stat-value">4,200</div>
-            <div className="stat-desc">↗︎ 400 (22%)</div>
-          </div>
-
-          <div className="stat">
-            <div className="stat-title">New Registers</div>
+            <div className="stat-title">Listening Average</div>
             <div className="stat-value">1,200</div>
             <div className="stat-desc">↘︎ 90 (14%)</div>
+          </div>
+          <div className="stat">
+            <div className="stat-title">Dictation Avarage</div>
+            <div className="stat-value">4,200</div>
+            <div className="stat-desc">↗︎ 400 (22%)</div>
           </div>
         </div>
         <div className="stats stats-vertical shadow">
           <div className="stat">
-            <div className="stat-title">Downloads</div>
+            <div className="stat-title">Writing Average</div>
+            <div className="stat-value">4,200</div>
+            <div className="stat-desc">↗︎ 400 (22%)</div>
+          </div>
+          <div className="stat">
+            <div className="stat-title">Speaking Average</div>
             <div className="stat-value">31K</div>
             <div className="stat-desc">Jan 1st - Feb 1st</div>
           </div>
 
           <div className="stat">
-            <div className="stat-title">New Users</div>
-            <div className="stat-value">4,200</div>
-            <div className="stat-desc">↗︎ 400 (22%)</div>
-          </div>
-
-          <div className="stat">
-            <div className="stat-title">New Registers</div>
+            <div className="stat-title">Grammar Average</div>
             <div className="stat-value">1,200</div>
             <div className="stat-desc">↘︎ 90 (14%)</div>
           </div>
