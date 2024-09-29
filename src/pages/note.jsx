@@ -44,7 +44,9 @@ export const NotePage = () => {
             {Object.keys(resources).map((key, id) => {
               return (
                 <li key={id} className="link text-lg link-primary">
-                  <a href={resources[key]}>{key}</a>
+                  <a href={resources[key]} target="_blank">
+                    {key}
+                  </a>
                 </li>
               );
             })}
