@@ -10,7 +10,9 @@ export const Dashboard = () => {
     await logout();
     navigate("/");
   };
-  console.log(profile);
+
+  const {taskCount, completedTask, activeDays, points, lessonTaken, lessonDate, readingAvg, writingAvg, listeningAvg, speakingAvg, grammarAvg, dictationAvg, previousActiveDays, previousAvg} = profile;
+  const {prevReadingAvg, prevWritingAvg, prevListeningAvg, prevSpeakingAvg, prevGrammarAvg, prevDictationAvg} = previousAvg;
 
   const profileImgUrl = user.photoURL || getGravatarURL(user.email);
   return (
@@ -25,9 +27,9 @@ export const Dashboard = () => {
               </div>
             </div>
           </div>
-          <div className="stat-value text-md">--%</div>
+          <div className="stat-value text-md">{taskCount > 0 ? taskCount / completedTask : 0}%</div>
           <div className="stat-title text-lg">Tasks done</div>
-          <div className="stat-desc text-secondary text-lg">31 tasks remaining</div>
+          <div className="stat-desc text-secondary text-lg">{taskCount} tasks remaining</div>
         </div>
       </div>
       <div className="stats shadow flex justify-center items-center">
@@ -38,8 +40,8 @@ export const Dashboard = () => {
             </svg>
           </div>
           <div className="stat-title">Lessons Attended</div>
-          <div className="stat-value text-primary">8</div>
-          <div className="stat-desc">Since Sep 2024</div>
+          <div className="stat-value text-primary">{lessonTaken}</div>
+          <div className="stat-desc">Since {lessonDate}</div>
         </div>
 
         <div className="stat">
@@ -49,15 +51,15 @@ export const Dashboard = () => {
             </svg>
           </div>
           <div className="stat-title text-md">Days Active</div>
-          <div className="stat-value text-secondary">2</div>
-          <div className="stat-desc">21% more than last month</div>
+          <div className="stat-value text-secondary">{activeDays}</div>
+          <div className="stat-desc">{previousActiveDays > 0 ? (activeDays / previousActiveDays) * 100 : 0} more than last week</div>
         </div>
       </div>
       {/* Starpoints */}
       <div className="stats bg-purple-500 text-primary-content w-96">
         <div className="stat">
           <div className="stat-title text-gray-200">Star Points</div>
-          <div className="stat-value">89,400</div>
+          <div className="stat-value">{points}</div>
           <div className="stat-actions">
             <button className="badge badge-lg badge-accent btn-success">VIP</button>
           </div>
@@ -68,36 +70,36 @@ export const Dashboard = () => {
         <div className="stats stats-vertical shadow">
           <div className="stat">
             <div className="stat-title">Reading Average</div>
-            <div className="stat-value">31K</div>
-            <div className="stat-desc">Jan 1st - Feb 1st</div>
+            <div className="stat-value">{readingAvg}</div>
+            <div className="stat-desc">{readingAvg - prevReadingAvg}</div>
           </div>
           <div className="stat">
             <div className="stat-title">Listening Average</div>
-            <div className="stat-value">1,200</div>
-            <div className="stat-desc">↘︎ 90 (14%)</div>
+            <div className="stat-value">{listeningAvg}</div>
+            <div className="stat-desc">↘︎ {listeningAvg - prevListeningAvg}</div>
           </div>
           <div className="stat">
             <div className="stat-title">Dictation Avarage</div>
-            <div className="stat-value">4,200</div>
-            <div className="stat-desc">↗︎ 400 (22%)</div>
+            <div className="stat-value">{dictationAvg}</div>
+            <div className="stat-desc">↗︎ {dictationAvg - prevDictationAvg}</div>
           </div>
         </div>
         <div className="stats stats-vertical shadow">
           <div className="stat">
             <div className="stat-title">Writing Average</div>
-            <div className="stat-value">4,200</div>
-            <div className="stat-desc">↗︎ 400 (22%)</div>
+            <div className="stat-value">{writingAvg}</div>
+            <div className="stat-desc">↗︎ {writingAvg - prevWritingAvg}</div>
           </div>
           <div className="stat">
             <div className="stat-title">Speaking Average</div>
-            <div className="stat-value">31K</div>
-            <div className="stat-desc">Jan 1st - Feb 1st</div>
+            <div className="stat-value">{speakingAvg}</div>
+            <div className="stat-desc">{speakingAvg - prevSpeakingAvg}</div>
           </div>
 
           <div className="stat">
             <div className="stat-title">Grammar Average</div>
-            <div className="stat-value">1,200</div>
-            <div className="stat-desc">↘︎ 90 (14%)</div>
+            <div className="stat-value">{grammarAvg}</div>
+            <div className="stat-desc">↘︎ {grammarAvg - prevGrammarAvg}</div>
           </div>
         </div>
       </div>
