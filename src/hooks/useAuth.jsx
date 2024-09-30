@@ -1,5 +1,5 @@
 import {createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut} from "firebase/auth";
-import {doc, getDoc, getFirestore, setDoc} from "firebase/firestore";
+import {doc, getDoc, getFirestore, setDoc, Timestamp} from "firebase/firestore";
 import {createContext, useContext, useEffect, useState} from "react";
 import {firebase} from "../Firebase";
 
@@ -25,7 +25,7 @@ export const AuthProvider = ({children}) => {
           points: 0,
           name: `student-${id.substr(id.length - 4)}`,
           lessonTaken: 0,
-          lessonDate: new Date().getUTCDate(),
+          lessonDate: Timestamp.fromDate(new Date()),
           userId: id,
           readingAvg: 0,
           writingAvg: 0,
@@ -35,6 +35,16 @@ export const AuthProvider = ({children}) => {
           dictationAvg: 0,
           taskCount: 0,
           completedTask: 0,
+          activeDays: 0,
+          previousActiveDays: 0,
+          previousAvg: {
+            prevReadingAvg: 0,
+            prevWritingAvg: 0,
+            prevListeningAvg: 0,
+            prevSpeakingAvg: 0,
+            prevGrammarAvg: 0,
+            previousDictationAvg: 0,
+          },
         },
         {
           merge: true,
@@ -60,6 +70,7 @@ export const AuthProvider = ({children}) => {
     const id = user.uid;
     const docRef = doc(db, "members", id);
 
+    setLoading(true);
     try {
       const profile = await getDoc(docRef);
       if (profile.exists()) {
@@ -69,13 +80,15 @@ export const AuthProvider = ({children}) => {
       }
     } catch (error) {
       console.error(error);
+    } finally {
+      setLoading(false);
     }
   };
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
-      if (!profile) getUserProfile(currentUser);
+      if (user && !profile) getUserProfile(currentUser);
       setLoading(false);
     });
     return () => unsubscribe();
