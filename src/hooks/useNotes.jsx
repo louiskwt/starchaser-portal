@@ -26,7 +26,6 @@ export const NotesProvider = ({children}) => {
             id: doc.id,
             ...doc.data(),
           }));
-          console.log(notesList);
           setNotes(notesList);
         } catch (err) {
           setError(err.message);

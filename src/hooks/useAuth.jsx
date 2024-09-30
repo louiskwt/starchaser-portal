@@ -73,7 +73,6 @@ export const AuthProvider = ({children}) => {
     try {
       const profile = await getDoc(docRef);
       if (profile.exists()) {
-        console.log(profile.data());
         setProfile(profile.data());
       } else {
         throw new Error("Cannot get profile");
