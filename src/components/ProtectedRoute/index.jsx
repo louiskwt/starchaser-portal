@@ -2,7 +2,7 @@ import {Navigate} from "react-router-dom";
 import {useAuth, useNotes} from "../../hooks";
 
 export const ProtectedRoute = ({element}) => {
-  const {user, loading: loadingAuth, profile, getUserProfile} = useAuth();
+  const {user, loading: loadingAuth} = useAuth();
   const {loading: loadingNote} = useNotes();
 
   if (loadingAuth || loadingNote) {

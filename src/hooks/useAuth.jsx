@@ -70,18 +70,16 @@ export const AuthProvider = ({children}) => {
     const id = user.uid;
     const docRef = doc(db, "members", id);
 
-    setLoading(true);
     try {
       const profile = await getDoc(docRef);
       if (profile.exists()) {
+        console.log(profile.data());
         setProfile(profile.data());
       } else {
         throw new Error("Cannot get profile");
       }
     } catch (error) {
       console.error(error);
-    } finally {
-      setLoading(false);
     }
   };
 
