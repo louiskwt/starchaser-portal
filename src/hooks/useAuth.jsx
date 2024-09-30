@@ -18,11 +18,11 @@ export const AuthProvider = ({children}) => {
       await setDoc(
         db,
         "members",
-        user.id,
+        user.uid,
         {
           email: user.email,
           points: 0,
-          name: `student-${user.id.substr(user.id.length - 4)}`,
+          name: `student-${user.uid.substr(user.id.length - 4)}`,
           lessonTaken: 0,
           lessonDate: new Date().getUTCDate(),
           userId: user.id,
@@ -32,6 +32,8 @@ export const AuthProvider = ({children}) => {
           speakingAvg: 0,
           grammarAvg: 0,
           dictationAvg: 0,
+          taskCount: 0,
+          completedTask: 0,
         },
         {
           merge: true,
@@ -43,7 +45,7 @@ export const AuthProvider = ({children}) => {
   };
 
   const checkProfile = async (user) => {
-    const docRef = doc(db, "members", user.id);
+    const docRef = doc(db, "members", user.uid);
     try {
       const profile = await getDoc(docRef);
       return profile.exists();
