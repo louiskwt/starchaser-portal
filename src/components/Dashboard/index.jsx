@@ -1,5 +1,6 @@
 import {useNavigate} from "react-router-dom";
 import {useAuth} from "../../hooks";
+import {getGravatarURL} from "../../utils";
 
 export const Dashboard = () => {
   const {user, logout} = useAuth();
@@ -9,6 +10,8 @@ export const Dashboard = () => {
     await logout();
     navigate("/");
   };
+
+  const profileImgUrl = user.photoURL || getGravatarURL(user.email);
   return (
     <div className="flex flex-col justify-center items-center p-3 w-full">
       {/* main */}
@@ -17,7 +20,7 @@ export const Dashboard = () => {
           <div className="stat-figure text-secondary">
             <div className="avatar online">
               <div className="w-16 rounded-full">
-                <img src={user.photoURL} />
+                <img src={profileImgUrl} />
               </div>
             </div>
           </div>
