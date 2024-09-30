@@ -3,7 +3,7 @@ import {useAuth} from "../../hooks";
 import {getGravatarURL} from "../../utils";
 
 export const Dashboard = () => {
-  const {user, logout, profile} = useAuth();
+  const {user, logout, profile, getUserProfile} = useAuth();
 
   const navigate = useNavigate();
   const handleLogout = async () => {
@@ -11,8 +11,8 @@ export const Dashboard = () => {
     navigate("/");
   };
 
-  const {taskCount, completedTask, activeDays, points, lessonTaken, lessonDate, readingAvg, writingAvg, listeningAvg, speakingAvg, grammarAvg, dictationAvg, previousActiveDays, previousAvg} = profile;
-  const {prevReadingAvg, prevWritingAvg, prevListeningAvg, prevSpeakingAvg, prevGrammarAvg, prevDictationAvg} = previousAvg;
+  const {taskCount, completedTask, activeDays, points, lessonTaken, lessonDate, readingAvg, writingAvg, listeningAvg, speakingAvg, grammarAvg, dictationAvg, previousActiveDays, previousAvg} = profile || {};
+  const {prevReadingAvg, prevWritingAvg, prevListeningAvg, prevSpeakingAvg, prevGrammarAvg, prevDictationAvg} = previousAvg || {};
 
   const profileImgUrl = user.photoURL || getGravatarURL(user.email);
   return (
