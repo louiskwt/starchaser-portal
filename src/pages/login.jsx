@@ -3,7 +3,7 @@ import {Link, useNavigate} from "react-router-dom";
 import {useAuth} from "../hooks";
 
 export const LoginPage = () => {
-  const {loginWithGoogle, loginWithEmail, setUser, checkProfile, setInitialUserProfile} = useAuth();
+  const {loginWithGoogle, loginWithEmail, setUser, checkProfile, setInitialUserProfile, getUserProfile} = useAuth();
   const navigate = useNavigate();
   const [loginForm, setLoginForm] = useState({
     email: "",
@@ -22,6 +22,7 @@ export const LoginPage = () => {
       const hasUserProfile = await checkProfile(user);
       if (!hasUserProfile) setInitialUserProfile(user);
       setUser(user);
+      getUserProfile();
       navigate("/profile");
     } catch (error) {
       setErrorMessage(error.message.replace("Firebase: ", "Oops! "));
@@ -35,6 +36,7 @@ export const LoginPage = () => {
       const hasUserProfile = await checkProfile(user);
       if (!hasUserProfile) setInitialUserProfile(user);
       setUser(user);
+      getUserProfile;
       navigate("/profile");
     } catch (error) {
       setErrorMessage(error.message.replace("Firebase: ", "Oops! "));

@@ -7,6 +7,7 @@ const AuthContext = createContext();
 
 export const AuthProvider = ({children}) => {
   const [user, setUser] = useState(null);
+  const [profile, setProfile] = useState(null);
   const [loading, setLoading] = useState(true);
 
   const auth = getAuth(firebase);
@@ -55,9 +56,26 @@ export const AuthProvider = ({children}) => {
     }
   };
 
+  const getUserProfile = async (user) => {
+    const id = user.uid;
+    const docRef = doc(db, "members", id);
+
+    try {
+      const profile = await getDoc(docRef);
+      if (profile.exists()) {
+        setProfile(profile.data());
+      } else {
+        throw new Error("Cannot get profile");
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
+      if (!profile) getUserProfile();
       setLoading(false);
     });
     return () => unsubscribe();
@@ -110,7 +128,7 @@ export const AuthProvider = ({children}) => {
     }
   };
 
-  return <AuthContext.Provider value={{user, setUser, loginWithEmail, loginWithGoogle, logout, registerWithEmail, setInitialUserProfile, checkProfile, resetPassword, loading}}>{children}</AuthContext.Provider>;
+  return <AuthContext.Provider value={{user, setUser, loginWithEmail, loginWithGoogle, logout, registerWithEmail, setInitialUserProfile, checkProfile, resetPassword, getUserProfile, loading}}>{children}</AuthContext.Provider>;
 };
 
 export const useAuth = () => {
