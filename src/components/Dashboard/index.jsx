@@ -1,3 +1,4 @@
+import {useEffect} from "react";
 import {useNavigate} from "react-router-dom";
 import {useAuth} from "../../hooks";
 import {getGravatarURL} from "../../utils";
@@ -11,9 +12,17 @@ export const Dashboard = () => {
     navigate("/");
   };
 
+  useEffect(() => {
+    const loadProfile = () => {
+      getUserProfile(user);
+    };
+    return () => loadProfile();
+  }, []);
+
   const {taskCount, completedTask, activeDays, points, lessonTaken, lessonDate, readingAvg, writingAvg, listeningAvg, speakingAvg, grammarAvg, dictationAvg, previousActiveDays, previousAvg} = profile || {};
   const {prevReadingAvg, prevWritingAvg, prevListeningAvg, prevSpeakingAvg, prevGrammarAvg, prevDictationAvg} = previousAvg || {};
 
+  const firstLessonDate = lessonDate ? lessonDate.toDate().toDateString() : "";
   const profileImgUrl = user.photoURL || getGravatarURL(user.email);
   return (
     <div className="flex flex-col justify-center items-center p-3 w-full">
@@ -41,7 +50,7 @@ export const Dashboard = () => {
           </div>
           <div className="stat-title">Lessons Attended</div>
           <div className="stat-value text-primary">{lessonTaken}</div>
-          <div className="stat-desc">Since {lessonDate}</div>
+          <div className="stat-desc">Since {firstLessonDate}</div>
         </div>
 
         <div className="stat">
