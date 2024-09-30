@@ -1,5 +1,6 @@
 import {Link} from "react-router-dom";
 import {useAuth, useNotes} from "../../hooks";
+import {getGravatarURL} from "../../utils";
 
 export const Navbar = () => {
   const {user, loading} = useAuth();
@@ -15,6 +16,7 @@ export const Navbar = () => {
         </div>
       );
 
+    const profileUrl = user.photoURL || getGravatarURL(user.email);
     return user ? (
       <>
         {" "}
@@ -24,7 +26,7 @@ export const Navbar = () => {
         <div className="btn avatar">
           <div className="w-12 ml-1 rounded-2xl">
             <Link to="/profile">
-              <img src={user.photoURL} />
+              <img src={profileUrl} />
             </Link>
           </div>
         </div>
