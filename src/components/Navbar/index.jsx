@@ -16,7 +16,6 @@ export const Navbar = () => {
         </div>
       );
 
-    const profileImgUrl = user.photoURL || getGravatarURL(user.email);
     return user ? (
       <>
         {" "}
@@ -26,7 +25,7 @@ export const Navbar = () => {
         <div className="btn avatar">
           <div className="w-12 ml-1 rounded-2xl">
             <Link to="/profile">
-              <img src={profileImgUrl} />
+              <img src={(user && user.photoURL) || getGravatarURL(user.email)} />
             </Link>
           </div>
         </div>
