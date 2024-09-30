@@ -75,7 +75,7 @@ export const AuthProvider = ({children}) => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
-      if (!profile) getUserProfile();
+      if (!profile) getUserProfile(currentUser);
       setLoading(false);
     });
     return () => unsubscribe();
@@ -128,7 +128,7 @@ export const AuthProvider = ({children}) => {
     }
   };
 
-  return <AuthContext.Provider value={{user, setUser, loginWithEmail, loginWithGoogle, logout, registerWithEmail, setInitialUserProfile, checkProfile, resetPassword, getUserProfile, loading}}>{children}</AuthContext.Provider>;
+  return <AuthContext.Provider value={{user, setUser, profile, getUserProfile, loginWithEmail, loginWithGoogle, logout, registerWithEmail, setInitialUserProfile, checkProfile, resetPassword, loading}}>{children}</AuthContext.Provider>;
 };
 
 export const useAuth = () => {

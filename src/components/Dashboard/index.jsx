@@ -3,13 +3,14 @@ import {useAuth} from "../../hooks";
 import {getGravatarURL} from "../../utils";
 
 export const Dashboard = () => {
-  const {user, logout} = useAuth();
+  const {user, logout, profile} = useAuth();
 
   const navigate = useNavigate();
   const handleLogout = async () => {
     await logout();
     navigate("/");
   };
+  console.log(profile);
 
   const profileImgUrl = user.photoURL || getGravatarURL(user.email);
   return (

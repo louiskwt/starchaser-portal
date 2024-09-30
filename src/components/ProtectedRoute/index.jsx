@@ -2,7 +2,7 @@ import {Navigate} from "react-router-dom";
 import {useAuth, useNotes} from "../../hooks";
 
 export const ProtectedRoute = ({element}) => {
-  const {user, loading: loadingAuth} = useAuth();
+  const {user, loading: loadingAuth, profile, getUserProfile} = useAuth();
   const {loading: loadingNote} = useNotes();
 
   if (loadingAuth || loadingNote) {
@@ -15,5 +15,6 @@ export const ProtectedRoute = ({element}) => {
     );
   }
 
+  if (!profile && user) getUserProfile(user);
   return user ? element : <Navigate to="/login" />;
 };
