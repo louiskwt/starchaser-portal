@@ -15,6 +15,5 @@ export const ProtectedRoute = ({element}) => {
     );
   }
 
-  if (!profile && user) getUserProfile(user);
   return user ? element : <Navigate to="/login" />;
 };
