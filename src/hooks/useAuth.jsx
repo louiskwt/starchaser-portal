@@ -1,4 +1,5 @@
 import {createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut} from "firebase/auth";
+import {doc, getDoc, getFirestore, setDoc} from "firebase/firestore";
 import {createContext, useContext, useEffect, useState} from "react";
 import {firebase} from "../Firebase";
 
@@ -10,6 +11,47 @@ export const AuthProvider = ({children}) => {
 
   const auth = getAuth(firebase);
   const provider = new GoogleAuthProvider();
+  const db = getFirestore(firebase);
+
+  const setInitialUserProfile = async (user) => {
+    try {
+      await setDoc(
+        db,
+        "members",
+        user.id,
+        {
+          email: user.email,
+          points: 0,
+          name: `student-${user.id.substr(user.id.length - 4)}`,
+          lessonTaken: 0,
+          lessonDate: new Date().getUTCDate(),
+          userId: user.id,
+          readingAvg: 0,
+          writingAvg: 0,
+          listeningAvg: 0,
+          speakingAvg: 0,
+          grammarAvg: 0,
+          dictationAvg: 0,
+        },
+        {
+          merge: true,
+        }
+      );
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const checkProfile = async (user) => {
+    const docRef = doc(db, "members", user.id);
+    try {
+      const profile = await getDoc(docRef);
+      return profile.exists();
+    } catch (error) {
+      console.error(error);
+      throw error;
+    }
+  };
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -66,7 +108,7 @@ export const AuthProvider = ({children}) => {
     }
   };
 
-  return <AuthContext.Provider value={{user, setUser, loginWithEmail, loginWithGoogle, logout, registerWithEmail, resetPassword, loading}}>{children}</AuthContext.Provider>;
+  return <AuthContext.Provider value={{user, setUser, loginWithEmail, loginWithGoogle, logout, registerWithEmail, setInitialUserProfile, checkProfile, resetPassword, loading}}>{children}</AuthContext.Provider>;
 };
 
 export const useAuth = () => {
