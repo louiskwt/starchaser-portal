@@ -3,7 +3,7 @@ import {Link, useNavigate} from "react-router-dom";
 import {useAuth} from "../hooks";
 
 export const RegisterPage = () => {
-  const {registerWithEmail, setUser} = useAuth();
+  const {registerWithEmail, setUser, setInitialUserProfile} = useAuth();
   const navigate = useNavigate();
   const [registerForm, setRegisterForm] = useState({
     email: "",
@@ -25,6 +25,7 @@ export const RegisterPage = () => {
       if (registerForm.password === registerForm.confirmPassword) {
         const {email, password} = registerForm;
         const user = await registerWithEmail(email, password);
+        setInitialUserProfile(user);
         setUser(user);
         navigate("/profile");
       } else {
