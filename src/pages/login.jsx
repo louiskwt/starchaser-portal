@@ -22,9 +22,8 @@ export const LoginPage = () => {
       const hasUserProfile = await checkProfile(user);
       if (!hasUserProfile) {
         await setInitialUserProfile(user);
-      } else {
-        await getUserProfile(user);
       }
+      await getUserProfile(user);
       setUser(user);
 
       navigate("/profile");
@@ -40,9 +39,8 @@ export const LoginPage = () => {
       const hasUserProfile = await checkProfile(user);
       if (!hasUserProfile) {
         await setInitialUserProfile(user);
-      } else {
-        await getUserProfile(user);
       }
+      await getUserProfile(user);
       setUser(user);
       navigate("/profile");
     } catch (error) {
