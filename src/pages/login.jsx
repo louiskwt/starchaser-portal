@@ -20,9 +20,13 @@ export const LoginPage = () => {
     try {
       const user = await loginWithGoogle();
       const hasUserProfile = await checkProfile(user);
-      if (!hasUserProfile) setInitialUserProfile(user);
+      if (!hasUserProfile) {
+        await setInitialUserProfile(user);
+      } else {
+        await getUserProfile(user);
+      }
       setUser(user);
-      getUserProfile();
+
       navigate("/profile");
     } catch (error) {
       setErrorMessage(error.message.replace("Firebase: ", "Oops! "));
@@ -34,9 +38,12 @@ export const LoginPage = () => {
       const {email, password} = loginForm;
       const user = await loginWithEmail(email, password);
       const hasUserProfile = await checkProfile(user);
-      if (!hasUserProfile) setInitialUserProfile(user);
+      if (!hasUserProfile) {
+        await setInitialUserProfile(user);
+      } else {
+        await getUserProfile(user);
+      }
       setUser(user);
-      getUserProfile;
       navigate("/profile");
     } catch (error) {
       setErrorMessage(error.message.replace("Firebase: ", "Oops! "));
