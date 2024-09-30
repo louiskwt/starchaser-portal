@@ -3,7 +3,7 @@ import {Link, useNavigate} from "react-router-dom";
 import {useAuth} from "../hooks";
 
 export const LoginPage = () => {
-  const {loginWithGoogle, loginWithEmail, setUser} = useAuth();
+  const {loginWithGoogle, loginWithEmail, setUser, checkProfile, setInitialUserProfile} = useAuth();
   const navigate = useNavigate();
   const [loginForm, setLoginForm] = useState({
     email: "",
@@ -19,6 +19,8 @@ export const LoginPage = () => {
   const handleGoogleLogin = async () => {
     try {
       const user = await loginWithGoogle();
+      const hasUserProfile = await checkProfile(user);
+      if (!hasUserProfile) setInitialUserProfile(user);
       setUser(user);
       navigate("/profile");
     } catch (error) {
@@ -30,6 +32,8 @@ export const LoginPage = () => {
     try {
       const {email, password} = loginForm;
       const user = await loginWithEmail(email, password);
+      const hasUserProfile = await checkProfile(user);
+      if (!hasUserProfile) setInitialUserProfile(user);
       setUser(user);
       navigate("/profile");
     } catch (error) {
