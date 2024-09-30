@@ -15,17 +15,17 @@ export const AuthProvider = ({children}) => {
 
   const setInitialUserProfile = async (user) => {
     try {
+      const id = user.uid;
+      const memberRef = doc(db, "members", id);
       await setDoc(
-        db,
-        "members",
-        user.uid,
+        memberRef,
         {
           email: user.email,
           points: 0,
-          name: `student-${user.uid.substr(user.id.length - 4)}`,
+          name: `student-${id.substr(id.length - 4)}`,
           lessonTaken: 0,
           lessonDate: new Date().getUTCDate(),
-          userId: user.id,
+          userId: id,
           readingAvg: 0,
           writingAvg: 0,
           listeningAvg: 0,
