@@ -22,7 +22,12 @@ export const Dashboard = () => {
   const {taskCount, completedTask, activeDays, points, lessonTaken, lessonDate, readingAvg, writingAvg, listeningAvg, speakingAvg, grammarAvg, dictationAvg, previousActiveDays, previousAvg} = profile || {};
   const {prevReadingAvg, prevWritingAvg, prevListeningAvg, prevSpeakingAvg, prevGrammarAvg, prevDictationAvg} = previousAvg || {};
 
-  const firstLessonDate = lessonDate ? lessonDate.toDate().toDateString() : "";
+  const firstLessonDate = (() => {
+    if (lessonDate && lessonDate instanceof Date && !isNaN(lessonDate)) {
+      return lessonDate.toDate().toDateString();
+    }
+    return "";
+  })();
   const profileImgUrl = user.photoURL || getGravatarURL(user.email);
   return (
     <div className="flex flex-col justify-center items-center p-3 w-full">
