@@ -68,13 +68,19 @@ export const NotePage = () => {
         </div>
         <div className="mt-8" id="video">
           <h2 className="text-2xl font-bold text-left">Videos</h2>
-          {videos.map((link, index) => {
-            return (
-              <div className="my-4" key={index}>
-                <iframe width="560" height="315" src={link} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-              </div>
-            );
-          })}
+          {!videos || videos.length === 0 ? (
+            <div className="my-4">
+              <h2 className="text-lg font-bold">Oops! No videos yet...</h2>
+            </div>
+          ) : (
+            videos.map((link, index) => {
+              return (
+                <div className="my-4" key={index}>
+                  <iframe width="560" height="315" src={link} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+              );
+            })
+          )}
         </div>
         <div className="mt-8" id="link">
           <h2 className="text-2xl font-bold text-left">Links to Notes</h2>
