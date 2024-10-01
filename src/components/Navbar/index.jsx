@@ -43,7 +43,7 @@ export const Navbar = () => {
     <div className="navbar bg-base-100">
       <div className="flex-1">
         <Link className="btn btn-ghost text-xl" to={"/"}>
-          DSE Starchaser ⭐️
+          Starchaser Academy ⭐️
         </Link>
       </div>
       <div className="flex-none">
