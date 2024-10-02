@@ -1,9 +1,15 @@
 import {useNavigate} from "react-router-dom";
 import {useNotes} from "../hooks";
+import {Spinner} from "../Spinner";
 
 export const NoteSection = () => {
-  const {notes} = useNotes();
+  const {notes, loading} = useNotes();
   const navigate = useNavigate();
+
+  if (loading) {
+    return <Spinner />;
+  }
+
   return (
     <>
       <div className="flex flex-col items-center">
