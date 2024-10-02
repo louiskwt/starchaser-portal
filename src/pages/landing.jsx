@@ -1,10 +1,16 @@
-import {Hero, Navbar} from "../components";
+import {Hero, Navbar, NoteSection, Spinner} from "../components";
+import {useAuth} from "../hooks";
 
 export const LandingPage = () => {
+  const {user, loading} = useAuth();
+  if (loading) {
+    return <Spinner />;
+  }
+
   return (
     <>
       <Navbar />
-      <Hero />
+      {user ? <NoteSection /> : <Hero />}
     </>
   );
 };
