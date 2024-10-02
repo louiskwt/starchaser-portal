@@ -1,6 +1,7 @@
 import {collection, getDocs, getFirestore} from "firebase/firestore";
 import {createContext, useContext, useEffect, useState} from "react";
 import {Link} from "react-router-dom";
+import {Spinner} from "../components";
 import {firebase} from "../Firebase";
 import {useAuth} from "./useAuth";
 
@@ -59,7 +60,7 @@ export const NotesProvider = ({children}) => {
               Notes
             </Link>
             {loading ? (
-              <span className="loading loading-spinner loading-lg"></span>
+              <Spinner />
             ) : (
               notes.map((note) => {
                 return (
