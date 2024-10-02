@@ -1,5 +1,5 @@
 import {useNavigate} from "react-router-dom";
-import {useNotes} from "../hooks";
+import {useNotes} from "../../hooks";
 import {Spinner} from "../Spinner";
 
 export const NoteSection = () => {
