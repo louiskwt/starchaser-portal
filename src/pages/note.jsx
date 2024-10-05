@@ -7,7 +7,7 @@ export const NotePage = () => {
   const {notes} = useNotes();
   const note = notes.find((n) => (n.id = noteId)) || {};
 
-  const {vocabulary, grammar, topic, title, links, videos} = note;
+  const {vocabulary, topic, title, links, videos} = note;
   const {heading, ideas, resources} = topic;
 
   const VOCAB_TABLE_KEYS = ["Item", "Meaning", "Example"];
@@ -53,18 +53,6 @@ export const NotePage = () => {
         <div className="mt-8" id="vocabulary">
           <h2 className="text-2xl font-bold text-left">Vocab Table</h2>
           <Table data={vocabData} keys={VOCAB_TABLE_KEYS} />
-        </div>
-        <div className="mt-8" id="grammar">
-          <h2 className="text-2xl font-bold text-left">Grammar Section</h2>
-          <h3 className="text-xl font-bold text-left my-4">{grammar.heading}</h3>
-
-          <div className="px-4">
-            {grammar.content.map((text, index) => (
-              <p key={index} className="my-2 text-lg">
-                {text}
-              </p>
-            ))}
-          </div>
         </div>
         <div className="mt-8" id="video">
           <h2 className="text-2xl font-bold text-left">Videos</h2>
