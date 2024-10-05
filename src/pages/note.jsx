@@ -8,7 +8,7 @@ export const NotePage = () => {
   const note = notes.find((n) => (n.id = noteId)) || {};
 
   const {vocabulary, topic, title, links, videos} = note;
-  const {heading, ideas, resources} = topic;
+  const {heading, ideas, resources = {}} = topic;
 
   const VOCAB_TABLE_KEYS = ["Item", "Meaning", "Example"];
 
