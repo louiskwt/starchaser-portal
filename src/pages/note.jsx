@@ -22,6 +22,23 @@ export const NotePage = () => {
     };
   });
 
+  const resourceList = Object.keys(resources);
+
+  const resourceElements =
+    resourceList.length > 0 ? (
+      resourceList.map((key, id) => {
+        return (
+          <li key={id} className="link text-lg link-primary">
+            <a href={resources[key]} target="_blank">
+              {key}
+            </a>
+          </li>
+        );
+      })
+    ) : (
+      <img src="https://api.memegen.link/images/custom/Ahhhh/nothing_to_see.jpg?background=https://i.imgur.com/CsCgN7Ll.png&width=400" />
+    );
+
   return (
     <>
       <div className="flex flex-col justify-center w-full p-12">
@@ -38,17 +55,7 @@ export const NotePage = () => {
             ))}
           </ol>
           <h2 className="text-xl font-semibold mb-4">Resources</h2>
-          <ul className="px-4">
-            {Object.keys(resources).map((key, id) => {
-              return (
-                <li key={id} className="link text-lg link-primary">
-                  <a href={resources[key]} target="_blank">
-                    {key}
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
+          <ul className="px-4">{resourceElements}</ul>
         </div>
         <div className="mt-8" id="vocabulary">
           <h2 className="text-2xl font-bold text-left">Vocab Table</h2>
