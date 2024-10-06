@@ -1,5 +1,5 @@
 import {useParams} from "react-router-dom";
-import {Table} from "../components";
+import {Meme, Table} from "../components";
 import {useNotes} from "../hooks";
 
 export const NotePage = () => {
@@ -36,7 +36,7 @@ export const NotePage = () => {
         );
       })
     ) : (
-      <img src="https://api.memegen.link/images/custom/Ahhhh/nothing_to_see.jpg?background=https://i.imgur.com/CsCgN7Ll.png&width=400" />
+      <Meme text={"nothing_to_see"} />
     );
 
   return (
