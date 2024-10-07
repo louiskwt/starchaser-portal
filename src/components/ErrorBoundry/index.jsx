@@ -1,6 +1,6 @@
 import React from "react";
 import {Meme} from "../Meme";
-import {Navbar} from "../navbar";
+import {Navbar} from "../Navbar";
 
 export class ErrorBoundary extends React.Component {
   constructor(props) {
