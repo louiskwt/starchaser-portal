@@ -1,6 +1,5 @@
 import React from "react";
 import {Meme} from "../Meme";
-import {Navbar} from "../Navbar";
 
 export class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -17,18 +16,25 @@ export class ErrorBoundary extends React.Component {
   }
 
   render() {
+    const currentPath = window.location.pathname;
+    const onIndexPage = currentPath.length === 0 || currentPath === "/";
+    const msg = onIndexPage ? "Something_went_wrong_try_again_later!" : "Something_went_wrong!!";
+
     if (this.state.hasError) {
       return (
         <>
-          <Navbar />
-          <div className="flex justify-center flex-col items-center w-full h-full">
-            <Meme text={"Something went wrong!!"} />
+          <div className="flex justify-center flex-col mt-12 items-center w-full h-full">
+            <Meme text={msg} />
             <button
               className="btn btn-primary mt-12"
               onClick={() => {
-                window.location.replace("/");
+                if (onIndexPage) {
+                  window.open("https://www.youtube.com/watch?v=mx86-rTclzA", "_blank");
+                } else {
+                  window.location.replace("/");
+                }
               }}>
-              Go Back
+              Click here
             </button>
           </div>
         </>
