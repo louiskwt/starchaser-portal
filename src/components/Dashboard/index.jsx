@@ -19,7 +19,7 @@ export const Dashboard = () => {
     return () => loadProfile();
   }, []);
 
-  const {taskCount, completedTask, activeDays, points, lessonTaken, lessonDate, readingAvg, writingAvg, listeningAvg, speakingAvg, grammarAvg, dictationAvg, previousActiveDays, previousAvg} = profile || {};
+  const {taskCount, completedTask, activeDays, lessonTaken, lessonDate, readingAvg, writingAvg, listeningAvg, speakingAvg, grammarAvg, dictationAvg, previousAvg} = profile || {};
   const {prevReadingAvg, prevWritingAvg, prevListeningAvg, prevSpeakingAvg, prevGrammarAvg, prevDictationAvg} = previousAvg || {};
 
   const firstLessonDate = (() => {
@@ -66,19 +66,9 @@ export const Dashboard = () => {
           </div>
           <div className="stat-title text-md">Days Active</div>
           <div className="stat-value text-secondary">{activeDays}</div>
-          <div className="stat-desc">{previousActiveDays > 0 ? (activeDays / previousActiveDays) * 100 : 0} more than last week</div>
         </div>
       </div>
-      {/* Starpoints */}
-      <div className="stats bg-purple-500 text-primary-content w-96">
-        <div className="stat">
-          <div className="stat-title text-gray-200">Star Points</div>
-          <div className="stat-value">{points}</div>
-          <div className="stat-actions">
-            <button className="badge badge-lg badge-accent btn-success">VIP</button>
-          </div>
-        </div>
-      </div>
+
       {/* Stat */}
       <div className="flex justify-around">
         <div className="stats stats-vertical shadow">
