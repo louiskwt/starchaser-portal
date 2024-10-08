@@ -26,6 +26,7 @@ export const AuthProvider = ({children}) => {
           name: `student-${id.substr(id.length - 4)}`,
           lessonTaken: 0,
           lessonDate: Timestamp.fromDate(new Date()),
+          lastUpdated: Timestamp.now(),
           userId: id,
           readingAvg: 0,
           writingAvg: 0,
@@ -138,7 +139,30 @@ export const AuthProvider = ({children}) => {
     }
   };
 
-  return <AuthContext.Provider value={{user, setUser, profile, getUserProfile, loginWithEmail, loginWithGoogle, logout, registerWithEmail, setInitialUserProfile, checkProfile, resetPassword, loading}}>{children}</AuthContext.Provider>;
+  const updateActiveDay = async () => {
+    const {activeDays, lastUpdated} = profile;
+
+    const lastActiveDate = new Date(lastUpdated.toDate());
+    const now = new Date();
+    const oneDayAgo = 24 * 60 * 1000;
+
+    if (now - lastActiveDate > oneDayAgo) {
+      const id = user.uid;
+      const memberRef = doc(db, "members", id);
+      await setDoc(
+        memberRef,
+        {
+          activeDays: activeDays + 1,
+          lastUpdated: Timestamp.now(),
+        },
+        {
+          merge: true,
+        }
+      );
+    }
+  };
+
+  return <AuthContext.Provider value={{user, setUser, profile, getUserProfile, loginWithEmail, loginWithGoogle, logout, registerWithEmail, setInitialUserProfile, checkProfile, resetPassword, updateActiveDay, loading}}>{children}</AuthContext.Provider>;
 };
 
 export const useAuth = () => {
