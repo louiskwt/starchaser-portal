@@ -1,11 +1,17 @@
+import {useEffect} from "react";
 import {useParams} from "react-router-dom";
 import {Meme, Table} from "../components";
-import {useNotes} from "../hooks";
+import {useAuth, useNotes} from "../hooks";
 
 export const NotePage = () => {
   const {noteId} = useParams();
   const {notes} = useNotes();
+  const {updateActiveDay} = useAuth();
   const note = notes.find((n) => (n.id = noteId)) || {};
+
+  useEffect(() => {
+    updateActiveDay();
+  }, []);
 
   const {vocabulary, topic, title, links, videos} = note;
   const {heading, ideas, resources = {}} = topic;
