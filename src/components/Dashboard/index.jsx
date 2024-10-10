@@ -21,7 +21,6 @@ export const Dashboard = () => {
 
   const {taskCount, completedTask, activeDays, lessonTaken, lessonDate, readingAvg, writingAvg, listeningAvg, speakingAvg, grammarAvg, dictationAvg, previousAvg, name} = profile || {};
   const {prevReadingAvg, prevWritingAvg, prevListeningAvg, prevSpeakingAvg, prevGrammarAvg, prevDictationAvg} = previousAvg || {};
-  console.log(profile);
   const firstLessonDate = (() => {
     if (lessonDate && lessonDate instanceof Date && !isNaN(lessonDate)) {
       return lessonDate.toDate().toDateString();
