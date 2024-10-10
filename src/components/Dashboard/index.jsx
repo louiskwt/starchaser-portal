@@ -19,9 +19,9 @@ export const Dashboard = () => {
     return () => loadProfile();
   }, []);
 
-  const {taskCount, completedTask, activeDays, lessonTaken, lessonDate, readingAvg, writingAvg, listeningAvg, speakingAvg, grammarAvg, dictationAvg, previousAvg} = profile || {};
+  const {taskCount, completedTask, activeDays, lessonTaken, lessonDate, readingAvg, writingAvg, listeningAvg, speakingAvg, grammarAvg, dictationAvg, previousAvg, name} = profile || {};
   const {prevReadingAvg, prevWritingAvg, prevListeningAvg, prevSpeakingAvg, prevGrammarAvg, prevDictationAvg} = previousAvg || {};
-
+  console.log(profile);
   const firstLessonDate = (() => {
     if (lessonDate && lessonDate instanceof Date && !isNaN(lessonDate)) {
       return lessonDate.toDate().toDateString();
@@ -31,6 +31,9 @@ export const Dashboard = () => {
   const profileImgUrl = user.photoURL || getGravatarURL(user.email);
   return (
     <div className="flex flex-col justify-center items-center p-3 w-full">
+      <div className="flex flex-start text-left mb-4">
+        <h1 className="font-bold text-2xl">Hello {name}</h1>
+      </div>
       {/* main */}
       <div className="stats shadow">
         <div className="stat">
