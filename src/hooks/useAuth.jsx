@@ -44,7 +44,7 @@ export const AuthProvider = ({children}) => {
             prevListeningAvg: 0,
             prevSpeakingAvg: 0,
             prevGrammarAvg: 0,
-            previousDictationAvg: 0,
+            prevDictationAvg: 0,
           },
         },
         {
