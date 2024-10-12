@@ -1,8 +1,10 @@
-# React + Vite
+# Starchaser Academy
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This's a prototype that I want to build in order to tackle a bigger problem: English learning.
 
-Currently, two official plugins are available:
+This project is built by React + Vite and the backend is powered by Firebase
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Plan
+
+1. Invite users to use it
+2. Open source it
