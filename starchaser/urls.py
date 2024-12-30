@@ -19,5 +19,7 @@ from . import views
 
 urlpatterns = [
     path('', views.landing_page, name='landing_page'),
+    path('login', views.login, name='login'),
+    path('signup', views.signup, name='signup'),
     path("__reload__/", include("django_browser_reload.urls")),
 ]

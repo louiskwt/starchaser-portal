@@ -1,0 +1,38 @@
+<!-- login.html -->
+{% extends 'starchaser/base.html' %}
+
+{% block content %}
+<div class="flex items-center justify-center min-h-screen bg-gray-100">
+  <div class="w-full max-w-md bg-white rounded-lg shadow-lg p-8">
+    <h2 class="text-2xl font-bold mb-4 text-gray-800">登入</h2>
+    <form>
+      <div class="mb-4">
+        <label class="block text-gray-700 font-bold mb-2" for="username">
+          使用者名稱
+        </label>
+        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="輸入使用者名稱">
+      </div>
+      <div class="mb-6">
+        <label class="block text-gray-700 font-bold mb-2" for="password">
+          密碼
+        </label>
+        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="輸入密碼">
+      </div>
+      <div class="flex items-center justify-between">
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+          登入
+        </button>
+        <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="#">
+          忘記密碼？
+        </a>
+      </div>
+    </form>
+    <div class="mt-6 text-center">
+      <span class="block text-gray-700 font-bold mb-2">或使用以下方式登入:</span>
+      <a href="#" class="inline-block bg-white hover:bg-gray-100 text-gray-800 font-bold py-2 px-4 rounded-full shadow-md">
+        <img src="https://via.placeholder.com/20x20" class="inline-block mr-2 align-middle" alt="Google logo"> 使用 Google 登入
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock %}
