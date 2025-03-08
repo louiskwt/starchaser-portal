@@ -11,6 +11,7 @@ This is the beginning of your road to achieve the best possible results for your
 3. Check your answer and think about it
 
 4. Ask questions when you get stuck (My DM is open)
+   - But before you ask questions, please make sure you have done your research via Google or AI tools like [poe](https://poe.com/login)
 
 ## What's the catch?
 
