@@ -1,17 +1,19 @@
-# Welcome to MkDocs
+# Introduction
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+This is the beginning of your road to achieve the best possible results for your English DSE exams.
 
-## Commands
+## How to Use This Site
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+1. Watch videos on a topics that you want to work on
 
-## Project layout
+2. Complete Exercises
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+3. Check your answer and think about it
+
+4. Ask questions when you get stuck (My DM is open)
+
+## What's the catch?
+
+No, I'm not going to sell you my tutorial lessons, online video courses, or notes. All the matierials here are free and you can use it for you study.
+
+However, running this site and creating content requires time and effort, so I would highly recommend you to sponsor me. More on that later.
