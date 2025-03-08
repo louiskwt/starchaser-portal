@@ -2,3 +2,6 @@ site_name: DSE StarChaser
 
 theme:
   name: material
+  palette:
+    primary: black
+    scheme: slate
