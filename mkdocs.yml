@@ -2,6 +2,8 @@ site_name: DSE StarChaser
 
 theme:
   name: material
+  logo: assets/icon-196.png
+  favicon: assets/icon-196.png
   palette:
     primary: black
     scheme: slate
