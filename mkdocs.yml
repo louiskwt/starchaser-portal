@@ -7,3 +7,9 @@ theme:
   palette:
     primary: black
     scheme: slate
+
+nav:
+  - Resources:
+      - resources/index.md
+  - Grammar Lessons:
+      - grammar/index.md
