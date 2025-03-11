@@ -9,7 +9,6 @@ theme:
     scheme: slate
 
 nav:
-  - Resources:
-      - resources/index.md
+  - Resources: resources/index.md
   - Grammar Lessons:
       - grammar/index.md
