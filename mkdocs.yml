@@ -1,4 +1,6 @@
 site_name: DSE StarChaser
+site_url: https://louiskwt.github.io/starchaser-portal/
+description: A free and open-source study guide for English DSE Learning
 
 theme:
   name: material
