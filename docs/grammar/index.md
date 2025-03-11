@@ -1,5 +1,9 @@
 # DSE Grammar Index
 
+To get started, download the Grammar Booklet as a study guide as well 👇🏼
+
+- [Download](https://res.cloudinary.com/ltdev/image/upload/v1741665871/starchaser/Grammar_Booklet_Vol_1_zfn2wd.pdf)
+
 ---
 
 ## Basics
