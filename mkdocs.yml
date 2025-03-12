@@ -14,3 +14,6 @@ nav:
   - Resources: resources/index.md
   - Grammar Lessons:
       - grammar/index.md
+  - Listening Lessons:
+      - listening/index.md
+  - Speaking Notes: speaking/index.md
