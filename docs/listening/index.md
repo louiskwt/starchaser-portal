@@ -1,4 +1,4 @@
-# DSE Listening Lessons
+# DSE Listening Index
 
 This lesson is a work in progress. Each lesson will be released once I have finished recording.
 
