@@ -11,6 +11,7 @@ theme:
     scheme: slate
 
 nav:
+  - Home: index.md
   - Resources: resources/index.md
   - Grammar Lessons:
       - grammar/index.md
