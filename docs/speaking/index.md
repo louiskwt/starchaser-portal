@@ -41,3 +41,15 @@ Points and Ideas
 Speaking Paper
 
 - [Download PDF](https://res.cloudinary.com/ltdev/image/upload/v1741925089/starchaser/connecting_with_teachers_xrkkvn.pdf)
+
+---
+
+## Unmanned Convenient Store
+
+Points and Ideas
+
+- [Download PDF](https://res.cloudinary.com/ltdev/image/upload/v1741964367/starchaser/unmanned_convenient_store_speaking_o1vs9w.pdf)
+
+Speaking Paper
+
+- [Download PDF](https://res.cloudinary.com/ltdev/image/upload/v1741964367/starchaser/unmanned_convenient_store_speaking_o1vs9w.pdf)
