@@ -15,6 +15,10 @@ nav:
   - Resources: resources/index.md
   - Grammar Lessons:
       - grammar/index.md
+  - Writing Lessons:
+      - writing/index.md
+      - samples:
+        - writing/samples/2019_partA.md
   - Listening Lessons:
       - listening/index.md
   - Speaking Notes: speaking/index.md
