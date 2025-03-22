@@ -1,0 +1,9 @@
+# DSE 2019 Paper 2 Part A Sample
+
+## Write about one subject that you enjoyed studying or found challenging
+
+As I reflect on my time in Class 6C at Kowloon Secondary School, one subject that stands out is my elective—English Literature. At first, I found it challenging to analyze complex texts and understand the deeper meanings behind the words even though I am a bookworm. However, with the gentle guidance of my teacher Mr. Wong and the heart-warming support of my classmates, I gradually developed a love for the subject. Looking back, I enjoyed exploring the themes of identity, love, and resilience in novels like The Great Gatsby and 1984 because the discussions we had in class opened my eyes to different perspectives and taught me to think critically. Though it was demanding, the sense of accomplishment I felt after writing a thoughtful essay or acing a presentation made it all worthwhile.
+
+## Write about what you will miss most about being a student in Class 6C.
+
+What I will miss most about being a student in Class 6C is the camaraderie and sense of belonging we shared. Our class was more than just a group of students; we were a family. Whether it was cheering each other on during sports day, staying behind after school  to prepare for exams together, or simply sharing laughs during lunch breaks, every moment was special. I’ll miss the inside jokes, the encouragement during tough times, and the way we celebrated each other’s successes. Looking at our class photo take after the Christmas party this year, I’m reminded of the bond we’ve built over the years, and all these memories we shared will stay with me forever. As we move on to the next chapter of our lives, I’m grateful for the lessons learned, the friendships forged, and the unforgettable experiences in Class 6C. Thank you for making these years so meaningful. I’ll miss you all dearly!
