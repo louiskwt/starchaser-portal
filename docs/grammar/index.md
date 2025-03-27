@@ -8,7 +8,7 @@ To get started, download the Grammar Booklet as a study guide as well 👇🏼
 
 ## Basics
 
-1. [Parts of Speec](grammar/pos)
+1. [Parts of Speech](pos.md)
 2. Tenses (Simple)
 3. Basics Preposistion
 4. Conditional (Type 0 and 1)
