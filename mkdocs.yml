@@ -15,6 +15,7 @@ nav:
   - Resources: resources/index.md
   - Grammar Lessons:
       - grammar/index.md
+      - grammar/pos.md
   - Writing Lessons:
       - writing/index.md
       - Samples:
