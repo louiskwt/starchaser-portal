@@ -7,7 +7,16 @@
  識得詞類，對你哋寫作同閱讀理解都好有幫助，特別係 HKDSE 嘅英文作文！我哋會集中講 七大詞類：名詞（Noun）、動詞（Verb）、形容詞（Adjective）、副詞（Adverb）、限定詞（Determiner）、介詞（Preposition）、連接詞（Conjunction）。
 
 📌 在句子中，每個字都有佢嘅詞類！
+
 📌 一個字可以係唔同詞類，視乎佢喺句子入面點用！
+
+睇教學videos 之餘，記得下載埋 notes 同 練習去記低你學到嘅嘢同確保自己識去分同用 pos 👇🏼
+
+__Notes & Exercises__
+
+- [Notes](https://res.cloudinary.com/ltdev/image/upload/v1743041959/POS_ufewxs.pdf)
+
+- [Exercise](https://res.cloudinary.com/ltdev/image/upload/v1743041959/Basic_POS_Exercise_x7lxbg.pdf)
 
 ---
 
