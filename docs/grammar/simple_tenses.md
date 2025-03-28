@@ -6,6 +6,10 @@
 
 識得佢哋，就可以描述你每日做嘅事、以前發生過嘅事，甚至你將來想做嘅事。
 
+- [練習](https://res.cloudinary.com/ltdev/image/upload/v1743128857/Simple_tenses_Exercises_zqnikk.pdf)
+
+- [筆記](https://res.cloudinary.com/ltdev/image/upload/v1743128958/Simple_Tenses_pzfziv.pdf)
+
 ---
 
 ## 🕐 1. 現在簡單式（Present Simple Tense）
