@@ -17,6 +17,7 @@ nav:
       - grammar/index.md
       - grammar/pos.md
       - grammar/simple_tenses.md
+      - grammar/advanced_structure_inversion.md
   - Writing Lessons:
       - writing/index.md
       - Samples:

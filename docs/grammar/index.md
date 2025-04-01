@@ -33,5 +33,5 @@ To get started, download the Grammar Booklet as a study guide as well 👇🏼
 2. Advanced Tenses
 3. Advanced Conditionals (Type 3 and mixed)
 4. Sentence Patterns & Logic
-5. Advanced Structure
+5. [Advanced Structure: Inversion](advanced_structure_inversion.md)
 6. Punctuations
