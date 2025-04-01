@@ -22,3 +22,5 @@ TODO
 - [2021 Part A](samples/2021_partA.md)
 
 - [2021 Part B Q2](samples/2021_partB_2.md)
+
+- [2022 Part A](samples/2022_partA.md)
