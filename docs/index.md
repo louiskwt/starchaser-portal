@@ -1,3 +1,15 @@
+# DSE 2025 Final Reminder
+
+## Paper 1 Final Reminder
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/awT1G4d5huc?si=XDTxQ5HePH6j97od" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## Paper 2 Final Reminder
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Te3ITjHvajg?si=nQhH6iy5iatWLKC2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+
 # Introduction
 
 This is the beginning of your road to achieve the best possible results for your English DSE exams.
