@@ -12,7 +12,7 @@ __Notes & Exercises__
 
 ## Type 3 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/x4kwFBCd6bk?si=sR_mvoM-idWafGE8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rzBng0FO68k?si=V1sU92MF1I2ss5tO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 💡功能：表示後悔
 
