@@ -31,7 +31,7 @@ To get started, download the Grammar Booklet as a study guide as well 👇🏼
 
 1. Participle Clause
 2. Advanced Tenses
-3. Advanced Conditionals (Type 3 and mixed)
+3. [Advanced Conditionals (Type 3)](conditional_3.md)
 4. Sentence Patterns & Logic
 5. [Advanced Structure: Inversion](advanced_structure_inversion.md)
 6. Punctuations
