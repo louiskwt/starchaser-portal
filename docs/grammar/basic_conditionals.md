@@ -43,7 +43,7 @@ If + present simple, will + base verb
 - You will hurt your eyes if you don't wear safety goggles (如果你唔戴護目鏡，你可能會整親隻眼)
 
 
-### 🎯 On 小貼士：
+### 🎯 小貼士：
 
 用 type 1 的機會比用 type 0 高
 
