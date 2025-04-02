@@ -20,7 +20,7 @@ To get started, download the Grammar Booklet as a study guide as well 👇🏼
 0. Sentence Structure
 1. Progressive Tenses
 2. Perfect Tenses
-3. Intermediate Conditionals (Type 1 and 2)
+3. [Intermediate Conditionals (Type 2)](conditional_2.md)
 4. Relative Clauses
 5. Intermediate Conjunctions
 6. Intermediate Preposition
