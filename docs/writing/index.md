@@ -26,3 +26,8 @@ TODO
 - [2022 Part A](samples/2022_partA.md)
 
 - [2022 Part B Q4](samples/2022_partB_4.md)
+
+- [2023 Part A](samples/2023_partA.md)
+
+- [2023 Part B Q3](samples/2023_partB_3.md)
+
