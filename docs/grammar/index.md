@@ -12,7 +12,7 @@ To get started, download the Grammar Booklet as a study guide as well 👇🏼
 2. [Tenses (Simple)](simple_tenses.md)
 3. Basics Preposistion
 4. Conditional (Type 0 and 1)
-5. Comparative and Superlative Adjectives
+5. [Comparative and Superlative Adjectives](comparative_superlative_adj.md)
 6. Basic Conjuncions
 
 ## Intermediate
