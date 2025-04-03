@@ -34,9 +34,12 @@ Writing Booklet Vol 1.5
 
 ## Additional Resources
 
-1. Sites for Finding Past Paper >  [DSE Life](https://dse.life/ppindex/eng/)
+1. Sites for Finding Past Paper 
 
-_Since DSE Life doesn't have all the past paper, I'm considering hosting some resources in the future as well_
+    - DSE Life (The site has been suspended 😢)
+
+    - But hey, you can still have access through this [Wayback Machine Link](https://web.archive.org/web/20241228044243/https://dse.life/ppindex/eng/#dse)
+
 
 2. Checking Cutoff > [DSE 00](https://www.dse00.com/p/english-cut-off-details.html)  
 
