@@ -11,7 +11,7 @@ __Notes & Exercise__
 
 - [練習](https://res.cloudinary.com/ltdev/image/upload/v1743561865/basic_preposition_ex_azyshi.pdf)
 
-- [筆記](https://res.cloudinary.com/ltdev/image/upload/v1743561865/basic_preposition_bt2cvx.pdf)
+- [筆記](https://res.cloudinary.com/ltdev/image/upload/v1743676583/basic_preposition_fixed_amprnj.pdf)
 
 ---
 
