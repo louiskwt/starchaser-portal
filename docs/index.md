@@ -1,5 +1,13 @@
 # DSE 2025 Final Reminder
 
+## Paper 3 Final Reminder
+
+### Part 1
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/J6IZOuqCaDc?si=DK6RvGgz0Ual3JDv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+
 ## Paper 1 Final Reminder
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/awT1G4d5huc?si=XDTxQ5HePH6j97od" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
