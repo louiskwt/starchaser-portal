@@ -14,7 +14,7 @@ Although we regret not picking your charity as the provider for the volunteer ba
 
 Regards,<br/>
 Nico Lin<br/>
-Event Horizon<br/>
+Project Assistant, Event Horizon<br/>
 
 ---
 
@@ -36,7 +36,7 @@ Based on what I have mentioned above, I want to point out that the Event Horizon
 
 Yours faithfully,<br/>
 Nico Lin<br/>
-Event Horizon<br/>
+Project Assistant, Event Horizon<br/>
 
 ---
 
@@ -57,5 +57,5 @@ In addition, the poster should include the sponsor’s logo and slogan as well. 
 Again, we appreciate your effort in creating the promotional poster for us, but given the feedback and issues mentioned above, I hope you and your team can redesign the poster for us. If you have any questions, please don’t hesitate to contact me. I look forward to seeing the redesigned version of the poster. 
 
 Best regards,<br/>
-Nico Lin
-
+Nico Lin <br/>
+Project Assistant
