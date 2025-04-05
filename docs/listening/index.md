@@ -1,6 +1,10 @@
-# DSE Listening Index
+# DSE Listening 教學 & 筆記
 
 This lesson is a work in progress. Each lesson will be released once I have finished recording.
+
+## Latest Listening Recording 🆕
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GnQfZfEfq3Y?si=mvdd-avPyauSrWcI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Samples
 
