@@ -11,9 +11,9 @@ theme:
     scheme: slate
 
 nav:
-  - Home: index.md
-  - Resources: resources/index.md
-  - Grammar Lessons:
+  - Home 主頁: index.md
+  - Resources 備考資源: resources/index.md
+  - DSE Grammar 筆記:
       - grammar/index.md
       - grammar/pos.md
       - grammar/simple_tenses.md
@@ -23,7 +23,7 @@ nav:
       - grammar/conditional_2.md
       - grammar/conditional_3.md
       - grammar/advanced_structure_inversion.md
-  - Writing Lessons:
+  - DSE Paper 2 筆記 & 範文:
       - writing/index.md
       - Samples:
         - writing/samples/2018_partA.md
@@ -40,11 +40,11 @@ nav:
         - writing/samples/2023_partB_3.md
         - writing/samples/2024_partA.md
         - writing/samples/2024_partB_2.md
-  - Listening Lessons:
+  - DSE Paper 3 筆記 & 範文:
       - listening/index.md
       - listening/grammar_skills.md
       - Data File Samples:
           - listening/samples/2017_df_b2_tasks.md
           - listening/samples/2021_df_b2_tasks.md
           - listening/samples/2023_df_b2_tasks.md
-  - Speaking Notes: speaking/index.md
+  - DSE Paper 4 筆記: speaking/index.md
