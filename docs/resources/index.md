@@ -36,11 +36,11 @@ Writing Booklet Vol 1.5
 
 1. Sites for Finding Past Paper 
 
-    - DSE Life (The site has been suspended 😢)
-
-    - But hey, you can still have access through this [Wayback Machine Link](https://web.archive.org/web/20241228044243/https://dse.life/ppindex/eng/#dse)
+    - [DSE Life (archived)](https://web.archive.org/web/20241228044243/https://dse.life/ppindex/eng/#dse)
 
 
-2. Checking Cutoff > [DSE 00](https://www.dse00.com/p/english-cut-off-details.html)  
+2. Checking Cutoff
+
+    - [DSE 00](https://www.dse00.com/p/english-cut-off-details.html)  
 
 
