@@ -28,22 +28,6 @@ All the best to my DSE fighters!
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Te3ITjHvajg?si=nQhH6iy5iatWLKC2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-
-# Introduction
-
-This is the beginning of your road to achieve the best possible results for your English DSE exams.
-
-## How to Use This Site
-
-1. Watch videos on a topics that you want to work on
-
-2. Complete Exercises
-
-3. Check your answer and think about it
-
-4. Ask questions when you get stuck (My DM is open)
-   - But before you ask questions, please make sure you have done your research via Google or AI tools like [poe](https://poe.com/login)
-
 ## What's the catch?
 
 No, I'm not going to sell you my tutorial lessons, online video courses, or notes. All the matierials here are free and you can use it for you study.
