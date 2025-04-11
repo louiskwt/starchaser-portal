@@ -1,3 +1,9 @@
+# Archived - 陳列檔案
+
+此頁會寄存一些過去或不合時的舊資源
+
+---
+
 # DSE 2025 Final Reminder
 
 All the best to my DSE fighters!
