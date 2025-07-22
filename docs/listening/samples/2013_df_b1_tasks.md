@@ -6,10 +6,18 @@ Popular Travel Destinations
 
 The top 4 travel destinations in the world last year were:
 
-India 		-	76 million visitors
-The USA	    -	59 million visitors
-China		-	55 million visitors
-Spain		-	52 million visitors
+<div align="center">
+
+India - 76 million visitors
+<br/>
+The USA - 59 million visitors
+<br/>
+China - 55 million visitors
+<br/>
+Spain - 52 million visitors
+<br/>
+
+</div>
 
 The Busiest and Best Airports
 
@@ -55,18 +63,18 @@ Experience a Unique and Memorable Stay in Some of the Most Unusual Hotels
 
 If you’re tired of staying in a normal hotel for your holidays, we totally understand. That’s why this week we feature some of the unusual hotels in the world that will give you a totally different and unique experience. Do you want to know what makes them unusual? If so, read on!
 
-__Ice Hotel__
+**Ice Hotel**
 
 The very first unusual hotel that we would like to introduce is the Ice Hotel in Norway. What’s special about the Ice hotel? Well, everything is made of ice in the hotel. You may think it’d be really cold inside because it’s made of ice, but in fact, it is actually not cold inside. More importantly, you don’t need to worry about the colde weather because the staff actually make sure the customers have lots of warm coats to wear. If you want to experience the ice hotel yourself, please remember that it only opens in winter.
 
-__Prison Hotel__
+**Prison Hotel**
 
 The second unusual hotel on our list is the prison hotel in Autralia. When you stay in the prison hotel, you will sleep in a prison cell at night just like a prisoner. But don’t worry, you will have a key for your cell so that you’re not locked up inside the cell. Moreover, you can learn about the interesting history of the prison. On top of that, guests of the prison hotel have to cook dinner together in the prison kitchen and share an unforgettable meal together.
 
-__The Beacon Hotel__
+**The Beacon Hotel**
 
 Last but not least, we want to share about the lighthouse hotel called the Beacon. It’s located near Lochinver in Scotland, and hotel guests can experience what it’s like to stay in a lighthouse. The rooms are round, and you can enjoy the fantastic scenery during your stay. Moreover, the environment is peaceful and quiet. What’s more is that it’s a great place to watch the bird life. The Beacon opens all year round, so you can visit it anytime you like.
 
-__Which one do you want to try?__
+**Which one do you want to try?**
 
 After learning about our picks for the unusual hotels, which one would you like to experience? If you ever stayed at one of these hotels, we would love to hear from you about your experience. Thank you for reading.
