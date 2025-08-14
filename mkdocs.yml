@@ -27,24 +27,25 @@ nav:
   - DSE Paper 2 筆記 & 範文:
       - writing/index.md
       - Samples  範文:
-        - writing/samples/2018_partA.md
-        - writing/samples/2018_partB_4.md
-        - writing/samples/2019_partA.md
-        - writing/samples/2019_partB_2.md
-        - writing/samples/2020_partA.md
-        - writing/samples/2020_partB_3.md
-        - writing/samples/2021_partA.md
-        - writing/samples/2021_partB_2.md
-        - writing/samples/2022_partA.md
-        - writing/samples/2022_partB_4.md
-        - writing/samples/2023_partA.md
-        - writing/samples/2023_partB_3.md
-        - writing/samples/2024_partA.md
-        - writing/samples/2024_partB_2.md
+          - writing/samples/2018_partA.md
+          - writing/samples/2018_partB_4.md
+          - writing/samples/2019_partA.md
+          - writing/samples/2019_partB_2.md
+          - writing/samples/2020_partA.md
+          - writing/samples/2020_partB_3.md
+          - writing/samples/2021_partA.md
+          - writing/samples/2021_partB_2.md
+          - writing/samples/2022_partA.md
+          - writing/samples/2022_partB_4.md
+          - writing/samples/2023_partA.md
+          - writing/samples/2023_partB_3.md
+          - writing/samples/2024_partA.md
+          - writing/samples/2024_partB_2.md
   - DSE Paper 3 筆記 & 範文:
       - listening/index.md
       - listening/grammar_skills.md
       - Data File Samples:
+          - listening/samples/2012_df_b2_tasks.md
           - listening/samples/2013_df_b1_tasks.md
           - listening/samples/2017_df_b2_tasks.md
           - listening/samples/2021_df_b2_tasks.md
