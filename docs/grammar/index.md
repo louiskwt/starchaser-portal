@@ -18,8 +18,8 @@ To get started, download the Grammar Booklet as a study guide as well 👇🏼
 ## Intermediate
 
 0. Sentence Structure
-1. Progressive Tenses
-2. Perfect Tenses
+1. [Progressive Tenses](progressive_tenses.md)
+2. [Perfect Tenses](perfect_tenses.md)
 3. [Intermediate Conditionals (Type 2)](conditional_2.md)
 4. Relative Clauses
 5. Intermediate Conjunctions
