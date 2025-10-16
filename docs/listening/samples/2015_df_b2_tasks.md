@@ -39,3 +39,17 @@ Based on what I have mentioned, I hope you can allow us to film the music video 
 Yours sincerely,<br/>
 Starsky Cheung<br/>
 North Star Artists
+
+## Task 10 Article
+
+<div align="center">
+
+The Truth about Mark Nelson’s Incident
+
+</div>
+
+On 13th March, an incident happened in Notting Hill while Mark was walking near his home and chatting with his girlfriend on his phone. For our fans who care about Mark Nelson, this article aims to clarify what has happened to Mark Nelson.
+
+According to Gossip Week, Mark pushed over a photographer named Ruari King after Ruari suddenly showed up and took photos of Mark during his walk. But the truth is that the photographer was walking backward and taking photo of Mark, so he just fell over. As a matter of fact, Mark even tried to offer a helping hand to help the photographer stand up, but Mark’s attempt to help was depicted by Gossip Week as though Mark was violent and trying to attack Ruari. But as we all know, Mark is as gentle as a lamb, and he is not a violent person. Even though it is reported that the photographer was seriously injured, the photographter actually got up and continued to take more photos afterwards.
+
+Obviously, the article written by Gossip Week is nothing further from the truth, and we would like to mention two similar incidents that have happened to other famous people as well. The well-known actor Bernie Lee’s nose was cut from photographer’s camera and he had to cancel his photo shoot because of that. In addition, the famous signer Donna Rae had to ask for protection from the police since she was followed late at night. We strongly believe that these types of intrusive behaviours from the photographers must be stopped in order to protect the safety and privacy of the celebrities.
