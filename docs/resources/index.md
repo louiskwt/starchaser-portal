@@ -32,10 +32,6 @@ Writing Booklet Vol 1.5
 
 ## Additional Resources
 
-1. Sites for Finding Past Paper
+1. [DSE Life (archived)](https://web.archive.org/web/20241228044243/https://dse.life/ppindex/eng/#dse) -- Past Paper <span style="color: yellow; margin-left: 5px">\*檔案要用電腦才可打開</span>
 
-   - [DSE Life (archived)](https://web.archive.org/web/20241228044243/https://dse.life/ppindex/eng/#dse)
-
-2. Checking Cutoff
-
-   - [DSE 00](https://www.dse00.com/p/english-cut-off-details.html)
+2. [DSE 00](https://www.dse00.com/p/english-cut-off-details.html) -- Checking Cutoff
