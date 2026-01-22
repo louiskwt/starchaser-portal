@@ -32,6 +32,8 @@ Writing Booklet Vol 1.5
 
 ## Additional Resources
 
-1. [DSE Life (archived)](https://web.archive.org/web/20241228044243/https://dse.life/ppindex/eng/#dse) -- Past Paper <span style="color: yellow; margin-left: 5px">\*檔案要用電腦才可打開</span>
+1. [DSE Past Paper](https://dsepastpaper.com/english) -- DSE Paper Only
 
-2. [DSE 00](https://www.dse00.com/p/english-cut-off-details.html) -- Checking Cutoff
+2. [DSE Life (archived)](https://web.archive.org/web/20241228044243/https://dse.life/ppindex/eng/#dse) -- DSE and A-level Past Paper <span style="color: yellow; margin-left: 5px">\*檔案要用電腦才可打開</span>
+
+3. [DSE 00](https://www.dse00.com/p/english-cut-off-details.html) -- Checking Cutoff
