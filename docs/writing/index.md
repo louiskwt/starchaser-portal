@@ -1,9 +1,5 @@
 # DSE Writing Index
 
-TODO
-
----
-
 ## Samples
 
 - [2018 Part A](samples/2018_partA.md)
