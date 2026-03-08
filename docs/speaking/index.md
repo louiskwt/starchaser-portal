@@ -1,6 +1,6 @@
 # Speaking Notes for DSE
 
-The following notes are updated in Spring 2025.
+The following notes are updated in Spring 2026
 
 Practical Speaking Phrases for Group Interaction and Individual Response
 
@@ -48,7 +48,7 @@ Speaking Paper
 
 Points and Ideas
 
-- [Download PDF](https://res.cloudinary.com/ltdev/image/upload/v1741964367/starchaser/unmanned_convenient_store_speaking_o1vs9w.pdf)
+- [Download PDF](https://res.cloudinary.com/ltdev/image/upload/v1772928248/starchaser/Unmanned_convenient_store_Speaking_Practice_notes_jenqua.pdf)
 
 Speaking Paper
 
