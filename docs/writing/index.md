@@ -28,6 +28,8 @@
 
 - [2023 Part B Q3](samples/2023_partB_3.md)
 
+- [2023 Part B Q9](samples/2023_partB_9.md)
+
 - [2024 Part A](samples/2024_partA.md)
 
 - [2024 Part B Q2](samples/2024_partB_2.md)
