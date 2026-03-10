@@ -8,6 +8,22 @@ Practical Speaking Phrases for Group Interaction and Individual Response
 
 ---
 
+# 2026 Spring Practices
+
+## Online Shopping
+
+Points and Ideas
+
+- [Download PDF](https://res.cloudinary.com/ltdev/image/upload/v1773121983/starchaser/Online_Shopping_Speaking_Practice_notes-2_g8gpdz.pdf)
+
+Speaking Paper
+
+- [Download PDF](https://res.cloudinary.com/ltdev/image/upload/v1773122049/starchaser/online_shopping_p4_tzbwhi.pdf)
+
+---
+
+# 2025 Spring Practices
+
 ## Post Covid Fashion
 
 Points and Ideas
