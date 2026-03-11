@@ -12,6 +12,5 @@ To add to my disappointment, the room was supposed to be a non-smoking one; howe
 
 I kindly request that you address these issues to ensure future guests have a better experience. A partial refund or a discount on a future stay would be appreciated, as I believe this would show your commitment to customer satisfaction. Moreover, I advise you to make sure the information shown on your website is as accurate as possible. Thank you for your attention to this matter. I look forward to your prompt response.
 
-Best regards,
+Best regards,</br>
 Chris Wong
-
