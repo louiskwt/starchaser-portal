@@ -10,6 +10,9 @@ theme:
     primary: black
     scheme: slate
 
+extra_javascript:
+  - js/wc.js
+
 nav:
   - Home 主頁: index.md
   - Resources 備考資源: resources/index.md
