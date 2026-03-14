@@ -40,7 +40,7 @@ Speaking Paper
 
 Points and Ideas
 
-- [Download PDF](https://res.cloudinary.com/ltdev/image/upload/v1741924400/starchaser/Online_Scam_Speaking_Practice_notes_xmudg6.pdf)
+- [Download PDF](https://res.cloudinary.com/ltdev/image/upload/v1773504323/starchaser/Online_Scam_Speaking_Practice_notes-1_nihajn.pdf)
 
 Speaking Paper
 
