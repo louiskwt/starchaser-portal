@@ -32,8 +32,4 @@ Writing Booklet Vol 1.5
 
 ## Additional Resources
 
-1. [DSE 247](https://dse247.com/subject/english/) -- DSE + AL + CE Paper
-
-2. [DSE Life (ALT)](https://dsepp.ru/) -- DSE and A-level Past Paper
-
-3. [DSE 00](https://www.dse00.com/p/english-cut-off-details.html) -- Checking Cutoff
+1. [DSE 00](https://www.dse00.com/p/english-cut-off-details.html) -- Checking Cutoff
