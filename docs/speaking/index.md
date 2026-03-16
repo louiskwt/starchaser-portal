@@ -10,6 +10,26 @@ Practical Speaking Phrases for Group Interaction and Individual Response
 
 # 2026 Spring Practices
 
+## Keeping Wild Animals as Pets
+
+Points and Ideas
+
+- [Download PDF](https://res.cloudinary.com/ltdev/image/upload/v1773666464/starchaser/wild_animals_as_pets_ideas-1_jcwvfs.pdf)
+
+Speaking Paper
+
+- [Download PDF](https://res.cloudinary.com/ltdev/image/upload/v1773666495/starchaser/wild_animal_p4_xpu36g.pdf)
+
+## Internship at a Video Game Company
+
+Points and Ideas
+
+- [Download PDF](https://res.cloudinary.com/ltdev/image/upload/v1773666373/starchaser/video_game_internship_notes_qctadi.pdf)
+
+Speaking Paper
+
+- [Download PDF](https://res.cloudinary.com/ltdev/image/upload/v1773666374/starchaser/video_game_internship_p4_n2sa0h.pdf)
+
 ## Online Shopping
 
 Points and Ideas
