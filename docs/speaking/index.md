@@ -10,6 +10,16 @@ Practical Speaking Phrases for Group Interaction and Individual Response
 
 # 2026 Spring Practices
 
+## Mascot Design
+
+Points and Ideas
+
+- [Download PDF](https://res.cloudinary.com/ltdev/image/upload/v1773761646/mascot_design_ideas-1_dllugt.pdf)
+
+Speaking Paper
+
+- [Download PDF](https://res.cloudinary.com/ltdev/image/upload/v1773761691/mascot_p4_omspoq.pdf)
+
 ## Keeping Wild Animals as Pets
 
 Points and Ideas
