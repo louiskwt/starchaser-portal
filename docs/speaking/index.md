@@ -50,6 +50,14 @@ Speaking Paper
 
 - [Download PDF](https://res.cloudinary.com/ltdev/image/upload/v1773122049/starchaser/online_shopping_p4_tzbwhi.pdf)
 
+## Giving Money to Parents
+
+- [Download PDF](https://res.cloudinary.com/ltdev/image/upload/v1773761927/Giving_money_to_parents_1_mlfckm.pdf)
+
+Speaking Paper
+
+- [Download PDF](https://res.cloudinary.com/ltdev/image/upload/v1773761928/giving_money_to_parents_p4_ky3a2v.pdf)
+
 ---
 
 # 2025 Spring Practices
