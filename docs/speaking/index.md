@@ -50,6 +50,16 @@ Speaking Paper
 
 - [Download PDF](https://res.cloudinary.com/ltdev/image/upload/v1773122049/starchaser/online_shopping_p4_tzbwhi.pdf)
 
+## Cheating
+
+Points and Ideas
+
+-[Download PDF](https://res.cloudinary.com/ltdev/image/upload/v1773794324/speaking_ideas_cheating_1_r7egug.pdf)
+
+Speaking Paper
+
+-[Download PDF](https://res.cloudinary.com/ltdev/image/upload/v1773794324/cheating_speaking_paper_lc9nnj.pdf)
+
 ## Giving Money to Parents
 
 - [Download PDF](https://res.cloudinary.com/ltdev/image/upload/v1773761927/Giving_money_to_parents_1_mlfckm.pdf)
