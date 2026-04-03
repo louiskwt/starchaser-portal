@@ -16,6 +16,8 @@ This lesson is a work in progress. Each lesson will be released once I have fini
 
 - [2018 Data File B2](samples/2018_df_b2_tasks.md)
 
+- [2021 Data File B1](samples/2021_df_b1_tasks.md)
+
 - [2021 Data File B2](samples/2021_df_b2_tasks.md)
 
 - [2023 Data File B2](samples/2023_df_b2_tasks.md)
