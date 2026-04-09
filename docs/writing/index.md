@@ -34,4 +34,6 @@
 
 - [2024 Part B Q2](samples/2024_partB_2.md)
 
+- [2025 Part A](samples/2025_partA.md)
+
 - [2025 Fall Band Letter Writing](samples/2025_fall_band_letter.md)
