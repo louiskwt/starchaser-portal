@@ -36,4 +36,6 @@
 
 - [2025 Part A](samples/2025_partA.md)
 
+- [2025 Part B](samples/2025_partB_3.md)
+
 - [2025 Fall Band Letter Writing](samples/2025_fall_band_letter.md)
