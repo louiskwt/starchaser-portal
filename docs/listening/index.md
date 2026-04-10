@@ -26,6 +26,8 @@ This lesson is a work in progress. Each lesson will be released once I have fini
 
 - [2024 Data File B2](samples/2024_df_b2_tasks.md)
 
+- [2025 Data File B2](samples/2025_df_b2_tasks.md)
+
 ---
 
 ## Basics
