@@ -3,15 +3,39 @@ title: DSE StarChaser - 免費英文學習平台 | HKDSE 英文備考資源
 description: DSE StarChaser 是一家專為香港學生提供的免費英文學習平台。包含文法筆記、寫作範文、聆聽練習及說話備考資源，助你備考 HKDSE 英文考試。
 ---
 
-# 🎓 DSE StarChaser - 免費英文學習平台 📚
+# 🎓 DSE StarChaser - 你的 HKDSE 英文備考助手
 
-## How to use this site?
+**免費、無廣告、持續更新 — 專為香港學生而設的英文學習平台**
 
-Start with the [grammar section](grammar/index.md) if you're still struggling with understanding or writing in English.
+---
 
-When preparing for exams of the DSE, you should check out the [resources section](resources/index.md) for my notes and other resources
+## 開始你的備考之路
 
-After that, you need to practice, practice and practice. Once you have done some writing or Data File tasks, you can compare your writing with the samples available here:
+唔知由邊度入手？我哋已經為你整理好清晰嘅學習順序 👇
 
-1. [Writing samples](writing/index.md)
-2. [Data File samples](listening/index.md)
+### 📖 文法基礎
+まだ英文文法係咪覺得複雜？從 [文法筆記](grammar/index.md) 開始打好基礎，詞類、時態、条件句逐一攻克。
+
+### 📚 備考資源
+備考 HKDSE 唔知要用咩教材？到 [資源專頁](resources/index.md) 下載 Grammar Book、Vocab Book、Writing Booklet 等精華筆記。
+
+### ✍️ 寫作實戰
+睇完筆記就係時候實踐！參考 [寫作範文](writing/index.md) 度覽歷年高分範文，分析答題策略。
+
+### 🎧 聆聽訓練
+利用 [Data File 範例](listening/index.md) 熟悉聆聽卷格式，練習答題技巧。
+
+---
+
+## 為何選擇 StarChaser？
+
+| 特色 | 內容 |
+|------|------|
+| 完全免費 | 所有資源免費下載，無需訂閱或付費 |
+| 專為 DSE 而設 | 涵蓋 Paper 2 寫作、Paper 3 聆聽、Paper 4 口語 |
+| 持續更新 | 包含 2025 最新試卷範文，紧贴 HKDSE 趨勢 |
+| 中英對照 | 廣東話解說 + 英文範例，適合香港學生 |
+
+---
+
+**立即開始：** 點擊上方導航或從文法筆記開始你的學習之旅 🚀
