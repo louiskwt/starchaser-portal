@@ -12,6 +12,27 @@ theme:
 
 extra_javascript:
   - js/wc.js
+  - js/analytics.js
+
+extra:
+  analytics:
+    provider: google
+    property: G-BJJTFMQJTQ
+    anonymize_ip: true
+    cookie_expiration: 365
+    feedback:
+      title: 這些內容對你有幫助嗎?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: 有幫助的！
+          data: 1
+          note: >-
+            感謝你的寶貴意見～
+        - icon: material/emoticon-sad-outline
+          name: 內容可以改善下...
+          data: 0
+          note: >-
+            明白，感謝你的寶貴意見
 
 markdown_extensions:
   - meta
