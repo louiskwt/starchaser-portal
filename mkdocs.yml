@@ -13,6 +13,9 @@ theme:
 extra_javascript:
   - js/wc.js
 
+markdown_extensions:
+  - meta
+
 nav:
   - Home 主頁: index.md
   - Resources 備考資源: resources/index.md
