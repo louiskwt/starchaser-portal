@@ -1,3 +1,8 @@
+---
+title: DSE 英文寫作範文及教學 | Paper 2 寫作高分技巧
+description: DSE 英文寫作範文全集，包含 2018-2025 年 Paper 2 Part A 及 Part B 範文。學習寫作技巧、格式要求，助你掌握 HKDSE 英文寫作高分要點。
+---
+
 # DSE Writing 教學 & 筆記
 
 ## Samples

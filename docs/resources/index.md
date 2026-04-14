@@ -1,3 +1,8 @@
+---
+title: DSE 英文備考資源 | 免費文法詞彙寫作筆記 PDF
+description: DSE StarChaser 提供免費英文備考資源下載，包括文法 Booklet、詞彙 Book 及寫作參考資料 PDF，專為香港學生備考 HKDSE 英文而設。
+---
+
 # Resources For DSE
 
 新版本的筆記仍在製作中，敬請期待～

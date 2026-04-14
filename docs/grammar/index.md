@@ -1,3 +1,8 @@
+---
+title: DSE 英文文法筆記 | 詞類、時態、條件句學習指南
+description: 免費下載 DSE 英文文法筆記，涵蓋詞類（Parts of Speech）、時態（Tenses）、條件句（Conditionals）、比較級等文法重點。適合香港中學生備戰 HKDSE 英文考試。
+---
+
 # DSE Grammar Index
 
 To get started, download the Grammar Booklet as a study guide as well 👇🏼

@@ -1,3 +1,8 @@
+---
+title: DSE 英文口語練習 | Paper 4 說話考試備考資源
+description: DSE 英文口語備考資源，包含 Paper 4 說話考試練習課題、口語 phrases 範例及答題技巧。專為香港中學生備戰 HKDSE 英文口語考試。
+---
+
 # Speaking Notes for DSE
 
 The following notes are updated in Spring 2026

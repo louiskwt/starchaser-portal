@@ -1,3 +1,8 @@
+---
+title: DSE 英文聆聽練習 | Data File 答題技巧及範例
+description: DSE 英文聆聽備考資源，包含歷年 Data File 練習（2012-2025）、答題技巧及語法要點。專為香港中學生備考 HKDSE 英文聆聽部分。
+---
+
 # DSE Listening 教學 & 筆記
 
 This lesson is a work in progress. Each lesson will be released once I have finished recording.
