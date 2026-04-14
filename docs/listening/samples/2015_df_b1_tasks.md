@@ -1,3 +1,8 @@
+---
+title: DSE 2015 Data File B1 範例 | Task 6 人物簡介聆聽練習
+description: DSE 2015 英文聆聽 Paper 3 Data File B1 Task 6 人物簡介範例，練習聆聽短傳記答題技巧，備戰 HKDSE 英文聆聽考試。
+---
+
 # 2015 Data File B1 Samples
 
 ## Task 6 Short Biography

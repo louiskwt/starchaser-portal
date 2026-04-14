@@ -1,3 +1,8 @@
+---
+title: DSE 2025 Data File B2 範例 | Task 8 健康月文章聆聽練習
+description: DSE 2025 英文聆聽 Paper 3 Data File B2 Task 8 健康月文章範例，練習聆聽資訊性文章答題技巧，備戰 HKDSE 英文聆聽考試。
+---
+
 # 2025 Data File B2 Samples
 
 ## Task 8: Article

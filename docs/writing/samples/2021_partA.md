@@ -1,3 +1,8 @@
+---
+title: DSE 2021 Paper 2 Part A 範文 | School Speech 學校演說範例
+description: DSE 2021 英文寫作 Paper 2 Part A 範文，學校活動演說示例。學習演說稿的格式與開場技巧，備戰 HKDSE 英文寫作。
+---
+
 # DSE 2021 Paper 2 Part A Speech Sample
 
 This’s Chris from the school fair committee, and today I have an exciting announcement to make. Our Annual School Fair is just around the corner! It’ll be held on Saturday, 29th May 2021, from 12 PM to 4 PM right here at our school campus. This’s one of the biggest events of the year, and we want all of you to be part of it!

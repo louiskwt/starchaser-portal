@@ -1,3 +1,8 @@
+---
+title: DSE 2025 Data File B1 範例 | Task 6 邀請函聆聽練習
+description: DSE 2025 英文聆聽 Paper 3 Data File B1 Task 6 邀請函範例，練習聆聽社交書信答題技巧，備戰 HKDSE 英文聆聽考試。
+---
+
 # 2025 Data File B1 Samples
 
 ## Task 6: Invitation Email

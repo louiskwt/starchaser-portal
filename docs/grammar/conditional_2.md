@@ -1,3 +1,8 @@
+---
+title: DSE 英文假設條件句 | Conditional Type 2 用法詳解
+description: 學習 DSE 英文第二類條件句（Conditional Type 2）：與現在事實相反的假設。掌握 if + past simple + would + verb 的結構。
+---
+
 # Conditional Type 2 （假設條件句)
 
 __Notes & Exercises__

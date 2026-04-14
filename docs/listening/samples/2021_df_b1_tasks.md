@@ -1,3 +1,8 @@
+---
+title: DSE 2021 Data File B1 範例 | Task 6 活動公告聆聽練習
+description: DSE 2021 英文聆聽 Paper 3 Data File B1 Task 6 網球活動公告範例，練習聆聽公告通知答題技巧，備戰 HKDSE 英文聆聽考試。
+---
+
 # 2021 Data File B1 Samples
 
 ## Task 6: Announcement

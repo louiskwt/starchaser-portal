@@ -1,3 +1,8 @@
+---
+title: DSE 英文簡單時態 | Simple Tenses 現在式過去式未來式
+description: 掌握 DSE 英文基本時態：Simple Present、Simple Past、Simple Future。學習現在式、過去式、未來式的用法及結構，備考 HKDSE 英文。
+---
+
 # Simple Tenses (簡單時態)
 
 英文入面最基本、最重要嘅三個時態：現在式、過去式、同埋未來式。

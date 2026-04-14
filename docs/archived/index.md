@@ -1,3 +1,8 @@
+---
+title: 封存檔案 | DSE StarChaser 舊版備考資源
+description: DSE StarChaser 封存頁面，收錄過時或不再更新的舊版備考資源、筆記及練習材料。
+---
+
 # Archived - 陳列檔案
 
 此頁會寄存一些過去或不合時的舊資源

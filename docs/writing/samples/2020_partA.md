@@ -1,3 +1,8 @@
+---
+title: DSE 2020 Paper 2 Part A 範文 | Restaurant Review 餐廳評論範例
+description: DSE 2020 英文寫作 Paper 2 Part A 範文，餐廳評論寫作示例。學習評論文的結構、詞彙及表達方式，備戰 HKDSE 英文寫作。
+---
+
 # DSE 2020 Paper 2 Part A: Restaurant Review
 
 ---

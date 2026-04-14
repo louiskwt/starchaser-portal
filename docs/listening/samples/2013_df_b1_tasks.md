@@ -1,3 +1,8 @@
+---
+title: DSE 2013 Data File B1 範例 | Task 5 旅遊目的地聆聽練習
+description: DSE 2013 英文聆聽 Paper 3 Data File B1 Task 5 旅遊目的地範例，練習聆聽答題技巧，備戰 HKDSE 英文聆聽考試。
+---
+
 # 2013 Data File B1 Samples
 
 ## Task 5 Fact File

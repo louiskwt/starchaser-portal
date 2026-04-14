@@ -1,3 +1,8 @@
+---
+title: DSE 英文基本連接詞 | Basic Conjunctions 從屬並列連詞
+description: 學習 DSE 英文基本連接詞（Conjunctions）：and、but、because、although 等常見連接詞的用法，讓句子結構更豐富、流暢。
+---
+
 # Basic Conjunctions 基本連接詞
 
 

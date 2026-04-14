@@ -1,3 +1,8 @@
+---
+title: DSE 英文比較級最高級 | Comparative and Superlative Adjectives 用法
+description: 學習 DSE 英文形容詞的比較級及最高級變化：何時用 -er/-est，何時用 more/most。掌握比較結構，提升寫作精準度。
+---
+
 #  Comparative & Superlative Adjectives (比較級或最高級形容詞）
 
 ## ✏️ 基本概念

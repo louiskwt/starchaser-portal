@@ -1,3 +1,8 @@
+---
+title: DSE 2024 Data File B1 範例 | Task 5 活動參與者Email聆聽練習
+description: DSE 2024 英文聆聽 Paper 3 Data File B1 Task 5 活動參與者 email 範例，練習聆聽書信通知答題技巧，備戰 HKDSE 英文聆聽考試。
+---
+
 # 2024 Data File B1 Samples
 
 ## Task 5: Email to participants

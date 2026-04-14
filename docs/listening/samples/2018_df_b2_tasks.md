@@ -1,3 +1,8 @@
+---
+title: DSE 2018 Data File B2 範例 | Task 8 資金籌集報告聆聽練習
+description: DSE 2018 英文聆聽 Paper 3 Data File B2 Task 8 資金籌集報告範例，練習聆聽商業報告答題技巧，備戰 HKDSE 英文聆聽考試。
+---
+
 # 2018 Data File B2 Samples
 
 ## Task 8: Funding Report

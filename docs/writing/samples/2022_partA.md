@@ -1,3 +1,8 @@
+---
+title: DSE 2022 Paper 2 Part A 範文 | Visitor Guide 遊客指南範例
+description: DSE 2022 英文寫作 Paper 2 Part A 範文，遊客指南寫作示例。學習如何撰寫資訊性文章，備戰 HKDSE 英文寫作。
+---
+
 # 2022 Paper 2 Part A: Guide for Visitor
 
 ---

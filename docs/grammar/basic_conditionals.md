@@ -1,3 +1,8 @@
+---
+title: DSE 英文條件句 | Basic Conditionals Type 0 and 1 用法
+description: 學習 DSE 英文條件句：Zero Conditional 及 First Conditional。掌握真假條件句的結構與應用，適合備考 HKDSE 英文考試。
+---
+
 # Basic Conditionals 條件句 (Type 0 and 1)
 
 

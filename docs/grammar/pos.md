@@ -1,3 +1,8 @@
+---
+title: DSE 英文詞類學習 | Parts of Speech 七大詞類详解
+description: 學習 DSE 英文詞類（Parts of Speech）：名詞、動詞、形容詞、副詞、限定詞、介詞、連接詞。免費下載練習，理解單詞在句子中的角色。
+---
+
 # Basic Parts of Speech (詞類）
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/dyvaDRro7-c?si=c2JsidSz6jy7FBwb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

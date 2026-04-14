@@ -1,3 +1,8 @@
+---
+title: DSE 2024 Data File B2 範例 | Task 8 意外事故報告聆聽練習
+description: DSE 2024 英文聆聽 Paper 3 Data File B2 Task 8 双体船意外事故報告範例，練習聆聽事故報告答題技巧，備戰 HKDSE 英文聆聽考試。
+---
+
 # 2024 Data File B2 Samples
 
 ## Task 8: Incident Report

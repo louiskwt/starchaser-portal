@@ -1,3 +1,8 @@
+---
+title: DSE 2018 Paper 2 Part A 範文 | 學校旅行家長通知信範例
+description: DSE 2018 英文寫作 Paper 2 Part A 範文，學校旅行家長通知信格式及範例。學習如何撰寫正式通知信，備戰 HKDSE 英文寫作。
+---
+
 # DSE 2018 Paper 2 Part A Sample
 
 Dear parents and guardians of all 6A students,

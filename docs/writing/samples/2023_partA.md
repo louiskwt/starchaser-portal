@@ -1,3 +1,8 @@
+---
+title: DSE 2023 Paper 2 Part A 範文 | Application Form 求職申請表範例
+description: DSE 2023 英文寫作 Paper 2 Part A 範文，公司介紹及申請表範例。學習商業英語寫作格式，備戰 HKDSE 英文寫作。
+---
+
 # DSE 2023 Paper 2 Part A: Application Form
 
 __Company Profile__

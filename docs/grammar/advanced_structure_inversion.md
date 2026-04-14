@@ -1,3 +1,8 @@
+---
+title: DSE 英文倒裝句 | Advanced Inversion 結構及用法
+description: 學習 DSE 英文倒裝句（Inversion）：否定副詞開頭、部分助動詞開頭的倒裝結構。讓你的寫作更高級、更地道。
+---
+
 # Advanced Structures: Inversion (倒裝句)
 
 倒裝句其實喺寫作或者正式場合都會用到，學識佢可以令你英文更高級、更自然。

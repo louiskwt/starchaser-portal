@@ -1,3 +1,8 @@
+---
+title: DSE 英文進行式 | Progressive Tenses 現在過去未來進行式
+description: 學習 DSE 英文進行式：Present Perfect Continuous、Past Continuous、Future Continuous。掌握進行式的結構與應用場景，備考 HKDSE。
+---
+
 # Progressive Tenses [進行式]
 
 **Notes & Exercise**

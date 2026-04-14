@@ -1,3 +1,8 @@
+---
+title: DSE 2019 Paper 2 Part A 範文 | 高中英文作文範例
+description: DSE 2019 英文寫作 Paper 2 Part A 範文，包含描述難忘科目或挑戰的寫作示例。參考範文格式及內容，備戰 HKDSE 英文寫作。
+---
+
 # DSE 2019 Paper 2 Part A Sample
 
 ## Write about one subject that you enjoyed studying or found challenging

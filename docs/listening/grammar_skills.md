@@ -1,3 +1,8 @@
+---
+title: DSE 聆聽文法技巧 | Grammar Skills in Listening 答題要點
+description: 學習 DSE 英文聆聽考試中的文法技巧：如何透過語法知識判斷答案、填空時如何注意時態及單複數，提升 Paper 3 答題準確度。
+---
+
 # Grammar Skills in Listening
 
 你可能以為 Listening 只係聽得清楚就得，但其實 Grammar 都好重要，因為佢幫到你：

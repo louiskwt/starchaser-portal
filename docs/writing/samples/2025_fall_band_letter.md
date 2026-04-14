@@ -1,3 +1,8 @@
+---
+title: DSE 2025 Fall Band Letter 範文 | Level 5 書信寫作範例
+description: DSE 2025 Fall Band Letter 英文寫作 Level 5 範文，示範高分書信寫作技巧。參考格式及內容，備戰 HKDSE 英文書信寫作。
+---
+
 # Fall 2025 Band Letter Writing
 
 ## Level 5 Sample (Concise AI Version)

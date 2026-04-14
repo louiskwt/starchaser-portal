@@ -1,3 +1,8 @@
+---
+title: DSE 2015 Data File B2 範例 | Task 8 演唱會籌備聆聽練習
+description: DSE 2015 英文聆聽 Paper 3 Data File B2 Task 8 演唱會籌備 email 範例，練習聆聽商業書信答題技巧，備戰 HKDSE 英文聆聽考試。
+---
+
 # 2015 Data File B2 Samples
 
 ## Task 8 Email to Ultimatum Products

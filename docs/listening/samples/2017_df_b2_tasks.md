@@ -1,3 +1,8 @@
+---
+title: DSE 2017 Data File B2 範例 | Task 8 商場發展報告聆聽練習
+description: DSE 2017 英文聆聽 Paper 3 Data File B2 Task 8 商場發展概念計劃報告範例，練習聆聽商業報告答題技巧，備戰 HKDSE 英文聆聽考試。
+---
+
 # 2017 Data File B2 Samples
 
 ## Task 8: Report

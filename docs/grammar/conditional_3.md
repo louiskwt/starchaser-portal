@@ -1,3 +1,8 @@
+---
+title: DSE 英文進階條件句 | Conditional Type 3 與過去事實相反
+description: 學習 DSE 英文第三類條件句（Conditional Type 3）：與過去事實相反的假設。掌握 if + past perfect + would have + past participle 的結構。
+---
+
 # Conditional Type 3 （進階條件句)
 
 __Notes & Exercises__

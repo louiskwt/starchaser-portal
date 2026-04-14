@@ -1,3 +1,8 @@
+---
+title: DSE 2023 Data File B2 範例 | Task 8 名人公告聆聽練習
+description: DSE 2023 英文聆聽 Paper 3 Data File B2 Task 8 烹飪節目名人公告範例，練習聆聽公告資訊答題技巧，備戰 HKDSE 英文聆聽考試。
+---
+
 # 2023 Data File B2 Samples 
 
 ## Task 8: Announcement

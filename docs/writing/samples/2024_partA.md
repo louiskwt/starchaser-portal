@@ -1,3 +1,8 @@
+---
+title: DSE 2024 Paper 2 Part A 範文 | Complaint Email 投訴信範例
+description: DSE 2024 英文寫作 Paper 2 Part A 範文，投訴酒店體驗的信件示例。學習投訴信的格式及表達技巧，備戰 HKDSE 英文寫作。
+---
+
 # DSE 2024 Paper 2 Part A: Complaint Email
 
 Dear Hotel Manager of Seaside Hotel,

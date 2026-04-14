@@ -1,3 +1,8 @@
+---
+title: DSE 2025 Paper 2 Part A 範文 | Information Leaflet 資訊單張範例
+description: DSE 2025 英文寫作 Paper 2 Part A 範文，青少年藝術俱樂部資訊單張示例。學習資訊性文章的撰寫技巧，備戰 HKDSE 英文寫作。
+---
+
 # 2025 Paper Part A: Information Leaflet
 
 ## Our background
