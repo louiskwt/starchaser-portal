@@ -1,5 +1,5 @@
 ---
-title: DSE 2019 Paper 2 Part A 範文 | 高中英文作文範例
+title: DSE 2019 Paper 2 Part A 範文
 description: DSE 2019 英文寫作 Paper 2 Part A 範文，包含描述難忘科目或挑戰的寫作示例。參考範文格式及內容，備戰 HKDSE 英文寫作。
 ---
 
@@ -11,4 +11,4 @@ As I reflect on my time in Class 6C at Kowloon Secondary School, one subject tha
 
 ## Write about what you will miss most about being a student in Class 6C.
 
-What I will miss most about being a student in Class 6C is the camaraderie and sense of belonging we shared. Our class was more than just a group of students; we were a family. Whether it was cheering each other on during sports day, staying behind after school  to prepare for exams together, or simply sharing laughs during lunch breaks, every moment was special. I’ll miss the inside jokes, the encouragement during tough times, and the way we celebrated each other’s successes. Looking at our class photo take after the Christmas party this year, I’m reminded of the bond we’ve built over the years, and all these memories we shared will stay with me forever. As we move on to the next chapter of our lives, I’m grateful for the lessons learned, the friendships forged, and the unforgettable experiences in Class 6C. Thank you for making these years so meaningful. I’ll miss you all dearly!
+What I will miss most about being a student in Class 6C is the camaraderie and sense of belonging we shared. Our class was more than just a group of students; we were a family. Whether it was cheering each other on during sports day, staying behind after school to prepare for exams together, or simply sharing laughs during lunch breaks, every moment was special. I’ll miss the inside jokes, the encouragement during tough times, and the way we celebrated each other’s successes. Looking at our class photo take after the Christmas party this year, I’m reminded of the bond we’ve built over the years, and all these memories we shared will stay with me forever. As we move on to the next chapter of our lives, I’m grateful for the lessons learned, the friendships forged, and the unforgettable experiences in Class 6C. Thank you for making these years so meaningful. I’ll miss you all dearly!

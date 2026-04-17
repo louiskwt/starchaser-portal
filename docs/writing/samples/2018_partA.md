@@ -1,5 +1,5 @@
 ---
-title: DSE 2018 Paper 2 Part A 範文 | 學校旅行家長通知信範例
+title: DSE 2018 Paper 2 Part A 範文 | Letter to Parents 家長信
 description: DSE 2018 英文寫作 Paper 2 Part A 範文，學校旅行家長通知信格式及範例。學習如何撰寫正式通知信，備戰 HKDSE 英文寫作。
 ---
 
@@ -20,4 +20,3 @@ Based on what I have mentioned above, I hope you can consider letting your child
 Regards,<br/>
 Chris Wong <br/>
 6A Class teacher<br/>
-
