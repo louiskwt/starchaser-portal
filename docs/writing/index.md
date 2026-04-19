@@ -11,6 +11,8 @@ description: DSE 英文寫作範文全集，包含 2018-2025 年 Paper 2 Part A 
 
 - [2018 Part B Q4](samples/2018_partB_4.md)
 
+- [2018 Part B Q5](samples/2018_partB_5.md)
+
 - [2019 Part A](samples/2019_partA.md)
 
 - [2019 Part B Q2](samples/2019_partB_2.md)
