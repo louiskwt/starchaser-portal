@@ -5,6 +5,7 @@ function generateWordCount() {
     const article_section = document.querySelector("article");
     const headers = document.querySelectorAll("h2");
     const ps = document.querySelectorAll("p");
+    const feedback_section = document.querySelector(".md-feedback");
 
     if (!article_section || !ps) return;
 
@@ -21,7 +22,12 @@ function generateWordCount() {
     const wc = countWords(w_arr);
     const wc_element = document.createElement("p");
     wc_element.textContent = `${wc} words`;
-    article_section.appendChild(wc_element);
+
+    if (feedback_section) {
+      feedback_section.insertAdjacentElement("beforebegin", wc_element);
+    } else {
+      article_section.appendChild(wc_element);
+    }
   }
 }
 
