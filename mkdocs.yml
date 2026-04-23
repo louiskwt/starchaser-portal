@@ -2,6 +2,12 @@ site_name: DSE StarChaser
 site_url: https://dsestarchaser.me/
 site_description: A free and open-source study guide for DSE English Learning
 
+plugins:
+  - search:
+      lang:
+        - en
+        - zh
+
 theme:
   name: material
   logo: assets/icon-196.png
