@@ -9,7 +9,7 @@ description: DSE 2025 英文聆聽 Paper 3 Data File B2 Task 8 健康月文章�
 
 **Wellness Month 2025 — A Month To Relax and Recover**
 
-Do you remember miss our Wellness Month from last year? Do you worry about your wellness as much as your academic performance? Wellness Month is scheduled to return this year in July once you finish your exams. This year, the main theme is going to be relax and recover so it’s perfect for all of us after feeling all stressed out after the exam!
+Do you miss our Wellness Month from last year? Do you worry about your wellness as much as your academic performance? Wellness Month is scheduled to return this year in July once you finish your exams. This year, the main theme is going to be relax and recover so it’s perfect for all of us after feeling all stressed out after the exam!
 
 In terms of the events for this year’s Wellness Month, we will re-run the Yoga and Meditation sessions, because yoga can help improve your focus and attention span. This year, it is going to be led by 2 celebrity yoga instructors. Besides doing yoga, you can also participate in the Crafting Session this year to get some hands-on experience in creating arts and crafts from Asian cotuntries if you missed that opportunity last year. Moreover, we will run the Wellness Fair that includes exercise advice and self-care resources just as last year, but this year, the fair is going to feature interactive booths to make it more interesting.
 
